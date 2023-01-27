@@ -1,11 +1,11 @@
 # 2023-group-4
 
 TEAM MEMBER:
-Antalya \n
-Kate Hunter\n
-Marcin\n
-Mike\n
-Yuchen Zhang\n
+Antalya 
+/Kate Hunter
+/Marcin
+/Mike
+/Yuchen Zhang
 
 
 

@@ -19,4 +19,9 @@ TEAM PHOTO:
 
 
 GAMELIST:
-T-REX game/ Nyan Cat / 羊了个羊(candy crush)
+T-REX game/ Nyan Cat（might be the one we want to make） / candy crush
+
+
+DESIGN OF THE GAME:
+Life is full of innumerable obstacles, unexpected surprises, and nasty shocks, but you! as a strong person, can always JUMP over them to reach your destination. We will not be defeated by obstacles, or will we? Let's play this 'Game of Real life' to figure it out. 
+

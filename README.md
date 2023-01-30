@@ -8,11 +8,11 @@
 
 | Name         | Email                 | Vote 2 games |
 |--------------|-----------------------|--------------|
-| Antalya      | yj22925@bristol.ac.uk |              |
+| Antalya      | yj22925@bristol.ac.uk | Nyan Cat     |
 | Kate Hunter  | bq22223@bristol.ac.uk |              |
 | Marcin       | ep22762@bristol.ac.uk |              |
 | Mike         | oe22158@bristol.ac.uk |              |
-| Yuchen Zhang | vg22038bristol.ac.uk  |              |
+| Yuchen Zhang | vg22038@bristol.ac.uk |              |
 
 
 ## Team Goal

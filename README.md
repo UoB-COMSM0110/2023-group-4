@@ -1,19 +1,18 @@
-# 2023-group-4
+## 2023-group-4
 
 
-)
 ![IMG_2773](https://user-images.githubusercontent.com/115186584/215514936-d7056b15-1411-43f3-ae06-d2b5da753d9a.JPG)
 
 
 ## Team Members
 
 | Name         | Email                 | Vote 2 games |
-|--------------|-----------------------|              |
-| Antalya      | yj222925@bristol.ac.uk|              |
-| Kate Hunter  | bq22223@              |              |
-| Marcin       |    ep22762            |              |
+|--------------|-----------------------|--------------|
+| Antalya      | yj22925@bristol.ac.uk |              |
+| Kate Hunter  | bq22223@bristol.ac.uk |              |
+| Marcin       | ep22762@bristol.ac.uk |              |
 | Mike         | oe22158@bristol.ac.uk |              |
-| Yuchen Zhang |    vg22038            |              |
+| Yuchen Zhang | vg22038bristol.ac.uk  |              |
 
 
 ## Team Goal

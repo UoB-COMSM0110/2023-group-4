@@ -1,6 +1,6 @@
 ## 2023-group-4
 
-##WHO ARE WE?
+## WHO ARE WE?
 
 ![Group4](https://user-images.githubusercontent.com/115186584/215521710-d9c85960-1257-4b2b-a89c-cf05d7b6ae0a.jpeg)
 

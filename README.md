@@ -1,7 +1,8 @@
 # 2023-group-4
 
 
-![IMG_2773](https://user-images.githubusercontent.com/115186584/215160415-505ee48a-42c5-4f63-9e34-ef51ff0aca0d.JPG)
+)
+![IMG_2773](https://user-images.githubusercontent.com/115186584/215514936-d7056b15-1411-43f3-ae06-d2b5da753d9a.JPG)
 
 
 ## Team Members

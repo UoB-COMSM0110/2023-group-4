@@ -5,11 +5,14 @@
 (Don't worry we will take a better picture soon)
 
 ## Team Members
-- Antalya 
-- Kate Hunter
-- Marcin
-- Mike
-- Yuchen Zhang
+
+| Name         | Email                 |
+|--------------|-----------------------|
+| Antalya      |                       |
+| Kate Hunter  |                       |
+| Marcin       |                       |
+| Mike         | oe22158@bristol.ac.uk |
+| Yuchen Zhang |                       |
 
 
 ## Team Goal

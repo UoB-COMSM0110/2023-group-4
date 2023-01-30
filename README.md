@@ -1,7 +1,6 @@
 ## 2023-group-4
 
-
-![IMG_2773](https://user-images.githubusercontent.com/115186584/215514936-d7056b15-1411-43f3-ae06-d2b5da753d9a.JPG)
+![Group Photo](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/IMG_2773.JPG)
 
 
 ## Team Members

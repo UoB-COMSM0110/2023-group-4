@@ -25,7 +25,7 @@ T-Rex Game ft. Nyan Cat
 ##  VIDEO OF PROTOTYPE 
 Check out the video we uploaded!!!
 
-[<img src="https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg" width="50%">](https://www.youtube.com/watch?v=H8TkaA0i4RQ) "Now in Android: 55")
+[<img src="[https://i.ytimg.com/vi/Hc79sDi3f0U/maxresdefault.jpg](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg)" width="50%">](https://www.youtube.com/watch?v=H8TkaA0i4RQ "Check out the video!")
 
  
   

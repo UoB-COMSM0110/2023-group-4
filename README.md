@@ -27,16 +27,24 @@ Check out the video we uploaded!!!
 <a href="https://youtu.be/H8TkaA0i4RQ" target="_blank">
 alt="Click here to check the video! <3" width="240" height="180" border="10" /></a>
 
+  
+<a href="[http://www.youtube.com/watch?feature](https://youtu.be/H8TkaA0i4RQ)=player_embedded&v=Prototype
+" target="_blank"><img src="[http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg))" 
+alt="Check the video here! <3" width="240" height="180" border="10" /></a>
+  
+  
+  
+  
 ## OUR CHARACTERS
 
 <img width="186" alt="stand-cat cry" src="https://user-images.githubusercontent.com/115186584/217028981-de10ba55-9107-4ad0-b2b2-8b50d7bc3cce.png">
-alt="Sad cat!"
+
 ![cat 1](https://user-images.githubusercontent.com/115186584/217029194-13f6f8ac-93a4-4b07-b054-d735f799d25b.png)
-alt="Rich cat!"
+
 <img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
-alt="Gangsta cat!"
+
 ![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
-alt="Magic cat!"
+
 
 ## Team Goal
 Ambitious to make a great game.

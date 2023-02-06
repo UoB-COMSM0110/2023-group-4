@@ -14,7 +14,7 @@
 | Kate Hunter  | bq22223@bristol.ac.uk |                                       |
 | Marcin       | ep22762@bristol.ac.uk |                                       |
 | Mike         | oe22158@bristol.ac.uk | T-Rex Game ft. Nyan Cat / flappy bird |
-| Yuchen Zhang | vg22038@bristol.ac.uk |                                       |
+| Yuchen Zhang | vg22038@bristol.ac.uk | baba is you/flappy bird               |
 
 
 ## Team Goal

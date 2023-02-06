@@ -22,6 +22,8 @@ T-Rex Game ft. Nyan Cat
 
 ![IMG_2904](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg)
 
+##  VIDEO OF PROTOTYPE 
+Check out the video we uploaded!!!
 
 ## OUR CHARACTERS
 
@@ -56,5 +58,4 @@ Ambitious to make a great game.
 ##  DESIGN OF THE GAME
 Life is full of innumerable obstacles, unexpected surprises, and nasty shocks, but you! as a strong person, can always JUMP over them to reach your destination. We will not be defeated by obstacles, or will we? Let's play this 'Game of Real life' to figure it out. 
 
-##  VIDEO OF PROTOTYPE 
-Check out the video we uploaded!!!
+

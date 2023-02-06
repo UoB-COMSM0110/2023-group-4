@@ -23,7 +23,7 @@ T-Rex Game ft. Nyan Cat
 ![IMG_2904](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg)
 
 ##  VIDEO OF PROTOTYPE 
-Check out the video we uploaded!!!
+↓↓↓↓↓ Click empty space down below ↓↓↓↓↓ to check out the video we uploaded!!!
 
 [<img src="[https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg]" width="50%">](https://www.youtube.com/watch?v=H8TkaA0i4RQ "Check out the video!")
 

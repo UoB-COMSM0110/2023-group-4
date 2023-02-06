@@ -32,8 +32,9 @@ T-Rex Game ft. Nyan Cat
 
 <img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
 
-![cat 1](https://user-images.githubusercontent.com/115186584/217029276-28053287-8f33-44fe-822c-1e67c42a65e7.png)
 
+
+![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
 
 
 ## Team Goal

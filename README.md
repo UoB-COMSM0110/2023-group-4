@@ -24,9 +24,6 @@ T-Rex Game ft. Nyan Cat
 
 ##  VIDEO OF PROTOTYPE 
 Check out the video we uploaded!!!
-<a href="https://youtu.be/H8TkaA0i4RQ" target="_blank">
-alt="Click here to check the video! <3" width="240" height="180" border="10" /></a>
-
   
 <a href="[http://www.youtube.com/watch?feature](https://youtu.be/H8TkaA0i4RQ)=player_embedded&v=Prototype
 " target="_blank"><img src="[http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg))" 

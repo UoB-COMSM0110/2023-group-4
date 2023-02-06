@@ -26,9 +26,14 @@ T-Rex Game ft. Nyan Cat
 ## OUR CHARACTERS
 
 <img width="186" alt="stand-cat cry" src="https://user-images.githubusercontent.com/115186584/217028981-de10ba55-9107-4ad0-b2b2-8b50d7bc3cce.png">
-![st,small,507x507-pad,600x600,f8f8f8](https://user-images.githubusercontent.com/115186584/217028994-c38bc255-1620-4352-888e-a96d21032dd7.jpeg)
+
+![cat 1](https://user-images.githubusercontent.com/115186584/217029194-13f6f8ac-93a4-4b07-b054-d735f799d25b.png)
+
+
 <img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
-![cat 1](https://user-images.githubusercontent.com/115186584/217029030-c5216efe-234e-4f31-a178-b92f9a763bb2.png)
+
+![cat 1](https://user-images.githubusercontent.com/115186584/217029276-28053287-8f33-44fe-822c-1e67c42a65e7.png)
+
 
 
 ## Team Goal

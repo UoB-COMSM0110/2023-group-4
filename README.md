@@ -31,13 +31,19 @@ T-Rex Game ft. Nyan Cat
   
 ## OUR CHARACTERS
 
+## Emo cat
 <img width="186" alt="stand-cat cry" src="https://user-images.githubusercontent.com/115186584/217028981-de10ba55-9107-4ad0-b2b2-8b50d7bc3cce.png">
 
+## Long leg cat
+![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
+
+## Rich cat
 ![cat 1](https://user-images.githubusercontent.com/115186584/217029194-13f6f8ac-93a4-4b07-b054-d735f799d25b.png)
 
+## Gangster cat 
 <img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
 
-![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
+
 
 
 ## Team Goal

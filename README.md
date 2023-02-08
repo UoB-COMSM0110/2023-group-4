@@ -71,6 +71,19 @@ Despite its best efforts, the cat is always defeated by the copycat. But here's 
 
 Will the cat ever triumph over its relentless nemesis? Or will it be trapped in this endless cycle of defeat and renewal, forced to face its trials time and time again? Join the cat on its journey through life and experience the thrill of the chase in this heart-pounding adventure that will test the limits of your determination and resilience."
 
+## If you don't want to read the long text up there.
+   (Ignore here if you have read 😬)
+- #### The player controls a cat that must navigate through life and overcome various obstacles.
+
+- #### The player must defeat a cunning copycat in order to progress, but the copycat always wins.
+
+- #### Quitting is not an option, as quitting is seen as a failure in life.
+
+- #### Every time the player attempts to quit the game, they are met with even greater challenges in the form of attacking cats.
+
+- #### The player is trapped in an endless cycle of defeat and renewal, forced to face the trials and obstacles of life time and time again.
+
+- #### The game tests the player's determination and resilience, and presents a metaphor for the challenges and obstacles of life.
 
 ##  Use case disgram 
 

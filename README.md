@@ -8,7 +8,7 @@
 
 ## Team Members
 
-| Name         | Email                 | Vote 2 games                          |
+| Name         | Email                 | Vote 2 games (for week 2)             |
 |--------------|-----------------------|---------------------------------------|
 | Antalya      | yj22925@bristol.ac.uk | T-Rex Game ft. Nyan Cat / flappy bird |
 | Kate Hunter  | bq22223@bristol.ac.uk | Baba is you                           |
@@ -31,25 +31,25 @@ T-Rex Game ft. Nyan Cat
   
 ## OUR CHARACTERS
 
-## Emo cat
+## Emo cat (Level 1 🌟)
 <img width="186" alt="stand-cat cry" src="https://user-images.githubusercontent.com/115186584/217028981-de10ba55-9107-4ad0-b2b2-8b50d7bc3cce.png">
 
-## Long leg cat
+## Long leg cat (Level 2 🌟🌟)
 ![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
-
-## Rich cat
+  
+## Rich cat (level 3 🌟🌟🌟)
 ![cat 1](https://user-images.githubusercontent.com/115186584/217029194-13f6f8ac-93a4-4b07-b054-d735f799d25b.png)
 
-## Gangster cat 
+## Gangster cat (level 4 🌟🌟🌟🌟)
 <img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
 
-
-
+## Secret character: 🔪 c**y c*t 🔪(Someone who will steal your life 🤫)
+<img width="478" alt="IMG_2956" src="https://user-images.githubusercontent.com/115186584/217626956-7ec1afd9-0eea-438b-940d-809c7826bc2c.PNG">
 
 ## Team Goal
 Ambitious to make a great game.
 
-## Proposed Game List
+## Proposed Game List （for week 1）
 - T-REX game
 - Nyan Cat（might be the one we want to make
 - Candy crush
@@ -63,6 +63,17 @@ Ambitious to make a great game.
 
 
 ##  DESIGN OF THE GAME
-Life is full of innumerable obstacles, unexpected surprises, and nasty shocks, but you! as a strong person, can always JUMP over them to reach your destination. We will not be defeated by obstacles, or will we? Let's play this 'Game of Real life' to figure it out. 
+"In a world full of challenges and obstacles, one brave cat must journey through life to reach its ultimate goal. Armed with agility and quick reflexes, the cat must leap and dodge its way through the trials and tribulations of existence. From navigating the twists and turns of daily life to overcoming the unexpected twists and turns of fate, this cat will stop at nothing to reach its destiny.
+
+With each leap and bound, the cat is faced with new obstacles - from angry dogs and raging rivers to treacherous cliffs and endless pits. And as the journey grows increasingly difficult, the cat must confront its greatest challenge of all: a cunning copycat that threatens to steal its place in life's grand design.
+
+Despite its best efforts, the cat is always defeated by the copycat. But here's the catch: quitting is not an option. For life is a journey, and quitters never win. Every time the player attempts to quit the game, they are met with even greater challenges, as wave after wave of attacking cats surge forward.
+
+Will the cat ever triumph over its relentless nemesis? Or will it be trapped in this endless cycle of defeat and renewal, forced to face its trials time and time again? Join the cat on its journey through life and experience the thrill of the chase in this heart-pounding adventure that will test the limits of your determination and resilience."
+
+
+##  Use case disgram 
+
+<img width="1060" alt="Use case disgram-group 4" src="https://user-images.githubusercontent.com/115186584/217627220-779e51ce-7d6b-4951-a738-f30d610a15cc.png">
 
 

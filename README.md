@@ -134,7 +134,7 @@ One of the key steps in our ideation process was thinking about the flow of the 
 To further refine our idea, we revisited our concept and made sure that everyone on the team was on the same page. This involved simulating how the user would play the game, and considering any potential obstacles or challenges that may arise.
 Once we were satisfied with our concept, we moved on to creating a paper prototype of the game to test its viability. This involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine.
 Finally, we considered the timeline for the project and any details that needed to be addressed, such as the art style and sound effects. By this stage, we had a general idea of what we wanted to achieve and were able to focus on bringing the game to life.
-In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players. (500 words)
+In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players. (445 words)
 
 ## Meeting Minutes (Week 4 - 2023. 2.13)
 

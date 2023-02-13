@@ -97,35 +97,34 @@ Use case diagrams, user stories. Early stages design. Ideation process. How did 
 
 ### Userstories:
 
--Users presses space to start the game;
--Users use left and right and space to choose the characters and difficulties. (By default is the first cat)
--Users can see obstacles coming up randomly. 
--Users use space to control the character to jump over obstacles;
--Users see the score and level; 
--Users can get one score once jump over the obstacles;
--Users can collect ‘ invisibility’  randomly;
--Users get  ‘ invisibility’ when they get power-up ;
--Users get ‘invisibility’  whenever they get another 100 score;
--When users get ‘invisibility’ they can defeat anything for 5 seconds. 
--Users can experience a harder game with 1.2 faster speed whenever they get another 100 score.
--Users double presses (or maybe press longer?) space to jump higher to avoid Copycat;
--Users can press “Q” to quit the game;
--Users can be power-up once collect ;
--Users can see ‘‘copycat’ flying out randomly
--User would lose a game when bump into copycat (first time);
--Users can see a message to see if they want to resume or quit the game; 
--Users can up and down to choose whether to resume or quit the game;(not yet confirmed)
--Users can use space to confirm the option;
--If users resume, users can be stronger (reminded by a message) and defeat copycat;
--If the users choose to quit, the game will resume at a faster speed. 
--Users will lose/ends the game when they bump into an obstacles;
--Users can store their score automatically when it defeats the top 3 players;
--Users will see the game over page when they lose the game;
--Users can press ‘S’ to see the highest score on the game over page;(load scores from file)
+-  #### Users presses space to start the game;
+-  #### Users use left and right and space to choose the characters and difficulties. (By default is the first cat)
+-  #### Users can see obstacles coming up randomly. 
+-  #### Users use space to control the character to jump over obstacles;
+-  #### Users see the score and level; 
+-  #### Users can get one score once jump over the obstacles;
+-  #### Users can collect ‘ invisibility’  randomly;
+-  #### Users get  ‘ invisibility’ when they get power-up ;
+-  #### Users get ‘invisibility’  whenever they get another 100 score;
+-  #### When users get ‘invisibility’ they can defeat anything for 5 seconds. 
+-  #### Users can experience a harder game with 1.2 faster speed whenever they get another 100 score.
+-  #### Users double presses (or maybe press longer?) space to jump higher to avoid Copycat;
+-  #### Users can press “Q” to quit the game;
+-  #### Users can be power-up once collect ;
+-  #### Users can see ‘‘copycat’ flying out randomly
+-  #### User would lose a game when bump into copycat (first time);
+-  #### Users can see a message to see if they want to resume or quit the game; 
+-  #### Users can up and down to choose whether to resume or quit the game;(not yet confirmed)
+-  #### Users can use space to confirm the option;
+-  #### If users resume, users can be stronger (reminded by a message) and defeat copycat;
+-  #### If the users choose to quit, the game will resume at a faster speed. 
+-  #### Users will lose/ends the game when they bump into an obstacles;
+-  #### Users can store their score automatically when it defeats the top 3 players;
+-  #### Users will see the game over page when they lose the game;
+-  #### Users can press ‘S’ to see the highest score on the game over page;(load scores from file)
 (253 words )
 
 ### Ideation process 
-
 
 The ideation process for our team's game development project involved a series of steps and discussions to arrive at our final concept. It all started with the idea of creating a jumping game, inspired by popular titles such as the T-Rex game found in Google Chrome.
 As we brainstormed and discussed possible directions for the game, we eventually landed on the idea of incorporating a meme cat, such as Nyan Cat, as the main character. This idea sparked further creative discussions, as we considered different twists and concepts that could set our game apart from others in the genre.

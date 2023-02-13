@@ -89,7 +89,8 @@ Will the cat ever triumph over its relentless nemesis? Or will it be trapped in 
 <img width="1060" alt="Use case disgram-group 4" src="https://user-images.githubusercontent.com/115186584/217627220-779e51ce-7d6b-4951-a738-f30d610a15cc.png">
 
 
-MEETING MINUTES
+
+-------------------------------------MEETING MINUTES-----------------------------------
 
 Nayn Cat T-Rex Game
 - jumping over other cats/obstacles
@@ -105,6 +106,7 @@ Challenges:
 - Keeping the pixelated aesthetic of the original game
 - Creating the fake “quit” scenario
 - Global leader board?
+
 
 How to Get a Working Prototype by the end of reading week
 - Code for jumping game

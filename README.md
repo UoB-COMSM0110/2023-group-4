@@ -61,7 +61,7 @@ Ambitious to make a great game.
 - flappy 48
 
 
-##  DESIGN OF THE GAME
+##  DESIGN OF THE GAME (INTRODUCTION)
 "In a world full of challenges and obstacles, one brave cat must journey through life to reach its ultimate goal. Armed with agility and quick reflexes, the cat must leap and dodge its way through the trials and tribulations of existence. From navigating the twists and turns of daily life to overcoming the unexpected twists and turns of fate, this cat will stop at nothing to reach its destiny.
 
 With each leap and bound, the cat is faced with new obstacles - from angry dogs and raging rivers to treacherous cliffs and endless pits. And as the journey grows increasingly difficult, the cat must confront its greatest challenge of all: a cunning copycat that threatens to steal its place in life's grand design.

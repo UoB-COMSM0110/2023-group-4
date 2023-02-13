@@ -90,7 +90,8 @@ Will the cat ever triumph over its relentless nemesis? Or will it be trapped in 
 
 
 
--------------------------------------MEETING MINUTES-----------------------------------
+## Meeting Minutes
+
 
 Nayn Cat T-Rex Game
 - jumping over other cats/obstacles

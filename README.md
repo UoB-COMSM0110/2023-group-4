@@ -88,9 +88,56 @@ Will the cat ever triumph over its relentless nemesis? Or will it be trapped in 
 
 <img width="1060" alt="Use case disgram-group 4" src="https://user-images.githubusercontent.com/115186584/217627220-779e51ce-7d6b-4951-a738-f30d610a15cc.png">
 
+## Requirments (15% ~750 words)
+Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
+
+### USE CASE DIAGRAM (2.0)
+
+<img width="727" alt="截屏2023-02-13 19 52 58" src="https://user-images.githubusercontent.com/115186584/218561372-0009921c-1748-4dac-a997-0f1116b3f5fa.png">
+
+### Userstories:
+
+-Users presses space to start the game;
+-Users use left and right and space to choose the characters and difficulties. (By default is the first cat)
+-Users can see obstacles coming up randomly. 
+-Users use space to control the character to jump over obstacles;
+-Users see the score and level; 
+-Users can get one score once jump over the obstacles;
+-Users can collect ‘ invisibility’  randomly;
+-Users get  ‘ invisibility’ when they get power-up ;
+-Users get ‘invisibility’  whenever they get another 100 score;
+-When users get ‘invisibility’ they can defeat anything for 5 seconds. 
+-Users can experience a harder game with 1.2 faster speed whenever they get another 100 score.
+-Users double presses (or maybe press longer?) space to jump higher to avoid Copycat;
+-Users can press “Q” to quit the game;
+-Users can be power-up once collect ;
+-Users can see ‘‘copycat’ flying out randomly
+-User would lose a game when bump into copycat (first time);
+-Users can see a message to see if they want to resume or quit the game; 
+-Users can up and down to choose whether to resume or quit the game;(not yet confirmed)
+-Users can use space to confirm the option;
+-If users resume, users can be stronger (reminded by a message) and defeat copycat;
+-If the users choose to quit, the game will resume at a faster speed. 
+-Users will lose/ends the game when they bump into an obstacles;
+-Users can store their score automatically when it defeats the top 3 players;
+-Users will see the game over page when they lose the game;
+-Users can press ‘S’ to see the highest score on the game over page;(load scores from file)
+(253 words )
+
+### Ideation process 
 
 
-## Meeting Minutes
+The ideation process for our team's game development project involved a series of steps and discussions to arrive at our final concept. It all started with the idea of creating a jumping game, inspired by popular titles such as the T-Rex game found in Google Chrome.
+As we brainstormed and discussed possible directions for the game, we eventually landed on the idea of incorporating a meme cat, such as Nyan Cat, as the main character. This idea sparked further creative discussions, as we considered different twists and concepts that could set our game apart from others in the genre.
+However, we also considered the feasibility of different ideas, weighing the amount of resources and time required to bring each one to fruition. Through these discussions, we arrived at a clearer picture of why we wanted to create this game and what our ultimate goals were.
+As we continued to build upon our idea, we came up with a number of different twists that could potentially make our game stand out. After much discussion and consideration, we finally arrived at our final concept, incorporating elements that we believed would be both entertaining and engaging for players.
+One of the key steps in our ideation process was thinking about the flow of the game, including the use case and use story. We wanted to ensure that our game would be easy to understand and play, while still providing a fun and challenging experience for players.
+To further refine our idea, we revisited our concept and made sure that everyone on the team was on the same page. This involved simulating how the user would play the game, and considering any potential obstacles or challenges that may arise.
+Once we were satisfied with our concept, we moved on to creating a paper prototype of the game to test its viability. This involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine.
+Finally, we considered the timeline for the project and any details that needed to be addressed, such as the art style and sound effects. By this stage, we had a general idea of what we wanted to achieve and were able to focus on bringing the game to life.
+In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players. (500 words)
+
+## Meeting Minutes (Week 4 - 2023. 2.13)
 
 
 Nayn Cat T-Rex Game

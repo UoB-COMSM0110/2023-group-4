@@ -150,7 +150,7 @@ Nayn Cat T-Rex Game
 
 
 Challenges:
-- Keeping the pixelated aesthetic of the original game
+- animating the characters
 - Creating the fake “quit” scenario
 - Global leader board?
 

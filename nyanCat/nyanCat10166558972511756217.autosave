@@ -6,33 +6,29 @@ Button catTwo;
 Button catThree;
 Button catFour;
 Button[] buttonArray = new Button[6];
+int numFrames = 6;
+int curFrame = 0;
 Obstacle obs;
 Player player;
 boolean left,right,up,down,space;
 
 PImage[] spriteImages;
+PGraphics gif;
 void setup(){
   fill(255);
   size(800,600);
+  gameState = "START";
+  PImage cat1 = loadImage("Cat1.png");
+  player = new Player(false,cat1,width/2+100,height-150,100,100);
+  obs = new Obstacle(300,460,200,200,"safe",null);
+  buttonInit();
   //The key listener:⬅ ⬆ ➡ ⬇ space
   left = false;
   right = false;
   up = false;
   down = false;
   space = false;
-
-  gameState = "START";
-  PImage cat1 = loadImage("Cat1.png");
-  player = new Player(false,cat1,width/2+100,height-150,100,100);
-  obs = new Obstacle(300,460,200,200,"safe",null);
-  buttonInit();
-  
   //Animation values
-  int frames = 6;
-  spriteImages = new PImage[frames];
-  for (int i = 0; i<frames; i++){
-    spriteImages[i]=loadImage("Images/frame_" + i + ".png");
-  }
 }
 //Change the initial poision in this function
 void buttonListener(){
@@ -99,14 +95,14 @@ void startGame(){
     button.update();
     button.renderButton();
   }
-  player.display();
+  player.renderPlayer();
   buttonListener();
 }
 
 void playGame(){
   player.collisionSide = sideOfCollisions(player,obs);
   player.update();
-  player.display();
+  player.renderPlayer();
   obs.display();
   displayPositionData();
 }

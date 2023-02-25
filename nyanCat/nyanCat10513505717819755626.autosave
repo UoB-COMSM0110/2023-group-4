@@ -13,19 +13,13 @@ boolean left,right,up,down,space;
 
 float obstacleVelocityX;
 //Timer
-final int timeGap = 2000;
+final int timeGap = 1000;
 float oldtime;
 float nowtime;
 float deltatime;
 float timer; 
 
 Boolean paused;
-
-Obstacle initialObs;
-
-//Initial Pos
-float initialX;
-float initialY;
 /*
 Index of Button
 0: Start Button
@@ -49,17 +43,16 @@ void setup(){
   buttonArray = new ArrayList<>();
   obstacleVelocityX = 5.0;
   gameState = "START";
-  initialX = width/2+100;
-  initialY = height-150;
-  player = new Player(false,null,initialX,initialY,100,100,"Images/ratOne/");
+  PImage cat1 = loadImage("Cat1.png");
+  player = new Player(false,cat1,width/2+100,height-150,100,100,"Images/ratOne/");
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
     test[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
   }
   
   PImage obstacle = loadImage("obstacles.png");
-  /*initialObs = new Obstacle(800,460,200,200,"dead",obstacle,obstacleVelocityX);
-  obsList.add(initialObs);*/
+  Obstacle obs = new Obstacle(300,460,200,200,"dead",obstacle,obstacleVelocityX);
+  obsList.add(obs);
   buttonInit();
 }
 //Change the initial poision in this function
@@ -77,12 +70,17 @@ void buttonListener(){
     if(index == 0){
       gameState = "PLAY";
       //Set the initial position of the player
-      reset();
-    }/*else if(index == 1){
+      player.setposX(0);
+      player.setposY((float)height-100);
+    }else if(index == 1){
       gameState = "HELP";
-    }*/else if(index>=1 && index<=4){
+    }else if(index>=2 && index<=5){
       Button button = buttonArray.get(index);
       player = new Player(false,button.getCat(),width/2+100,button.getpos().y,button.getWidth(),button.getHeight(),button.getFilePath());
+    }else if(index == 6){
+      gameState = "PLAY";
+    }else if(index == 7){
+      gameState = "START";
     }
   }
   //Play Menu
@@ -93,9 +91,9 @@ void buttonInit(){
   startButton = new Button(width/2-50,height/3+30,100,50,"Start",0,200,0,null,null,null);
   buttonArray.add(startButton);
   //Help Button
-  /*helpButton = new Button(width/2-50,height/3+90,100,50,"Help",0,200,0,null,null,null);
-  buttonArray.add(helpButton);*/
-  //Four characters*
+  helpButton = new Button(width/2-50,height/3+90,100,50,"Help",0,200,0,null,null,null);
+  buttonArray.add(helpButton);
+  //Four characters
   int frames = 4;
   PImage[] character = new PImage[4];
   for (int i = 0; i<4; i++){
@@ -125,7 +123,7 @@ void buttonInit(){
 }
 void draw(){
   clear();
-  println("GameState: "+ gameState);
+  println("GameState:"+ gameState)
   if(gameState == "START"){
     startGame();
   }else if(gameState == "PLAY"){
@@ -144,7 +142,7 @@ void startGame(){
   textSize(25);
   fill(0,0,0);
   text("Cat adventure",width/2,height/3);
-  for(int i =0;i<5;i++){
+  for(int i =0;i<6;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
@@ -158,15 +156,16 @@ void playGame(){
   player.display();
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
-    Obstacle deadObs = new Obstacle(800,460,50,200,"dead",obstacle,obstacleVelocityX);
+    Obstacle deadObs = new Obstacle(600,460,200,200,"dead",obstacle,obstacleVelocityX);
     obsList.add(deadObs);
     timer = 0;
   }
   //Obstacles Controller
   for(Obstacle obs:obsList){
-    println("posX"+obs.x+"posY"+obs.y);
-    obs.update();
-    obs.display();
+    if(!paused){
+      obs.update();
+      obs.display();
+    }
   }
   displayPositionData();
   //Collission detection
@@ -178,24 +177,17 @@ void playGame(){
   }
   timer += getDeltaTime();
   //Update the status of buttons: Check if it is clicked
+  
 }
 void winGame(){}
 void loseGame(){
   //Stop the game
   loseGamePage();
-  for(int i=5;i<=6;i++){
+  for(int i =6;i<=7;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
-  if(buttonArray.get(5).isClicked()){
-    gameState = "PLAY";
-    reset();
-    buttonArray.get(5).Clicked = false;
-  }else if(buttonArray.get(6).isClicked()){
-    gameState = "START";
-    reset();
-    buttonArray.get(6).Clicked = false;
-  }
+  buttonListener();
 }
 void loseGamePage(){
   //Menu BackGround
@@ -209,23 +201,9 @@ void loseGamePage(){
   textAlign(CENTER);
   fill(0);
   text(text,width/2,y+50);
+  
 }
 void helpMenu(){}
-
-void reset(){
-  if(gameState == "START"){
-    player.setposX(initialX);
-    player.setposY(initialY);
-  }else{
-    player.setposX(0);
-    player.setposY((float)height-100);
-  }
-  obsList = new ArrayList<>();
-  PImage obstacle = loadImage("obstacles.png");
-  for(Button button:buttonArray){
-    button.Clicked = false;
-  }
-}
 
 void clear(){
   fill(255);

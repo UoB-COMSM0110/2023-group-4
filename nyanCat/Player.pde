@@ -8,25 +8,41 @@ class Player{
   float velocityX, velocityY,accX,accY,speedLimit;
   float friction,bounce,gravity;
   boolean isOnGround;
-  float jumpForce;
+  float jumpForce;   
   float halfWidth,halfHeight;
   String collisionSide;
   boolean touched;
   
   //image variables
-  int currentFrame;
+  int walkFrame;
   boolean facingRight;
   int frameSequence;
   int frameOffset;
-  Player(Boolean winLose, PImage img, float posX,float posY,float wid,float hei){
+  //Idle sequence
+  int idleFrame;
+  int idleSequence;
+  //Frame array
+  PImage[] idleImages;
+  PImage[] moveImages;
+
+  //File Path: Save the animation
+  String filePath;
+  int frames;
+  //Time(ms)
+  int timeGap = 500;
+  Player(Boolean winLose, PImage img, float posX,float posY,float wid,float hei,String filePath){
     this.winLose = winLose;
     this.cat = img;
+    //Position
     this.posX = posX;
     this.posY = posY;
+    //Size
     this.Width = wid;
     this.Height = hei;
+    //Veloctiy
     this.velocityX = 0;
     this.velocityY = 0;
+    //Accelaration
     this.accX = 0;
     this.accY = 0;
     this.speedLimit = 5;
@@ -43,13 +59,21 @@ class Player{
     
     halfWidth = wid/2;
     halfHeight = hei/2;
-    
+    //Colisssion detection
     collisionSide = "";
-
-    currentFrame = 0;
+    //Animation
+    //Walk sequence
+    walkFrame = 0;
     facingRight = true;
     frameSequence = 6;//number of frames in each animation sequence
+    //Idle sequence
+    idleFrame = 0;
+    idleSequence = 4;
     frameOffset = 0;
+    //Animation file path
+    this.filePath = filePath;
+    frames = 0;
+    loadFiles();
   }
   void update(){
     //Just call this function in the scenario you want.Hint: in the draw function
@@ -96,10 +120,10 @@ class Player{
       velocityX = 0;
     }
     posX += velocityX;
-    System.out.println(posX+" += "+velocityX);
     posY += velocityY;
     checkBoundaries();
     checkPlatforms();
+    
   }
   void setcat(PImage image){
     cat = image;
@@ -112,16 +136,18 @@ class Player{
     }
   }
   void display(){
-    if (abs(velocityX) > 0) {
-        image(spriteImages[currentFrame+0], posX,posY,Width,Height);
+    if (abs(velocityY) > 0) {
+        image(moveImages[walkFrame+0], posX,posY,Width,Height);
     }else{
-        PImage img = spriteImages[0];
-        image(img,posX,posY,Width,Height);
+        image(idleImages[idleFrame+0], posX,posY,Width,Height);
     }
-    if (isOnGround) {
-      currentFrame = (currentFrame + 1)%frameSequence;
-    } else {
-      currentFrame = 0;
+    //If the frames is 60, 1000/60 = 16 ms. Each frame would run for 16 ms
+    
+     if(millis() % timeGap <= (2000/frameRate)){
+      idleFrame = (idleFrame + 1)%idleSequence;
+      if (!isOnGround) {
+        walkFrame = (walkFrame + 1)%frameSequence;
+      } 
     }
   }
   //Getters
@@ -162,6 +188,27 @@ class Player{
     collisionSide = side;
   }
   
+  void loadFiles(){
+    if(filePath!=null){
+      //Move animation
+      if(filePath.contains("rat")){
+        frames = 4;
+        frameSequence = 4;
+      }else{
+        frames = 6;
+        frameSequence = 6;
+      }
+      moveImages = new PImage[frames];
+      idleImages = new PImage[4];
+      for (int i = 0; i<frames; i++){
+        moveImages[i]=loadImage(filePath+"walk/"+ i + ".png");
+      }
+      //Idle animation
+      for (int i = 0; i<4; i++){
+        idleImages[i]=loadImage(filePath+"Idle/"+ i + ".png");
+      }
+    }
+  }
   
   void checkBoundaries(){
     //Check boundaries
@@ -209,4 +256,5 @@ class Player{
       isOnGround = false;
     }
   }
+
 }

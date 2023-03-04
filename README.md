@@ -28,7 +28,6 @@ Click the image below to watch the video:
 
 
 ##  FIRST MVP
-
 ![ScannerLens 02-23-2023 01 01](https://user-images.githubusercontent.com/44331318/220983668-6b4948b5-81e3-4b02-bea7-e605970594ed.jpg)
 ![ScannerLens 02-23-2023 01 02](https://user-images.githubusercontent.com/44331318/220983695-32932d43-8641-4188-b86b-15758ad5eb7a.jpg)
 ![ScannerLens 02-23-2023 01 03](https://user-images.githubusercontent.com/44331318/220983708-d45beb93-cc5a-4676-b2c6-f7a663d2cbe3.jpg)
@@ -44,7 +43,6 @@ Despite its best efforts, the cat is always defeated by the copycat. But here's 
 Will the cat ever triumph over its relentless nemesis? Or will it be trapped in this endless cycle of defeat and renewal, forced to face its trials time and time again? Join the cat on its journey through life and experience the thrill of the chase in this heart-pounding adventure that will test the limits of your determination and resilience."
 
 ## If you don't want to read the long text up there.
-   (Ignore here if you have read the long introduction! Cogratulations for wasting more time reading 😬)
 - #### The player controls a cat that must navigate through life and overcome various obstacles.
 
 - #### The player must defeat a cunning copycat in order to progress, but the copycat always wins.

@@ -120,13 +120,13 @@ We have meeting at least once a week.
 We update our progress regularly.
 
 Tools we used: 
-1.Trello (Kanban board)-> to record our process;
-2.Google doc to take minutes and note down all the brainstorming;
-3.WhatsApp Group to connect with each other
-4.GitHub README page to updata each other'e thought and modify it at the end
+- #### Trello (Kanban board)-> to record our process;
+- #### Google doc to take minutes and note down all the brainstorming;
+- #### WhatsApp Group to connect with each other
+- #### GitHub README page to updata each other'e thought and modify it at the end
 
 TEAM ROLE:
-(week 7)
+(final decision on week 7)
 
 
 ## 8. Conclusion (10% ~500 words)

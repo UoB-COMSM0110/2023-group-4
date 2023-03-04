@@ -36,7 +36,7 @@ Despite its best efforts, the cat is always defeated by the copycat. But here's 
 
 Will the cat ever triumph over its relentless nemesis? Or will it be trapped in this endless cycle of defeat and renewal, forced to face its trials time and time again? Join the cat on its journey through life and experience the thrill of the chase in this heart-pounding adventure that will test the limits of your determination and resilience."
 
-## If you don't want to read the long text up there.
+## Intro to the game.
 - #### The player controls a cat that must navigate through life and overcome various obstacles.
 
 - #### The player must defeat a cunning copycat in order to progress, but the copycat always wins.

@@ -97,32 +97,3 @@ Once we were satisfied with our concept, we moved on to creating a paper prototy
 Finally, we considered the timeline for the project and any details that needed to be addressed, such as the art style and sound effects. By this stage, we had a general idea of what we wanted to achieve and were able to focus on bringing the game to life.
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players. (445 words)
 
-## Meeting Minutes (Week 4 - 2023. 2.13)
-
-
-Nayn Cat T-Rex Game
-- jumping over other cats/obstacles
-- asteroids flying in the air also have to be avoided
-- after a certain distance Nyan Cat has to battle the Copy Cat
-- if you defeat Copy Cat you gain a power up so you can jump higher
-- After the first boss the obstacles move faster towards Nyan Cat
-- after a certain distance Nyan Cat has to battle the Copy Cat
-- Try to quite the game but the game does not allow you to end the session. Ending the game requires three attempts
-
-
-Challenges:
-- animating the characters
-- Creating the fake “quit” scenario
-- Global leader board?
-
-
-How to Get a Working Prototype by the end of reading week
-- Code for jumping game
-  https://editor.p5js.org/elias1233official/sketches/ZYE6yuzxK
-- Place player with GIF of Nyan cat
-- Randomized cat images from library replace the rectangle obstacles
-- Moving background
-- Programming interaction with the Copy Cat
-- Quit button functionality
-- Global leader board
-

@@ -5,7 +5,6 @@
 ![Group4](https://user-images.githubusercontent.com/115186584/215521710-d9c85960-1257-4b2b-a89c-cf05d7b6ae0a.jpeg)
 
 
-
 ## Team Members
 
 | Name         | Email                 | Vote 2 games (for week 2)             |
@@ -34,40 +33,6 @@ Click the image below to watch the video:
 ![ScannerLens 02-23-2023 01 02](https://user-images.githubusercontent.com/44331318/220983695-32932d43-8641-4188-b86b-15758ad5eb7a.jpg)
 ![ScannerLens 02-23-2023 01 03](https://user-images.githubusercontent.com/44331318/220983708-d45beb93-cc5a-4676-b2c6-f7a663d2cbe3.jpg)
 ![ScannerLens 02-23-2023 01 04](https://user-images.githubusercontent.com/44331318/220983724-464cc535-f843-42a4-b817-813f72d87de3.jpg)
-
-  
-## OUR CHARACTERS
-
-## Emo cat (Level 1 🌟)
-<img width="186" alt="stand-cat cry" src="https://user-images.githubusercontent.com/115186584/217028981-de10ba55-9107-4ad0-b2b2-8b50d7bc3cce.png">
-
-## Long leg cat (Level 2 🌟🌟)
-![cat 2 ](https://user-images.githubusercontent.com/115186584/217029414-80794935-246e-4ef8-b8d1-403b8156ed69.png)
-  
-## Rich cat (level 3 🌟🌟🌟)
-![cat 1](https://user-images.githubusercontent.com/115186584/217029194-13f6f8ac-93a4-4b07-b054-d735f799d25b.png)
-
-## Gangster cat (level 4 🌟🌟🌟🌟)
-<img width="221" alt="cat 5" src="https://user-images.githubusercontent.com/115186584/217029019-607c7f5a-07dd-4066-b45a-254968ba5da8.png">
-
-## Secret character: 🔪 c**y c*t 🔪(Someone who will steal your life 🤫)
-<img width="478" alt="IMG_2956" src="https://user-images.githubusercontent.com/115186584/217626956-7ec1afd9-0eea-438b-940d-809c7826bc2c.PNG">
-
-## Team Goal
-Ambitious to make a great game.
-
-## Proposed Game List （for week 1）
-- T-REX game
-- Nyan Cat（might be the one we want to make
-- Candy crush
-- [T-Rex Game by Google](https://trex-runner.com/)
-- baba is you 
-- snake game
-- ballon game 
-- super Mareo
-- flappy bird (jump games)
-- flappy 48
-
 
 ##  DESIGN OF THE GAME (INTRODUCTION)
 "In a world full of challenges and obstacles, one brave cat must journey through life to reach its ultimate goal. Armed with agility and quick reflexes, the cat must leap and dodge its way through the trials and tribulations of existence. From navigating the twists and turns of daily life to overcoming the unexpected twists and turns of fate, this cat will stop at nothing to reach its destiny.

@@ -245,7 +245,7 @@ void reset(){
   if(gameState == "START"){
     player.setposX(initialX);
     player.setposY(initialY);
-  }else{
+  }else{//gameState  is "Play"
     player.setposX(0);
     player.setposY((float)height-100);
   }
@@ -360,6 +360,7 @@ void keyPressed() {
     space = true;
     break;
   }
+
 }
 void keyReleased() {
   switch (keyCode) {

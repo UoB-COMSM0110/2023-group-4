@@ -225,10 +225,10 @@ class Player{
       posY = 0;
     }
     //Below
-    if (posY + Height > height){
+    if (posY + Height > height-100){
       isOnGround = true;
       velocityY = 0;
-      posY = height - Height;
+      posY = height - Height-100;
     }
   }
 
@@ -252,7 +252,6 @@ class Player{
       touched = false;
     }
     if (collisionSide != "bottom" && velocityY > 0) {
-      println("velocityY:"+velocityY);
       isOnGround = false;
     }
   }

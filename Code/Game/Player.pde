@@ -225,10 +225,10 @@ class Player{
       posY = 0;
     }
     //Below
-    if (posY + Height > height){
+    if (posY + Height > height-58){
       isOnGround = true;
       velocityY = 0;
-      posY = height - Height;
+      posY = height - Height-58;
     }
   }
 

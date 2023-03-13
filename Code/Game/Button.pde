@@ -5,6 +5,7 @@ class Button{
   float Height = 0;
   //Colour
   color Colour;
+  color TextColor;
   String text;
   Boolean Pressed = false;
   Boolean Clicked = false;
@@ -20,13 +21,14 @@ class Button{
 
   int timeGap = 500;
   //Constructor 
-  Button(int posX,int posY,int wid,int hei, String text,int red,int green,int blue,String spritePath,PImage img,PImage[] animation){
+  Button(int posX,int posY,int wid,int hei, String text,int red,int green,int blue,String spritePath,PImage img,PImage[] animation, int tRed,int tGreen,int tBlue){
     pos.x = posX;
     pos.y = posY;
     this.Width = wid;
     this.Height = hei;
     this.text = text;
     this.Colour = color(red,green,blue);
+    this.TextColor = color(tRed,tGreen,tBlue);
     this.Image = img;
     anim = new PImage[4];
     if(animation!=null){
@@ -66,9 +68,10 @@ class Button{
     }
     else{
       //Text
+      textSize(25);
       fill(Colour);
       rect(pos.x,pos.y,Width,Height);
-      fill(0);
+      fill(TextColor);
       textAlign(CENTER,CENTER);
       text(text,pos.x+(Width/2),pos.y+(Height/2));
   }

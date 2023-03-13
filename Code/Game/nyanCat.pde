@@ -173,7 +173,7 @@ void playGame(){
     score = score +20;
     println("jump good\n");
     // Jump was successful
-    System.out
+    
   }}*/
   ///////
    //Generate a seed value based on the current system time, thread ID, and memory address

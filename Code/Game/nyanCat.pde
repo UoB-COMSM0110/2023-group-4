@@ -14,7 +14,7 @@ boolean left,right,up,down,space;
 
 float obstacleVelocityX;
 //Timer
-int timeGap;
+int timeGap = 2000;
 float oldtime;
 float nowtime;
 float deltatime;
@@ -37,8 +37,9 @@ Index of Button
 7: Lose Menu---Quit Button
 */ 
 void setup(){
-  fill(255);
-  size(800,600);
+  size(1000,366);
+  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  background(bg);
   
   //The key listener:⬅ ⬆ ➡ ⬇ space
   left = false;
@@ -52,7 +53,7 @@ void setup(){
   obstacleVelocityX = 5.0;
   gameState = "START";
   initialX = width/2+100;
-  initialY = height-150;
+  initialY = height-158;
   player = new Player(false,null,initialX,initialY,100,100,"Images/ratOne/");
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
@@ -92,7 +93,7 @@ void buttonListener(){
 //If you want ot create new buttons, Put them into buttonArray
 void buttonInit(){
   //Start Button
-  startButton = new Button(width/2-50,height/3+30,100,50,"Start",0,200,0,null,null,null);
+  startButton = new Button(width/2-50,height/3+30,100,50,"Start",0,200,0,null,null,null,0,0,0);
   buttonArray.add(startButton);
   //Help Button
   /*helpButton = new Button(width/2-50,height/3+90,100,50,"Help",0,200,0,null,null,null);
@@ -103,26 +104,26 @@ void buttonInit(){
   for (int i = 0; i<4; i++){
     character[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
   }
-  chaOne = new Button(0,height-150,100,100,null,0,200,0,"Images/ratOne/",null,character);
+  chaOne = new Button(0,height-158,100,100,null,0,200,0,"Images/ratOne/",null,character,0,0,0);
   buttonArray.add(chaOne);
   for (int i = 0; i<frames; i++){
     character[i]=loadImage("Images/ratTwo/Idle/" + i + ".png");
   }
-  chaTwo = new Button(100,height-150,100,100,null,0,200,0,"Images/ratTwo/",null,character);
+  chaTwo = new Button(100,height-158,100,100,null,0,200,0,"Images/ratTwo/",null,character,0,0,0);
   buttonArray.add(chaTwo);
   for (int i = 0; i<frames; i++){
     character[i]=loadImage("Images/catOne/Idle/" + i + ".png");
   }
-  chaThree = new Button(200,height-150,100,100,null,0,200,0,"Images/catOne/",null,character);
+  chaThree = new Button(200,height-158,100,100,null,0,200,0,"Images/catOne/",null,character,0,0,0);
   buttonArray.add(chaThree);
    for (int i = 0; i<frames; i++){
     character[i]=loadImage("Images/catTwo/Idle/" + i + ".png");
   }
-  chaFour = new Button(300,height-150,100,100,null,0,200,0,"Images/catTwo/",null,character);
+  chaFour = new Button(300,height-158,100,100,null,0,200,0,"Images/catTwo/",null,character,0,0,0);
   buttonArray.add(chaFour);
-  Button restartButton = new Button(width/2-150,height/3+90,100,100,"Start\nagain",0,200,0,null,null,null);
+  Button restartButton = new Button(width/2-130,height/3+20,260,50,"Play Again",149,75,12,null,null,null,225,225,225);
   buttonArray.add(restartButton);
-  Button quitButton = new Button(width/2,height/3+90,100,100,"Quit",0,200,0,null,null,null);
+  Button quitButton = new Button(width/2-130,height/3+80,260,50,"Quit",149,75,12,null,null,null,225,225,225);
   buttonArray.add(quitButton);
 }
 void draw(){
@@ -142,6 +143,8 @@ void draw(){
 }
 
 void startGame(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  background(bg);
   textAlign(CENTER);
   textSize(25);
   fill(0,0,0);
@@ -155,6 +158,8 @@ void startGame(){
 }
 
 void playGame(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  background(bg);
   //Player Controller
   player.update();
   player.display();
@@ -176,9 +181,10 @@ void playGame(){
    // Print the time gap
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
-    Obstacle deadObs = new Obstacle(800,460,50,200,"dead",obstacle,obstacleVelocityX);
+    Obstacle deadObs = new Obstacle(1000,236,73,80,"dead",obstacle,obstacleVelocityX);
     obsList.add(deadObs);
     timer = 0;
+    timeGap = (int) random(1000, 3001);
   }
   //Obstacles Controller
   for(Obstacle obs:obsList){
@@ -218,17 +224,21 @@ void loseGame(){
   }
 }
 void loseGamePage(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  background(bg);
   //Menu BackGround
-  int menuW = 300;
-  int menuH = 300;
-  String text = "GAME OVER!";
+  int menuW = 400;
+  int menuH = 230;
+  String text = "GAME OVER";
   int x = (width-menuW)/2;
-  int y = (height-menuH)/2;
-  fill(255);
+  int y = (height-menuH)/2-30;
+  fill(149,75,12);
+  noStroke();
   rect(x,y,menuW,menuH);
+  textSize(60);
   textAlign(CENTER);
-  fill(0);
-  text(text,width/2,y+50);
+  fill(238,175,54);
+  text(text,width/2,y+70);
 }
 void helpMenu(){}
 

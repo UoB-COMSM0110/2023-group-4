@@ -13,11 +13,12 @@ boolean left,right,up,down,space;
 
 float obstacleVelocityX;
 //Timer
-final int timeGap = 2000;
+int timeGap;
 float oldtime;
 float nowtime;
 float deltatime;
 float timer; 
+int score = 0;
 
 Boolean paused;
 
@@ -125,7 +126,7 @@ void buttonInit(){
 }
 void draw(){
   clear();
-  println("GameState: "+ gameState);
+  //println("GameState: "+ gameState);
   if(gameState == "START"){
     startGame();
   }else if(gameState == "PLAY"){
@@ -156,6 +157,33 @@ void playGame(){
   //Player Controller
   player.update();
   player.display();
+  //////DOING SCORE
+   // Track player's y position before jump
+  //float prevPosy = player.getPosY();
+  /*println(player.getPosY());
+  
+  // Check if player jumps
+  if (keyCode==UP && player.getPosY() != 500) { 
+    println("juuuuump");
+  // Track player's y position after jump
+  //float currentPosy = player.getPosY();
+  // Check if the jump was successful (i.e. player's y position increased)
+  println(player.getPosY());
+   if (player.getPosY() == 500){
+    score = score +20;
+    println("jump good\n");
+    // Jump was successful
+    
+  }}*/
+  ///////
+   //Generate a seed value based on the current system time, thread ID, and memory address
+   long seed = System.currentTimeMillis() + Thread.currentThread().getId() + System.identityHashCode(this);
+   // Set the seed value for the random number generator
+   randomSeed(seed);
+   // Generate a random number between 1300 and 2500 milliseconds
+   timeGap = (int) random(1300, 2500);
+   // Print the time gap
+   System.out.println("Time gap: " + timeGap);
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
     Obstacle deadObs = new Obstacle(800,460,50,200,"dead",obstacle,obstacleVelocityX);
@@ -165,6 +193,7 @@ void playGame(){
   //Obstacles Controller
   for(Obstacle obs:obsList){
     println("posX"+obs.x+"posY"+obs.y);
+
     obs.update();
     obs.display();
   }
@@ -237,6 +266,10 @@ void displayPositionData() {
   String s = "\nvx: "+player.getVelocityX()+"  vy: "+player.getVelocityY() + 
     "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.getPosX()+"  posY: "+player.getPosY();
   text(s, 150, 50);
+  // Display score
+  textSize(32);
+  fill(0);
+  text("Score: " + score, 600, 30);
 }
 
 String sideOfCollisions(Player player,Obstacle obstacle){

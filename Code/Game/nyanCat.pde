@@ -5,6 +5,7 @@ Button chaOne;
 Button chaTwo;
 Button chaThree;
 Button chaFour;
+float belowBoundary = height - 110;
 ArrayList<Button> buttonArray;
 //ArrayList of Obstacle
 ArrayList<Obstacle> obsList;
@@ -158,24 +159,14 @@ void playGame(){
   player.update();
   player.display();
   //////DOING SCORE
-   // Track player's y position before jump
-  //float prevPosy = player.getPosY();
-  /*println(player.getPosY());
-  
-  // Check if player jumps
-  if (keyCode==UP && player.getPosY() != 500) { 
-    println("juuuuump");
-  // Track player's y position after jump
-  //float currentPosy = player.getPosY();
+  if (player.getPosY() < 400) { 
   // Check if the jump was successful (i.e. player's y position increased)
-  println(player.getPosY());
-   if (player.getPosY() == 500){
+   if (player.getPosY() > belowBoundary){
     score = score +20;
     println("jump good\n");
     // Jump was successful
-    
-  }}*/
-  ///////
+  }
+}
    //Generate a seed value based on the current system time, thread ID, and memory address
    long seed = System.currentTimeMillis() + Thread.currentThread().getId() + System.identityHashCode(this);
    // Set the seed value for the random number generator
@@ -183,7 +174,6 @@ void playGame(){
    // Generate a random number between 1300 and 2500 milliseconds
    timeGap = (int) random(1300, 2500);
    // Print the time gap
-   System.out.println("Time gap: " + timeGap);
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
     Obstacle deadObs = new Obstacle(800,460,50,200,"dead",obstacle,obstacleVelocityX);
@@ -192,13 +182,14 @@ void playGame(){
   }
   //Obstacles Controller
   for(Obstacle obs:obsList){
-    println("posX"+obs.x+"posY"+obs.y);
-
+    //println("posX"+obs.x+"posY"+obs.y);
     obs.update();
     obs.display();
   }
   displayPositionData();
   //Collission detection
+  // Check if player jumps
+  
   for(Obstacle obs:obsList){
    player.collisionSide = sideOfCollisions(player,obs);
    if(player.collisionSide!="none"){
@@ -249,6 +240,7 @@ void reset(){
     player.setposX(0);
     player.setposY((float)height-100);
   }
+    score = 0;
   obsList = new ArrayList<>();
   PImage obstacle = loadImage("obstacles.png");
   for(Button button:buttonArray){

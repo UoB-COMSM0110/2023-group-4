@@ -5,12 +5,18 @@ Button chaOne;
 Button chaTwo;
 Button chaThree;
 Button chaFour;
+
+Button normal;
+Button hard;
 float belowBoundary = height - 110;
 ArrayList<Button> buttonArray;
 //ArrayList of Obstacle
 ArrayList<Obstacle> obsList;
 Player player;
 boolean left,right,up,down,space;
+Enemy copyCat;
+
+String difficulty;
 
 float obstacleVelocityX;
 //Timer
@@ -22,6 +28,7 @@ float timer;
 int score = 0;
 
 Boolean paused;
+Boolean appear;
 
 Obstacle initialObs;
 
@@ -38,7 +45,8 @@ Index of Button
 */ 
 void setup(){
   size(1000,366);
-  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   
   //The key listener:⬅ ⬆ ➡ ⬇ space
@@ -48,6 +56,7 @@ void setup(){
   down = false;
   space = false;
   paused = false;
+  appear = false;
   obsList = new ArrayList<>();
   buttonArray = new ArrayList<>();
   obstacleVelocityX = 5.0;
@@ -55,14 +64,13 @@ void setup(){
   initialX = width/2+100;
   initialY = height-158;
   player = new Player(false,null,initialX,initialY,100,100,"Images/ratOne/");
+  copyCat = new Enemy(width,player.getLowBoundary());
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
     test[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
   }
   
   PImage obstacle = loadImage("obstacles.png");
-  /*initialObs = new Obstacle(800,460,200,200,"dead",obstacle,obstacleVelocityX);
-  obsList.add(initialObs);*/
   buttonInit();
 }
 //Change the initial poision in this function
@@ -71,19 +79,16 @@ void buttonListener(){
   for(Button button:buttonArray){
     if(button.isClicked()){
       index = buttonArray.indexOf(button);
-      println(index);
     }
   }
   //Start Menu
   if(index > -1){
     //Change the game state according to the index:0:startButton 1:helpButton 2-5:car 1-4
     if(index == 0){
-      gameState = "PLAY";
+      gameState = "Choose";
       //Set the initial position of the player
       reset();
-    }/*else if(index == 1){
-      gameState = "HELP";
-    }*/else if(index>=1 && index<=4){
+    }else if(index>=1 && index<=4){
       Button button = buttonArray.get(index);
       player = new Player(false,button.getCat(),width/2+100,button.getpos().y,button.getWidth(),button.getHeight(),button.getFilePath());
     }
@@ -121,17 +126,26 @@ void buttonInit(){
   }
   chaFour = new Button(300,height-158,100,100,null,0,200,0,"Images/catTwo/",null,character,0,0,0);
   buttonArray.add(chaFour);
+  //Restar quit button
   Button restartButton = new Button(width/2-130,height/3+20,260,50,"Play Again",149,75,12,null,null,null,225,225,225);
   buttonArray.add(restartButton);
   Button quitButton = new Button(width/2-130,height/3+80,260,50,"Quit",149,75,12,null,null,null,225,225,225);
   buttonArray.add(quitButton);
+
+  normal = new Button(width/2-50,height/3-20,100,50,"Normal",0,200,0,null,null,null,0,0,0);
+  buttonArray.add(normal);
+  hard = new Button(width/2-50,height/3+90,100,50,"Hard",0,200,0,null,null,null,0,0,0);
+  buttonArray.add(hard);
 }
 void draw(){
   clear();
   //println("GameState: "+ gameState);
   if(gameState == "START"){
     startGame();
-  }else if(gameState == "PLAY"){
+  }else if (gameState == "Choose"){
+    difficultyChose();
+  }
+  else if(gameState == "PLAY"){
     playGame();
   }else if(gameState == "WIN"){
     winGame();
@@ -143,12 +157,14 @@ void draw(){
 }
 
 void startGame(){
-  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   textAlign(CENTER);
   textSize(25);
   fill(0,0,0);
   text("Cat adventure",width/2,height/3);
+  text("Click to choose the character",width/2-300,height/2);
   for(int i =0;i<5;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
@@ -157,21 +173,52 @@ void startGame(){
   buttonListener();
 }
 
+void difficultyChose(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(0,0,0);
+  text("Difficulty",width/2,height/4-30);
+  for(int i=7;i<=8;i++){
+    buttonArray.get(i).update();
+    buttonArray.get(i).renderButton();
+  }
+  if(normal.isClicked()){
+    difficulty = "NORMAL";
+    gameState = "PLAY";
+  }else if(hard.isClicked()){
+    difficulty = "HARD";
+    //Change the speed of the obstacle 
+    obstacleVelocityX = obstacleVelocityX * 1.3;
+    //Or you can change the frequency of the obstacles
+    //timeGap = timeGap * 0.8; or what eles you want
+    gameState = "PLAY";
+  }
+}
+
 void playGame(){
-  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+ // PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   //Player Controller
   player.update();
   player.display();
+  //Enemy controller
+  //You want to make the copyCat appear just change the paramater appear
+  if(appear){
+    copyCat.update();
+    copyCat.display();
+  }
   //////DOING SCORE
   if (player.getPosY() < 400) { 
   // Check if the jump was successful (i.e. player's y position increased)
-   if (player.getPosY() > belowBoundary){
-    score = score +20;
-    println("jump good\n");
-    // Jump was successful
+      if (player.getPosY() > belowBoundary){
+        score = score +20;
+        println("jump good\n");
+        // Jump was successful
+      }
   }
-}
    //Generate a seed value based on the current system time, thread ID, and memory address
    long seed = System.currentTimeMillis() + Thread.currentThread().getId() + System.identityHashCode(this);
    // Set the seed value for the random number generator
@@ -188,19 +235,25 @@ void playGame(){
   }
   //Obstacles Controller
   for(Obstacle obs:obsList){
-    //println("posX"+obs.x+"posY"+obs.y);
     obs.update();
     obs.display();
   }
   displayPositionData();
   //Collission detection
-  // Check if player jumps
-  
   for(Obstacle obs:obsList){
-   player.collisionSide = sideOfCollisions(player,obs);
-   if(player.collisionSide!="none"){
-     gameState = "LOSE";
+   if(collisionDetection(player,obs)){
+      gameState = "LOSE";
    }
+  }
+  //CopyCat collision detection
+  player.collisionSide = collisionsPVE(player,copyCat);
+  if(player.collisionSide!="none"&&copyCat.dead == false){
+    if(player.collisionSide == "top"||player.collisionSide == "bottom"){
+      //Remove the coptCat
+      copyCat.deadJump();
+    }else{
+      gameState = "LOSE";
+    }
   }
   timer += getDeltaTime();
   //Update the status of buttons: Check if it is clicked
@@ -224,7 +277,8 @@ void loseGame(){
   }
 }
 void loseGamePage(){
-  PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   //Menu BackGround
   int menuW = 400;
@@ -256,6 +310,7 @@ void reset(){
   for(Button button:buttonArray){
     button.Clicked = false;
   }
+  copyCat.setX(width);
 }
 
 void clear(){
@@ -273,8 +328,27 @@ void displayPositionData() {
   fill(0);
   text("Score: " + score, 600, 30);
 }
+boolean collisionDetection(Player player, Obstacle obs) {
+    ////r1 is the player
+  ////r2 is the enemy
 
-String sideOfCollisions(Player player,Obstacle obstacle){
+  float dx = (player.getPosX()+player.getWidth()/2) - (obs.x+obs.w/2);
+  float dy = (player.getPosY()+player.getHeight()/2) - (obs.y+obs.h/2);
+
+  float combinedHalfWidths = player.halfWidth + obs.halfWidth-50;
+  float combinedHalfHeights = player.halfHeight + obs.halfHeight-50;
+
+  if (abs(dx) < combinedHalfWidths) {
+    ////collision has happened on the x axis
+    ////now check on the y axis
+    if (abs(dy) < combinedHalfHeights) {
+      ////collision detected
+      return true;
+    }
+  }
+  return false;
+}
+String collisionsPVE(Player player,Enemy copyCat){
   ////r1 is the player
   ////r2 is the platform rectangle
   ////function returns the String collisionSide
@@ -285,11 +359,11 @@ String sideOfCollisions(Player player,Obstacle obstacle){
   float posX = player.getPosX();
   if (player.getVelocityY() < 0) { return "none"; }
 
-  float dx = (player.getPosX()+player.getWidth()/2) - (obstacle.x+obstacle.w/2);
-  float dy = (player.getPosY()+player.getHeight()/2) - (obstacle.y+obstacle.h/2);
+  float dx = (player.getPosX()+player.getWidth()/2) - (copyCat.x+copyCat.w/2);
+  float dy = (player.getPosY()+player.getHeight()/2) - (copyCat.y+copyCat.h/2);
 
-  float combinedHalfWidths =player.halfWidth + obstacle.halfWidth;
-  float combinedHalfHeights = player.halfHeight + obstacle.halfHeight;
+  float combinedHalfWidths =player.halfWidth + copyCat.halfWidth;
+  float combinedHalfHeights = player.halfHeight + copyCat.halfHeight;
 
   if (abs(dx) < combinedHalfWidths) {
     ////collision has happened on the x axis
@@ -306,22 +380,22 @@ String sideOfCollisions(Player player,Obstacle obstacle){
           ////move the rectangle back to eliminate overlap
           ////before calling its display to prevent
           ////drawing object inside each other
-          posY += overlapY;
-          player.setposY(posY);
+          /*posY += overlapY;
+          player.setposY(posY);*/
           return "top";
         } else {
-          posY -= overlapY;
-          player.setposY(posY);
+          /*posY -= overlapY;
+          player.setposY(posY);*/
           return "bottom";
         }
       } else {
         if (dx > 0) {
-          posX += overlapX;
-          player.setposX(posX);
+         /* posX += overlapX;
+          player.setposX(posX);*/
           return "left";
         } else {
-          posX -= overlapX;
-          player.setposX(posX);
+         /* posX -= overlapX;
+          player.setposX(posX);*/
           return "right";
         }
       }
@@ -344,12 +418,12 @@ float getDeltaTime()
 //Keyboard monitor
 void keyPressed() {
   switch (keyCode) {
-  /*case 37://left
+  case 37://left
     left = true;
     break;
   case 39://right
     right = true;
-    break;*/
+    break;
   case 38://up
     if(!paused){
     up = true;
@@ -366,12 +440,12 @@ void keyPressed() {
 }
 void keyReleased() {
   switch (keyCode) {
-  /*case 37://left
+  case 37://left
     left = false;
     break;
   case 39://right
     right = false;
-    break;*/
+    break;
   case 38://up
     up = false;
     break;

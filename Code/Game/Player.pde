@@ -12,6 +12,8 @@ class Player{
   float halfWidth,halfHeight;
   String collisionSide;
   boolean touched;
+
+  float lowBoundary;
   
   //image variables
   int walkFrame;
@@ -36,6 +38,7 @@ class Player{
     //Position
     this.posX = posX;
     this.posY = posY;
+    this.lowBoundary = height-58;
     //Size
     this.Width = wid;
     this.Height = hei;
@@ -172,6 +175,9 @@ class Player{
   public float getHeight(){
     return this.Height;
   }
+  public float getLowBoundary(){
+    return lowBoundary;
+  }
   public void setJumpForce(float force){
     this.jumpForce = force;
   }
@@ -187,6 +193,7 @@ class Player{
   public void setCollisionSide(String side){
     collisionSide = side;
   }
+  
   
   void loadFiles(){
     if(filePath!=null){
@@ -225,10 +232,10 @@ class Player{
       posY = 0;
     }
     //Below
-    if (posY + Height > height-58){
+    if (posY + Height > lowBoundary){
       isOnGround = true;
       velocityY = 0;
-      posY = height - Height-58;
+      posY = lowBoundary- Height;
     }
   }
 

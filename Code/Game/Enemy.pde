@@ -7,8 +7,8 @@ class Enemy{
   float leftEdge, rightEdge, ground;
 
   //world variables
-  float friction, bounce, gravity;
-
+  float gravity;
+ 
   //boolean isOnGround;
   //float jumpForce;
 
@@ -17,7 +17,6 @@ class Enemy{
 
   //image variables
   int currentFrame;
-  boolean facingRight;
   int frameSequence;
   int frameOffset;
 
@@ -45,7 +44,6 @@ class Enemy{
     gravity = .3;
     //collisionSide = "";
     currentFrame = 0;
-    facingRight = true;
     frameSequence = 6;//number of frames in each animation sequence
     frameOffset = 0;
 

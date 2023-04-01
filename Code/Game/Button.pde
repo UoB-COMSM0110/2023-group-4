@@ -13,7 +13,6 @@ class Button{
 
   //image variables
   int currentFrame;
-  boolean facingRight;
   int frameSequence;
   PImage[] anim;
   //The file path for characters: Image/catOne  Image/catTwo
@@ -37,7 +36,6 @@ class Button{
       }
     }
     currentFrame = 0;
-    facingRight = true;
     frameSequence = 4;
     
     filePath = spritePath;

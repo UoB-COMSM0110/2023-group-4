@@ -13,7 +13,7 @@ ArrayList<Button> buttonArray;
 //ArrayList of Obstacle
 ArrayList<Obstacle> obsList;
 Player player;
-boolean left,right,up,down,space;
+boolean left,right,up,down;
 Enemy copyCat;
 
 String difficulty;
@@ -29,10 +29,6 @@ int score = 0;
 
 Boolean paused;
 Boolean appear;
-
-Obstacle initialObs;
-
-//Initial Pos
 float initialX;
 float initialY;
 /*
@@ -49,12 +45,11 @@ void setup(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   
-  //The key listener:⬅ ⬆ ➡ ⬇ space
+  //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
   right = false;
   up = false;
   down = false;
-  space = false;
   paused = false;
   appear = false;
   obsList = new ArrayList<>();
@@ -64,7 +59,7 @@ void setup(){
   initialX = width/2+100;
   initialY = height-158;
   player = new Player(false,null,initialX,initialY,100,100,"Images/ratOne/");
-  copyCat = new Enemy(width,player.getLowBoundary());
+  copyCat = new Enemy(width,player.lowBoundary);
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
     test[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
@@ -211,9 +206,9 @@ void playGame(){
     copyCat.display();
   }
   //////DOING SCORE
-  if (player.getPosY() < 400) { 
+  if (player.posY < 400) { 
   // Check if the jump was successful (i.e. player's y position increased)
-      if (player.getPosY() > belowBoundary){
+      if (player.posY > belowBoundary){
         score = score +20;
         println("jump good\n");
         // Jump was successful
@@ -228,7 +223,7 @@ void playGame(){
    // Print the time gap
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
-    Obstacle deadObs = new Obstacle(1000,236,73,80,"dead",obstacle,obstacleVelocityX);
+    Obstacle deadObs = new Obstacle(1000,236,73,80,obstacle,obstacleVelocityX);
     obsList.add(deadObs);
     timer = 0;
     timeGap = (int) random(1000, 3001);
@@ -320,8 +315,8 @@ void clear(){
 
 void displayPositionData() {
   fill(0);
-  String s = "\nvx: "+player.getVelocityX()+"  vy: "+player.getVelocityY() + 
-    "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.getPosX()+"  posY: "+player.getPosY();
+  String s = "\nvx: "+player.velocityX+"  vy: "+player.velocityY + 
+    "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
   text(s, 150, 50);
   // Display score
   textSize(32);
@@ -332,8 +327,8 @@ boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player
   ////r2 is the enemy
 
-  float dx = (player.getPosX()+player.getWidth()/2) - (obs.x+obs.w/2);
-  float dy = (player.getPosY()+player.getHeight()/2) - (obs.y+obs.h/2);
+  float dx = (player.posX+player.Width/2) - (obs.x+obs.w/2);
+  float dy = (player.posY+player.Height/2) - (obs.y+obs.h/2);
 
   float combinedHalfWidths = player.halfWidth + obs.halfWidth-50;
   float combinedHalfHeights = player.halfHeight + obs.halfHeight-50;
@@ -355,12 +350,12 @@ String collisionsPVE(Player player,Enemy copyCat){
 
   //allow unicorn to pass through platforms.
   //Disable if you want unicorn to bounce off bottom of platforms
-  float posY = player.getPosY();
-  float posX = player.getPosX();
-  if (player.getVelocityY() < 0) { return "none"; }
+  float posY = player.posY;
+  float posX = player.posX;
+  if (player.velocityY < 0) { return "none"; }
 
-  float dx = (player.getPosX()+player.getWidth()/2) - (copyCat.x+copyCat.w/2);
-  float dy = (player.getPosY()+player.getHeight()/2) - (copyCat.y+copyCat.h/2);
+  float dx = (player.posX+player.Width/2) - (copyCat.x+copyCat.w/2);
+  float dy = (player.posY+player.Height/2) - (copyCat.y+copyCat.h/2);
 
   float combinedHalfWidths =player.halfWidth + copyCat.halfWidth;
   float combinedHalfHeights = player.halfHeight + copyCat.halfHeight;
@@ -432,9 +427,6 @@ void keyPressed() {
   case 40://down
     down = true;
     break;
-  case 32: //space
-    space = true;
-    break;
   }
 
 }
@@ -451,9 +443,6 @@ void keyReleased() {
     break;
   case 40://down
     down = false;
-    break;
-  case 32: //space
-    space = false;
     break;
   }
 }

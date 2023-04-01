@@ -6,7 +6,7 @@ class Player{
   float Height;
   //Move Function
   float velocityX, velocityY,accX,accY,speedLimit;
-  float friction,bounce,gravity;
+  float friction,gravity;
   boolean isOnGround;
   float jumpForce;   
   float halfWidth,halfHeight;
@@ -17,7 +17,6 @@ class Player{
   
   //image variables
   int walkFrame;
-  boolean facingRight;
   int frameSequence;
   int frameOffset;
   //Idle sequence
@@ -57,7 +56,6 @@ class Player{
     this.jumpForce = -11;
     //world values
     friction = 0.96;
-    bounce = -0.7;
     gravity = .3;
     
     halfWidth = wid/2;
@@ -67,7 +65,6 @@ class Player{
     //Animation
     //Walk sequence
     walkFrame = 0;
-    facingRight = true;
     frameSequence = 6;//number of frames in each animation sequence
     //Idle sequence
     idleFrame = 0;
@@ -152,31 +149,6 @@ class Player{
         walkFrame = (walkFrame + 1)%frameSequence;
       } 
     }
-  }
-  //Getters
-  public float getVelocityX(){
-    return this.velocityX;
-  }
-   public float getVelocityY(){
-    return this.velocityY;
-  }
-  public float getBounce(){
-    return this.bounce;
-  }
-  public float getPosX(){
-    return this.posX;
-  }
-  public float getPosY(){
-    return this.posY;
-  }
-  public float getWidth(){
-    return this.Width;
-  }
-  public float getHeight(){
-    return this.Height;
-  }
-  public float getLowBoundary(){
-    return lowBoundary;
   }
   public void setJumpForce(float force){
     this.jumpForce = force;

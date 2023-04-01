@@ -1,16 +1,14 @@
 class Obstacle{
   float w,h,x,y; //Width Hieght posX posY
-  String typeof;
   float halfWidth, halfHeight;
   float velocityX;
   PImage img;
 
-  Obstacle(float _x, float _y, float _w, float _h, String _typeof,PImage img,float velocityX){
+  Obstacle(float _x, float _y, float _w, float _h,PImage img,float velocityX){
     w = _w;
     h = _h;
     x = _x;
     y = _y;
-    typeof = _typeof;
     this.img = img;
 
     halfWidth = w/2;

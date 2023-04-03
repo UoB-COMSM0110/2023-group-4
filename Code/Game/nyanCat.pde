@@ -5,6 +5,7 @@ Button chaOne;
 Button chaTwo;
 Button chaThree;
 Button chaFour;
+Button confirmButton;
 
 Button normal;
 Button hard;
@@ -56,9 +57,9 @@ void setup(){
   buttonArray = new ArrayList<>();
   obstacleVelocityX = 10.0;
   gameState = "START";
-  initialX = width/2+100;
-  initialY = height-158;
-  player = new Player(false,null,initialX,initialY,100,100,"Images/ratOne/");
+  initialX = width/2+250;
+  initialY = height/7-9;
+  player = new Player(false,null,initialX,initialY,160,160,"Images/ratOne/");
   copyCat = new Enemy(width,player.lowBoundary);
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
@@ -80,12 +81,15 @@ void buttonListener(){
   if(index > -1){
     //Change the game state according to the index:0:startButton 1:helpButton 2-5:car 1-4
     if(index == 0){
-      gameState = "Choose";
+      gameState = "Character";
       //Set the initial position of the player
       reset();
     }else if(index>=1 && index<=4){
       Button button = buttonArray.get(index);
-      player = new Player(false,button.getCat(),width/2+100,button.getpos().y,button.getWidth(),button.getHeight(),button.getFilePath());
+      player = new Player(false,button.getCat(),width/2+250,height/7-9,button.getWidth() * 1.6,button.getHeight() * 1.6,button.getFilePath());
+    } else if(index == 9) {
+      gameState = "Choose";
+      reset();
     }
   }
   //Play Menu
@@ -93,7 +97,7 @@ void buttonListener(){
 //If you want ot create new buttons, Put them into buttonArray
 void buttonInit(){
   //Start Button
-  startButton = new Button(width/2-50,height/3+30,100,50,"Start",0,200,0,null,null,null,0,0,0);
+  startButton = new Button(width/2-50,height/2,60,40,"Start",149,75,12,null,null,null,255,255,255);
   buttonArray.add(startButton);
   //Help Button
   /*helpButton = new Button(width/2-50,height/3+90,100,50,"Help",0,200,0,null,null,null);
@@ -122,25 +126,29 @@ void buttonInit(){
   chaFour = new Button(300,height-158,100,100,null,0,200,0,"Images/catTwo/",null,character,0,0,0);
   buttonArray.add(chaFour);
   //Restar quit button
-  Button restartButton = new Button(width/2-130,height/3+20,260,50,"Play Again",149,75,12,null,null,null,225,225,225);
+  Button restartButton = new Button(width/2-130,height/3+40,260,30,"Play Again",149,75,12,null,null,null,225,225,225);
   buttonArray.add(restartButton);
-  Button quitButton = new Button(width/2-130,height/3+80,260,50,"Quit",149,75,12,null,null,null,225,225,225);
+  Button quitButton = new Button(width/2-130,height/3+100,260,30,"Quit",149,75,12,null,null,null,225,225,225);
   buttonArray.add(quitButton);
 
   normal = new Button(width/2-50,height/3-20,100,50,"Normal",0,200,0,null,null,null,0,0,0);
   buttonArray.add(normal);
   hard = new Button(width/2-50,height/3+90,100,50,"Hard",0,200,0,null,null,null,0,0,0);
   buttonArray.add(hard);
+  
+  confirmButton = new Button(width/2+240,height/2+20,150,60,"Get Ready →",255,255,255,null,null,null,149,75,12);
+  buttonArray.add(confirmButton);
 }
 void draw(){
   clear();
   //println("GameState: "+ gameState);
   if(gameState == "START"){
     startGame();
+  }else if (gameState == "Character") {
+    chooseCharacter();
   }else if (gameState == "Choose"){
     difficultyChose();
-  }
-  else if(gameState == "PLAY"){
+  }else if(gameState == "PLAY"){
     playGame();
   }else if(gameState == "WIN"){
     winGame();
@@ -156,14 +164,31 @@ void startGame(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   textAlign(CENTER);
-  textSize(25);
-  fill(0,0,0);
+  fill(238,175,54);
+  textSize(90);
+  text("Cat adventure",width/2 + 1.5,height/3 + 1.5);
+  textSize(90);
+  fill(149,75,12);
   text("Cat adventure",width/2,height/3);
-  text("Click to choose the character",width/2-300,height/2);
-  for(int i =0;i<5;i++){
+  buttonArray.get(0).update();
+  buttonArray.get(0).renderButton();
+  buttonListener();
+}
+
+void chooseCharacter(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  fill(255, 255, 255);
+  textSize(30);
+  text("Choose your character", width / 5 ,height/3);
+  textSize(55);
+  text("↓", width / 5 ,height/2.3);
+  for(int i = 1; i < 5; i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
+  buttonArray.get(9).update();
+  buttonArray.get(9).renderButton();
   player.display();
   buttonListener();
 }
@@ -202,6 +227,7 @@ void playGame(){
   
   //Player Controller
   player.update();
+  player.setSize(100,100);
   player.display();
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
@@ -296,9 +322,10 @@ void loseGamePage(){
 void helpMenu(){}
 
 void reset(){
-  if(gameState == "START"){
+  if(gameState == "START" || gameState == "Character"){
     player.setposX(initialX);
     player.setposY(initialY);
+    player.setSize(160,160);
   }else{//gameState  is "Play"
     player.setposX(0);
     player.setposY((float)height-100);

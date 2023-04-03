@@ -53,10 +53,10 @@ class Player{
     //The (0,0) for the screen  is left above corner, The jumpforce is negative
     //Gravity controlls the jump force  velocity = jumpForce + gravity
     //To decrease the jump distance. Either decrease the jumpforce or increase the gravity
-    this.jumpForce = -11;
+    this.jumpForce = -9;
     //world values
     friction = 0.96;
-    gravity = .3;
+    gravity = .4;
     
     halfWidth = wid/2;
     halfHeight = hei/2;

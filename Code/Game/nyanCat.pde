@@ -54,7 +54,7 @@ void setup(){
   appear = false;
   obsList = new ArrayList<>();
   buttonArray = new ArrayList<>();
-  obstacleVelocityX = 5.0;
+  obstacleVelocityX = 10.0;
   gameState = "START";
   initialX = width/2+100;
   initialY = height-158;
@@ -206,7 +206,7 @@ void playGame(){
     copyCat.display();
   }
   //////DOING SCORE
-  if (player.posY < 400) { 
+  if (player.posY < 207) { 
   // Check if the jump was successful (i.e. player's y position increased)
       if (player.posY > belowBoundary){
         score = score +20;

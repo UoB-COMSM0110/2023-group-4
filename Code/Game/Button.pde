@@ -10,6 +10,8 @@ class Button{
   Boolean Pressed = false;
   Boolean Clicked = false;
   PImage Image;
+  
+  float Radius = 0;
 
   //image variables
   int currentFrame;
@@ -26,6 +28,7 @@ class Button{
     this.Width = wid;
     this.Height = hei;
     this.text = text;
+    this.Radius = 4;
     this.Colour = color(red,green,blue);
     this.TextColor = color(tRed,tGreen,tBlue);
     this.Image = img;
@@ -54,6 +57,7 @@ class Button{
     }
   }
   void renderButton(){
+    noStroke();
     if(Image!= null){
       //Image: Icon
       image(Image,pos.x,pos.y,Width,Height);
@@ -68,7 +72,7 @@ class Button{
       //Text
       textSize(25);
       fill(Colour);
-      rect(pos.x,pos.y,Width,Height);
+      rect(pos.x,pos.y,Width,Height,Radius);
       fill(TextColor);
       textAlign(CENTER,CENTER);
       text(text,pos.x+(Width/2),pos.y+(Height/2));

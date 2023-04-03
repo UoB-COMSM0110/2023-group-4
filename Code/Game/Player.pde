@@ -166,6 +166,11 @@ class Player{
     collisionSide = side;
   }
   
+  public void setSize(float wid,float hei) {
+    this.Width = wid;
+    this.Height = hei;
+  }
+  
   
   void loadFiles(){
     if(filePath!=null){

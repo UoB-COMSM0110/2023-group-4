@@ -196,6 +196,10 @@ void playGame(){
  // PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  
+  PImage sc = loadImage("../design_and_interface/game_BG/score.png");
+  image(sc, 500, 15, width/8, height/8);
+  
   //Player Controller
   player.update();
   player.display();
@@ -209,10 +213,10 @@ void playGame(){
   if (player.posY < 207) { 
   // Check if the jump was successful (i.e. player's y position increased)
       if (player.posY > belowBoundary){
-        score = score +20;
-        println("jump good\n");
+        score = score +5;
         // Jump was successful
       }
+
   }
    //Generate a seed value based on the current system time, thread ID, and memory address
    long seed = System.currentTimeMillis() + Thread.currentThread().getId() + System.identityHashCode(this);
@@ -226,7 +230,7 @@ void playGame(){
     Obstacle deadObs = new Obstacle(1000,236,73,80,obstacle,obstacleVelocityX);
     obsList.add(deadObs);
     timer = 0;
-    timeGap = (int) random(1000, 3001);
+    timeGap = (int) random(800, 2000);
   }
   //Obstacles Controller
   for(Obstacle obs:obsList){
@@ -319,6 +323,7 @@ void displayPositionData() {
     "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
   text(s, 150, 50);
   // Display score
+  
   textSize(32);
   fill(0);
   text("Score: " + score, 600, 30);

@@ -70,7 +70,7 @@ class Button{
     }
     else{
       //Text
-      textSize(25);
+      textSize(15);
       fill(Colour);
       rect(pos.x,pos.y,Width,Height,Radius);
       fill(TextColor);

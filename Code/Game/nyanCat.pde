@@ -31,7 +31,9 @@ int score = 0;
 int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
-
+///
+PImage sc;
+///
 Boolean paused;
 Boolean appear;
 float initialX;
@@ -49,7 +51,11 @@ void setup(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+<<<<<<< HEAD
   
+=======
+  sc = loadImage("../design_and_interface/game_BG/score.png");
+>>>>>>> c1a1fe36a6c2c207b536e456b3afb9cebe7936a4
 
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
@@ -289,12 +295,10 @@ void showFakeQuit() {
 }
 
 void playGame(){
- // PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-  
-  //PImage sc = loadImage("../design_and_interface/game_BG/score.png");
-  //image(sc, 500, 15, width/8, height/8);
+  //Score Image
+  image(sc, 520, 15, width/10, height/8);
   
   //Player Controller
   player.update();
@@ -429,9 +433,9 @@ void displayPositionData() {
   text(s, 150, 50);
   // Display score
   
-  textSize(32);
+  textSize(24);
   fill(0);
-  text("Score: " + score, 600, 30);
+  text(score, 670, 40);
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

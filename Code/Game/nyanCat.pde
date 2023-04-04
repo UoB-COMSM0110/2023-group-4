@@ -307,7 +307,7 @@ void showFakeQuit() {
   text("You can't quit!!!",width/2+50,height/2);
   
   PImage cat = loadImage("../Game/Cat4.png");
-  image(cat, width/7-120,height/4, 441,565);
+  image(cat, width/7-120, height/4-20, 441, 450);
   
   if (pauseStart == 0) {
     pauseStart = millis(); 

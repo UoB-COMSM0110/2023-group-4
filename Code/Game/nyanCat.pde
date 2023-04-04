@@ -49,6 +49,7 @@ void setup(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  
 
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
@@ -174,6 +175,8 @@ void startGame(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  Cloud cloud = new Cloud(100, 100, 3, "../design_and_interface/game_BG/cloud/cloud_5.png");
+  cloud.display();
   textAlign(CENTER);
   fill(238,175,54);
   PFont font = createFont("PressStart2P-Regular.ttf", 60);

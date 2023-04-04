@@ -28,6 +28,9 @@ float nowtime;
 float deltatime;
 float timer; 
 int score = 0;
+int quitTime = 0;
+int pauseStart = 0;
+int pauseDuration = 3000;
 
 Boolean paused;
 Boolean appear;
@@ -162,6 +165,8 @@ void draw(){
     helpMenu();
   }else if(gameState == "INSTRUCTION"){
     showInstruction();
+  } else if (gameState == "Fake Quit") {
+    showFakeQuit();
   }
 }
 
@@ -256,6 +261,30 @@ void showInstruction(){
   }
 }
 
+void showFakeQuit() {
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(255,255,255);
+  text("You can't quit!!!",width/2+50,height/2);
+  
+  PImage cat = loadImage("../Game/Cat4.png");
+  image(cat, width/7-120,height/4, 441,565);
+  
+  if (pauseStart == 0) {
+    pauseStart = millis(); 
+  } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {
+    pauseStart = 0;
+    gameState = "PLAY";
+  } else {
+    textSize(25);
+    fill(255,255,255);
+    int timeLeft = (pauseDuration - millis() + pauseStart + 1000)/1000;
+    text("Get ready in " + Integer.toString(timeLeft) + " seconds",width/2+100,height/2 + 50);
+  }
+}
+
 void playGame(){
  // PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
@@ -335,7 +364,13 @@ void loseGame(){
     reset();
     buttonArray.get(5).Clicked = false;
   }else if(buttonArray.get(6).isClicked()){
-    gameState = "START";
+    if (quitTime < 3) {
+      gameState = "Fake Quit";
+      quitTime++;
+    } else {
+      gameState = "START";
+      quitTime = 0;
+    }
     reset();
     buttonArray.get(6).Clicked = false;
   }

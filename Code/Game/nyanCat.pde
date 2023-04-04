@@ -222,9 +222,9 @@ void difficultyChose(){
   }
   if(normal.isClicked()){
     difficulty = "NORMAL";
-    gameState = "PLAY";
+    gameState = "INSTRUCTION";
   }else if(hard.isClicked()){
-    difficulty = "INSTRUCTION";
+    difficulty = "HARD";
     //Change the speed of the obstacle 
     obstacleVelocityX = obstacleVelocityX * 1.3;
     //Or you can change the frequency of the obstacles

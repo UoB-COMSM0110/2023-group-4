@@ -226,7 +226,7 @@ void difficultyChose(){
   }else if(hard.isClicked()){
     difficulty = "HARD";
     //Change the speed of the obstacle 
-    obstacleVelocityX = obstacleVelocityX * 1.3;
+    obstacleVelocityX = obstacleVelocityX * 1.6;
     //Or you can change the frequency of the obstacles
     //timeGap = timeGap * 0.8; or what eles you want
     gameState = "INSTRUCTION";
@@ -365,6 +365,7 @@ void reset(){
     player.setposX(initialX);
     player.setposY(initialY);
     player.setSize(160,160);
+    obstacleVelocityX = 10.0;
   }else{//gameState  is "Play"
     player.setposX(0);
     player.setposY((float)height-100);

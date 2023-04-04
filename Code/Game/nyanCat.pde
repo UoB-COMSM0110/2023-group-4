@@ -45,7 +45,7 @@ void setup(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-  
+
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
   right = false;
@@ -97,7 +97,7 @@ void buttonListener(){
 //If you want ot create new buttons, Put them into buttonArray
 void buttonInit(){
   //Start Button
-  startButton = new Button(width/2-50,height/2,60,40,"Start",149,75,12,null,null,null,255,255,255);
+  startButton = new Button(width/2-50,height/2,90,40,"Start",149,75,12,null,null,null,255,255,255);
   buttonArray.add(startButton);
   //Help Button
   /*helpButton = new Button(width/2-50,height/3+90,100,50,"Help",0,200,0,null,null,null);
@@ -131,12 +131,12 @@ void buttonInit(){
   Button quitButton = new Button(width/2-130,height/3+100,260,30,"Quit",149,75,12,null,null,null,225,225,225);
   buttonArray.add(quitButton);
 
-  normal = new Button(width/2-50,height/3-20,100,50,"Normal",0,200,0,null,null,null,0,0,0);
+  normal = new Button(width/3+35,height/3+40,100,40,"Normal",149,75,12,null,null,null,255,255,255);
   buttonArray.add(normal);
-  hard = new Button(width/2-50,height/3+90,100,50,"Hard",0,200,0,null,null,null,0,0,0);
+  hard = new Button(width/2+31,height/3+40,100,40,"Hard",149,75,12,null,null,null,255,255,255);
   buttonArray.add(hard);
   
-  confirmButton = new Button(width/2+240,height/2+20,150,60,"Get Ready →",255,255,255,null,null,null,149,75,12);
+  confirmButton = new Button(width/2+240,height/2+20,180,40,"Get Ready →",149,75,12,null,null,null,255,255,255);
   buttonArray.add(confirmButton);
 }
 void draw(){
@@ -165,11 +165,13 @@ void startGame(){
   background(bg);
   textAlign(CENTER);
   fill(238,175,54);
-  textSize(90);
+  PFont font = createFont("PressStart2P-Regular.ttf", 60);
+  textFont(font);
   text("Cat adventure",width/2 + 1.5,height/3 + 1.5);
-  textSize(90);
   fill(149,75,12);
-  text("Cat adventure",width/2,height/3);
+  text("Cat adventure",width/2,height/3);  
+  fill(238,175,54);
+  rect(width/2-48,height/2+2, 90,40,4);
   buttonArray.get(0).update();
   buttonArray.get(0).renderButton();
   buttonListener();
@@ -179,14 +181,16 @@ void chooseCharacter(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   fill(255, 255, 255);
-  textSize(30);
+  textSize(18);
   text("Choose your character", width / 5 ,height/3);
-  textSize(55);
-  text("↓", width / 5 ,height/2.3);
+  textSize(40);
+  text("↓", width / 5 ,height/2);
   for(int i = 1; i < 5; i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
+  fill(238,175,54);
+  rect(width/2+242,height/2+22, 180,40,4);
   buttonArray.get(9).update();
   buttonArray.get(9).renderButton();
   player.display();
@@ -198,9 +202,15 @@ void difficultyChose(){
   background(bg);
   textAlign(CENTER);
   textSize(25);
-  fill(0,0,0);
-  text("Difficulty",width/2,height/4-30);
+  fill(255,255,255);
+  text("Difficulty",width/2,height/4+30);
   for(int i=7;i<=8;i++){
+    fill(238,175,54);
+    if (i==7){
+      rect(width/3+37,height/3+42, 100,40,4);
+    } else {
+      rect(width/2+33,height/3+42, 100,40,4);
+    }
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
@@ -302,7 +312,7 @@ void loseGamePage(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   //Menu BackGround
-  int menuW = 400;
+  int menuW = 500;
   int menuH = 230;
   String text = "GAME OVER";
   int x = (width-menuW)/2;
@@ -310,7 +320,7 @@ void loseGamePage(){
   fill(149,75,12);
   noStroke();
   rect(x,y,menuW,menuH);
-  textSize(60);
+  textSize(50);
   textAlign(CENTER);
   fill(238,175,54);
   text(text,width/2,y+70);

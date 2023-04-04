@@ -1,4 +1,4 @@
- String gameState;
+String gameState;
 Button startButton;
 Button helpButton;
 Button chaOne;
@@ -15,7 +15,6 @@ ArrayList<Button> buttonArray;
 //ArrayList of Obstacle
 ArrayList<Obstacle> obsList;
 ArrayList<Cloud> clouds;
-
 Player player;
 boolean left,right,up,down;
 Enemy copyCat;
@@ -33,9 +32,7 @@ int score = 0;
 int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
-///
-PImage sc;
-///
+
 Boolean paused;
 Boolean appear;
 float initialX;
@@ -53,9 +50,7 @@ void setup(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-
-  sc = loadImage("../design_and_interface/game_BG/score.png");
-
+  
 
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
@@ -84,15 +79,17 @@ void setup(){
   initClouds();
 }
 
-  void initClouds() {
+void initClouds() {
   PImage cloud1Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
   PImage cloud2Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
   PImage cloud3Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
-
- // Resize cloud1 image to half its size
+  PImage cloud4Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
+  
+// Resize cloud1 image to half its size
   cloud1Img.resize(cloud1Img.width / 2, cloud1Img.height / 2);
   cloud2Img.resize(cloud2Img.width / 2, cloud2Img.height / 2);
   cloud3Img.resize(cloud3Img.width / 2, cloud3Img.height / 2);
+  cloud4Img.resize(cloud3Img.width / 2, cloud3Img.height / 2);
 
   Cloud cloud1 = new Cloud(100, 50, cloud1Img, 1);
   Cloud cloud2 = new Cloud(350, 80, cloud2Img, 1);
@@ -104,9 +101,8 @@ void setup(){
   clouds.add(cloud2);
   clouds.add(cloud3);
   clouds.add(cloud4);
+  
 }
-
-
 
 //Change the initial poision in this function
 void buttonListener(){
@@ -184,6 +180,8 @@ void buttonInit(){
 void draw(){
   clear();
   //println("GameState: "+ gameState);
+  
+ 
   if(gameState == "START"){
     startGame();
   }else if (gameState == "Character") {
@@ -209,8 +207,7 @@ void startGame(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-
-
+ 
   textAlign(CENTER);
   fill(238,175,54);
   PFont font = createFont("PressStart2P-Regular.ttf", 60);
@@ -322,25 +319,27 @@ void showFakeQuit() {
   }
 }
 
-void playGame(){
+void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-  
-  // cloud movement 
+
   float averageObstacleVelocity = 0;
   if (obsList.size() > 0) {
     averageObstacleVelocity = obsList.get(0).velocityX;
   }
 
+  //can comment out this line if we have many obstacles;
+  //averageObstacleVelocity /= obsList.size();
+
   // Clouds Controller
   for (Cloud cloud : clouds) {
-    cloud.update(-averageObstacleVelocity); // Use the negative of the average obstacle velocity to move clouds
+    cloud.update(averageObstacleVelocity); // Use the negative of the average obstacle velocity to move clouds
     cloud.display();
   }
 
-  
-  //Score Image
-  image(sc, 520, 15, width/10, height/8);
+
+  //PImage sc = loadImage("../design_and_interface/game_BG/score.png");
+  //image(sc, 500, 15, width/8, height/8);
   
   //Player Controller
   player.update();
@@ -370,7 +369,9 @@ void playGame(){
    // Print the time gap
   if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
     PImage obstacle = loadImage("obstacles.png");
+    //PImage obstacle = loadImage("../design_and_interface/game_BG/obstcles/bad_luck.png");
     Obstacle deadObs = new Obstacle(1000,236,73,80,obstacle,obstacleVelocityX);
+
     obsList.add(deadObs);
     timer = 0;
     timeGap = (int) random(800, 2000);
@@ -475,9 +476,9 @@ void displayPositionData() {
   text(s, 150, 50);
   // Display score
   
-  textSize(24);
+  textSize(32);
   fill(0);
-  text(score, 670, 40);
+  text("Score: " + score, 600, 30);
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

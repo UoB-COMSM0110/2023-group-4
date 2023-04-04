@@ -6,6 +6,7 @@ Button chaTwo;
 Button chaThree;
 Button chaFour;
 Button confirmButton;
+Button beginButton;
 
 Button normal;
 Button hard;
@@ -138,6 +139,9 @@ void buttonInit(){
   
   confirmButton = new Button(width/2+240,height/2+20,180,40,"Get Ready →",149,75,12,null,null,null,255,255,255);
   buttonArray.add(confirmButton);
+  
+  beginButton = new Button(width/2-80,height/2+30,180,40,"Let's Go",149,75,12,null,null,null,255,255,255);
+  buttonArray.add(beginButton);
 }
 void draw(){
   clear();
@@ -156,6 +160,8 @@ void draw(){
     loseGame();
   }else if(gameState == "HELP"){
     helpMenu();
+  }else if(gameState == "INSTRUCTION"){
+    showInstruction();
   }
 }
 
@@ -218,11 +224,34 @@ void difficultyChose(){
     difficulty = "NORMAL";
     gameState = "PLAY";
   }else if(hard.isClicked()){
-    difficulty = "HARD";
+    difficulty = "INSTRUCTION";
     //Change the speed of the obstacle 
     obstacleVelocityX = obstacleVelocityX * 1.3;
     //Or you can change the frequency of the obstacles
     //timeGap = timeGap * 0.8; or what eles you want
+    gameState = "INSTRUCTION";
+  }
+}
+
+void showInstruction(){
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(255,255,255);
+  text("Use",width/2-80,height/3+15);
+  text("to",width/2+70,height/3+15);
+  text("Jump over obstacles",width/2,height/2);
+  fill(238,175,54);
+  rect(width/2-78,height/2+32, 180,40,4);
+  
+  PImage keyUp = loadImage("../Game/up-arrow.png");
+  image(keyUp, width/2-20,height/3-20, 40,40);
+
+  buttonArray.get(10).update();
+  buttonArray.get(10).renderButton();
+  
+  if(beginButton.isClicked()){
     gameState = "PLAY";
   }
 }

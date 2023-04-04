@@ -261,8 +261,8 @@ void playGame(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   
-  PImage sc = loadImage("../design_and_interface/game_BG/score.png");
-  image(sc, 500, 15, width/8, height/8);
+  //PImage sc = loadImage("../design_and_interface/game_BG/score.png");
+  //image(sc, 500, 15, width/8, height/8);
   
   //Player Controller
   player.update();

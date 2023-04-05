@@ -312,14 +312,13 @@ void showFakeQuit() {
   textAlign(CENTER);
   textSize(25);
   fill(255,255,255);
-  text("You can't quit!!!",width/2+50,height/2);
+  text("Be a fighter, not a quitter!",width/2+100,height/2);
   
   PImage cat = loadImage("../Game/Cat4.png");
-<<<<<<< HEAD
-  image(cat, width/7-120, height/4-20, 441, 450);
-=======
-  image(cat, width/7-120,height/4-25, 441 ,400);
->>>>>>> antalya
+
+  image(cat, width/7-150, height/4-20, 441, 450);
+
+
   
   if (pauseStart == 0) {
     pauseStart = millis(); 

@@ -7,7 +7,6 @@ Button chaThree;
 Button chaFour;
 Button confirmButton;
 Button beginButton;
-long lastScoreUpdateTime = 0;
 
 Button normal;
 Button hard;
@@ -22,8 +21,13 @@ boolean left,right,up,down;
 Enemy copyCat;
 
 String difficulty;
-
+//boss
+float bossYOffset = 0;
+float bossYDirection = 1;
+float bossYSpeed = 2;
+//
 float obstacleVelocityX;
+long lastScoreUpdateTime = 0;
 //Timer
 int timeGap = 2000;
 float oldtime;
@@ -35,7 +39,7 @@ int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
 ///
-PImage sc;
+PImage sc, fB;
 
 ///
 Boolean paused;
@@ -57,6 +61,7 @@ void setup(){
   background(bg);
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
+  fB = loadImage("../design_and_interface/game_BG/boss.png");
 
 
   //The key listener:⬅ ⬆ ➡ ⬇
@@ -211,6 +216,8 @@ void draw(){
     showInstruction();
   } else if (gameState == "Fake Quit") {
     showFakeQuit();
+  }else if (gameState == "BOSS") {
+      finalBoss();
   }
 }
 
@@ -354,6 +361,59 @@ void generateObstacles() {
   }
 }
 
+void finalBoss() {
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(255,255,255);
+
+
+  int bossWidth = fB.width / 8;
+  int bossHeight = fB.height / 8;
+
+  float bossX = width - bossWidth - 20;
+
+  // Update the boss's Y position based on the bossYDirection and bossYSpeed
+  bossYOffset += bossYDirection * bossYSpeed;
+
+  // Reverse the bossYDirection when the boss reaches the top or bottom limits
+  if (bossYOffset >= 155) {
+    bossYDirection = -1;
+  } else if (bossYOffset <= 60) {
+    bossYDirection = 1;
+  }
+
+  float bossY = 20 + bossYOffset;
+  //float bossLowY = bossY + bossHeight / 2;
+
+  image(fB, bossX, bossY, bossWidth, bossHeight);
+
+  /////logic 
+  // cloud movement 
+  float averageObstacleVelocity = 0;
+  if (obsList.size() > 0) {
+    averageObstacleVelocity = obsList.get(0).velocityX;
+  }
+
+  // Clouds Controller
+  for (Cloud cloud : clouds) {
+    cloud.update(-averageObstacleVelocity);
+    cloud.display();
+  }
+
+  //Player Controller
+  player.update();
+  player.setSize(100, 100);
+  player.display();
+  
+  
+
+  timer += getDeltaTime();
+}
+
+
+
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
@@ -409,7 +469,10 @@ void playGame() {
       gameState = "LOSE";
     }
   }
-  
+  //Change to boss level
+  if (score > 60) {
+    gameState = "BOSS";
+  }
   generateObstacles(); // Call the new generateObstacles() method here
 }
 

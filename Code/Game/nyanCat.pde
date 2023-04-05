@@ -21,13 +21,8 @@ boolean left,right,up,down;
 Enemy copyCat;
 
 String difficulty;
-//boss
-float bossYOffset = 0;
-float bossYDirection = 1;
-float bossYSpeed = 2;
-//
+
 float obstacleVelocityX;
-long lastScoreUpdateTime = 0;
 //Timer
 int timeGap = 2000;
 float oldtime;
@@ -39,7 +34,7 @@ int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
 ///
-PImage sc, fB;
+PImage sc;
 
 ///
 Boolean paused;
@@ -61,7 +56,6 @@ void setup(){
   background(bg);
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
-  fB = loadImage("../design_and_interface/game_BG/boss.png");
 
 
   //The key listener:⬅ ⬆ ➡ ⬇
@@ -216,8 +210,6 @@ void draw(){
     showInstruction();
   } else if (gameState == "Fake Quit") {
     showFakeQuit();
-  }else if (gameState == "BOSS") {
-      finalBoss();
   }
 }
 
@@ -246,7 +238,7 @@ void chooseCharacter(){
   background(bg);
   fill(255, 255, 255);
   textSize(18);
-  text("Choose your character", width / 5 ,height/3);
+  text("Click to choose\nyour character", width / 5 ,height/3);
   textSize(40);
   text("↓", width / 5 ,height/2);
   for(int i = 1; i < 5; i++){
@@ -291,28 +283,40 @@ void difficultyChose(){
   }
 }
 
-void showInstruction(){
+void showInstruction() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   textAlign(CENTER);
   textSize(25);
-  fill(255,255,255);
-  text("Use",width/2-80,height/3+15);
-  text("to",width/2+70,height/3+15);
-  text("Jump over obstacles",width/2,height/2);
-  fill(238,175,54);
-  rect(width/2-78,height/2+32, 180,40,4);
-  
+  fill(255, 255, 255);
+
+  float totalWidth = 80 + 40 + 36 + 40 + 90; // Width of text "Use", up-arrow, "&", right-arrow, and "to"
+  float startX = (width - totalWidth) / 2;
+
+  text("Use", startX + 30, height / 3 + 15);
   PImage keyUp = loadImage("../Game/up-arrow.png");
-  image(keyUp, width/2-20,height/3-20, 40,40);
+  image(keyUp, startX + 80, height / 3 - 20, 40, 40);
+  
+  text("&", startX + 80 + 60, height / 3 + 15);
+  
+  PImage keyRight = loadImage("../Game/right-arrow.png");
+  image(keyRight, startX + 80 + 40 + 36, height / 3 - 20, 40, 40);
+  
+  text("to", startX + 80 + 40 + 36 + 40 + 35, height / 3 + 15);
+
+  text("Jump over obstacles", width / 2, height / 2);
+  fill(238, 175, 54);
+  rect(width / 2 - 78, height / 2 + 32, 180, 40, 4);
 
   buttonArray.get(10).update();
   buttonArray.get(10).renderButton();
-  
-  if(beginButton.isClicked()){
+
+  if (beginButton.isClicked()) {
     gameState = "PLAY";
   }
 }
+
+
 
 void showFakeQuit() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
@@ -361,59 +365,6 @@ void generateObstacles() {
   }
 }
 
-void finalBoss() {
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
-  background(bg);
-  textAlign(CENTER);
-  textSize(25);
-  fill(255,255,255);
-
-
-  int bossWidth = fB.width / 8;
-  int bossHeight = fB.height / 8;
-
-  float bossX = width - bossWidth - 20;
-
-  // Update the boss's Y position based on the bossYDirection and bossYSpeed
-  bossYOffset += bossYDirection * bossYSpeed;
-
-  // Reverse the bossYDirection when the boss reaches the top or bottom limits
-  if (bossYOffset >= 155) {
-    bossYDirection = -1;
-  } else if (bossYOffset <= 60) {
-    bossYDirection = 1;
-  }
-
-  float bossY = 20 + bossYOffset;
-  //float bossLowY = bossY + bossHeight / 2;
-
-  image(fB, bossX, bossY, bossWidth, bossHeight);
-
-  /////logic 
-  // cloud movement 
-  float averageObstacleVelocity = 0;
-  if (obsList.size() > 0) {
-    averageObstacleVelocity = obsList.get(0).velocityX;
-  }
-
-  // Clouds Controller
-  for (Cloud cloud : clouds) {
-    cloud.update(-averageObstacleVelocity);
-    cloud.display();
-  }
-
-  //Player Controller
-  player.update();
-  player.setSize(100, 100);
-  player.display();
-  
-  
-
-  timer += getDeltaTime();
-}
-
-
-
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
@@ -430,6 +381,15 @@ void playGame() {
     cloud.display();
   }
 
+
+  //display the socre on the top right 
+  //Score Image
+  image(sc, width - 220, 15, width/13, height/10); // x was 520
+    //Display Score Number
+  fill(0);
+  textSize(24);
+  text(score, width - 90, 35);
+
   //Player Controller
   player.update();
   player.setSize(100,100);
@@ -440,12 +400,14 @@ void playGame() {
     copyCat.update();
     copyCat.display();
   }
-  //Score over time
- if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
-  score += 10; // Increment score by 1
-  lastScoreUpdateTime = millis(); // Update the time the score was last updated
-}
-
+  //////DOING SCORE
+  if (player.posY < 207) {
+    // Check if the jump was successful (i.e. player's y position increased)
+    if (player.posY > belowBoundary){
+      score = score +5;
+      // Jump was successful
+    }
+  }
 
   //Obstacles Controller
   for(Obstacle obs:obsList){
@@ -469,10 +431,7 @@ void playGame() {
       gameState = "LOSE";
     }
   }
-  //Change to boss level
-  if (score > 60) {
-    gameState = "BOSS";
-  }
+  
   generateObstacles(); // Call the new generateObstacles() method here
 }
 
@@ -551,13 +510,9 @@ void displayPositionData() {
   text(s, 150, 50);
   // Display score
   
-  //display the score on the top right 
-  image(sc, width - 220, 15, width/13, height/10); // x was 520
-    //Display Score Number
-  fill(0);
   textSize(24);
-  text(score, width - 90, 35);
-
+  fill(0);
+  text(score, 670, 40);
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

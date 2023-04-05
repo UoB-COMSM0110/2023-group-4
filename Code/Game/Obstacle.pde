@@ -1,3 +1,4 @@
+
 class Obstacle{
   float w,h,x,y; //Width Hieght posX posY
   float halfWidth, halfHeight;
@@ -33,4 +34,5 @@ class Obstacle{
     x = 500;
     y = 460;
   }
+
 }

@@ -7,6 +7,7 @@ Button chaThree;
 Button chaFour;
 Button confirmButton;
 Button beginButton;
+long lastScoreUpdateTime = 0;
 
 Button normal;
 Button hard;
@@ -379,14 +380,12 @@ void playGame() {
     copyCat.update();
     copyCat.display();
   }
-  //////DOING SCORE
-  if (player.posY < 207) {
-    // Check if the jump was successful (i.e. player's y position increased)
-    if (player.posY > belowBoundary){
-      score = score +5;
-      // Jump was successful
-    }
-  }
+  //Score over time
+ if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
+  score += 10; // Increment score by 1
+  lastScoreUpdateTime = millis(); // Update the time the score was last updated
+}
+
 
   //Obstacles Controller
   for(Obstacle obs:obsList){

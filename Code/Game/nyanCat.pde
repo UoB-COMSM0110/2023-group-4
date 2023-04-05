@@ -369,15 +369,6 @@ void playGame() {
     cloud.display();
   }
 
-
-  //display the socre on the top right 
-  //Score Image
-  image(sc, width - 220, 15, width/13, height/10); // x was 520
-    //Display Score Number
-  fill(0);
-  textSize(24);
-  text(score, width - 90, 35);
-
   //Player Controller
   player.update();
   player.setSize(100,100);
@@ -498,9 +489,13 @@ void displayPositionData() {
   text(s, 150, 50);
   // Display score
   
-  textSize(24);
+  //display the score on the top right 
+  image(sc, width - 220, 15, width/13, height/10); // x was 520
+    //Display Score Number
   fill(0);
-  text(score, 670, 40);
+  textSize(24);
+  text(score, width - 90, 35);
+
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

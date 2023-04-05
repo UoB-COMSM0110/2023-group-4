@@ -35,6 +35,7 @@ int pauseStart = 0;
 int pauseDuration = 3000;
 ///
 PImage sc;
+
 ///
 Boolean paused;
 Boolean appear;
@@ -77,11 +78,18 @@ void setup(){
     test[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
   }
   
-  PImage obstacle = loadImage("obstacles.png");
+  //PImage obstacle = loadImage("obstacles.png");
   buttonInit();
   
   clouds = new ArrayList<>();
   initClouds();
+  
+     // Load obstacle images
+     PImage[] obstacleImages = new PImage[8];
+
+  for (int i = 0; i < 8; i++) {
+    obstacleImages[i] = loadImage("../design_and_interface/game_BG/obstacle/obstacle" + str(i + 1) + ".png");
+  }
 }
 
   void initClouds() {
@@ -307,7 +315,7 @@ void showFakeQuit() {
   text("You can't quit!!!",width/2+50,height/2);
   
   PImage cat = loadImage("../Game/Cat4.png");
-  image(cat, width/7-120,height/4, 441,565);
+  image(cat, width/7-120,height/4-25, 441 ,400);
   
   if (pauseStart == 0) {
     pauseStart = millis(); 
@@ -321,12 +329,32 @@ void showFakeQuit() {
     text("Get ready in " + Integer.toString(timeLeft) + " seconds",width/2+100,height/2 + 50);
   }
 }
+void generateObstacles() {
+  if (millis() - oldtime > timeGap) {
+    oldtime = millis();
+    int randomObstacle = int(random(8));
+    PImage obsImage = loadImage("../design_and_interface/game_BG/obstacle/obstacle" + str(randomObstacle + 1) + ".png");
 
-void playGame(){
+    // Resize the obstacle while maintaining its aspect ratio
+    float originalWidth = 1890;
+    float originalHeight = 1417;
+    float newWidth = 110; //size of obstalce
+    float newHeight = (newWidth * originalHeight) / originalWidth;
+
+    float obstacleY = height - newHeight - 58; // Set the desired height position for the obstacle
+    Obstacle obs = new Obstacle(width, obstacleY, newWidth, newHeight, obsImage, obstacleVelocityX);
+    obsList.add(obs);
+
+    // Update timeGap with a new random value
+    timeGap = (int) random(800, 2000);
+  }
+}
+
+void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-  
-  // cloud movement 
+
+  // cloud movement
   float averageObstacleVelocity = 0;
   if (obsList.size() > 0) {
     averageObstacleVelocity = obsList.get(0).velocityX;
@@ -338,10 +366,15 @@ void playGame(){
     cloud.display();
   }
 
-  
+
+  //display the socre on the top right 
   //Score Image
-  image(sc, 520, 15, width/10, height/8);
-  
+  image(sc, width - 220, 15, width/13, height/10); // x was 520
+    //Display Score Number
+  fill(0);
+  textSize(24);
+  text(score, width - 90, 35);
+
   //Player Controller
   player.update();
   player.setSize(100,100);
@@ -353,28 +386,14 @@ void playGame(){
     copyCat.display();
   }
   //////DOING SCORE
-  if (player.posY < 207) { 
-  // Check if the jump was successful (i.e. player's y position increased)
-      if (player.posY > belowBoundary){
-        score = score +5;
-        // Jump was successful
-      }
+  if (player.posY < 207) {
+    // Check if the jump was successful (i.e. player's y position increased)
+    if (player.posY > belowBoundary){
+      score = score +5;
+      // Jump was successful
+    }
+  }
 
-  }
-   //Generate a seed value based on the current system time, thread ID, and memory address
-   long seed = System.currentTimeMillis() + Thread.currentThread().getId() + System.identityHashCode(this);
-   // Set the seed value for the random number generator
-   randomSeed(seed);
-   // Generate a random number between 1300 and 2500 milliseconds
-   timeGap = (int) random(1300, 2500);
-   // Print the time gap
-  if(timer >= timeGap){//Generate an Obastacle every 500ms: Change the timeGap to control generate speed
-    PImage obstacle = loadImage("obstacles.png");
-    Obstacle deadObs = new Obstacle(1000,236,73,80,obstacle,obstacleVelocityX);
-    obsList.add(deadObs);
-    timer = 0;
-    timeGap = (int) random(800, 2000);
-  }
   //Obstacles Controller
   for(Obstacle obs:obsList){
     obs.update();
@@ -383,9 +402,9 @@ void playGame(){
   displayPositionData();
   //Collission detection
   for(Obstacle obs:obsList){
-   if(collisionDetection(player,obs)){
+    if(collisionDetection(player,obs)){
       gameState = "LOSE";
-   }
+    }
   }
   //CopyCat collision detection
   player.collisionSide = collisionsPVE(player,copyCat);
@@ -397,9 +416,10 @@ void playGame(){
       gameState = "LOSE";
     }
   }
-  timer += getDeltaTime();
-  //Update the status of buttons: Check if it is clicked
+  
+  generateObstacles(); // Call the new generateObstacles() method here
 }
+
 void winGame(){}
 void loseGame(){
   //Stop the game

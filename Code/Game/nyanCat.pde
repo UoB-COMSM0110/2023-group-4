@@ -23,6 +23,13 @@ Enemy copyCat;
 String difficulty;
 
 float obstacleVelocityX;
+long lastScoreUpdateTime = 0;
+
+//boss
+float bossXOffset = 700;
+float bossXDirection = 1;
+float bossXSpeed = 5;
+//
 //Timer
 int timeGap = 2000;
 float oldtime;
@@ -34,7 +41,7 @@ int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
 ///
-PImage sc;
+PImage sc, fB;
 
 ///
 Boolean paused;
@@ -56,6 +63,7 @@ void setup(){
   background(bg);
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
+  fB = loadImage("../design_and_interface/game_BG/boss.png");
 
 
   //The key listener:⬅ ⬆ ➡ ⬇
@@ -210,6 +218,8 @@ void draw(){
     showInstruction();
   } else if (gameState == "Fake Quit") {
     showFakeQuit();
+  }else if (gameState == "BOSS") {
+      finalBoss();
   }
 }
 
@@ -364,7 +374,51 @@ void generateObstacles() {
     timeGap = (int) random(800, 2000);
   }
 }
+void finalBoss() {
+  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(255, 255, 255);
+  int bossWidth = fB.width / 14;
+  int bossHeight = fB.height / 14;
+  displayPositionData();
 
+  // Update the boss's X position based on the bossXDirection and bossXSpeed
+  bossXOffset += bossXDirection * bossXSpeed;
+  // Reverse the bossXDirection when the boss reaches the left or right limits
+  if (bossXOffset >= width - bossWidth - 20) {
+    bossXDirection = -1;
+  } else if (bossXOffset <= 20) {
+    bossXDirection = 1;
+  }
+  float bossX = bossXOffset;
+  float bossY = height - bossHeight - 40;
+  image(fB, bossX, bossY, bossWidth, bossHeight);
+  /////logic 
+  // cloud movement 
+  float averageObstacleVelocity = 0;
+  if (obsList.size() > 0) {
+    averageObstacleVelocity = obsList.get(0).velocityX;
+  }
+  // Clouds Controller
+  for (Cloud cloud : clouds) {
+    cloud.update(-averageObstacleVelocity);
+    cloud.display();
+  }
+  //Player Controller
+  player.update();
+  player.setSize(100, 100);
+  player.display();
+
+  if (player.posX + player.Width >= bossX + bossWidth - player.Width/2 && player.posX + player.Width <= bossX + bossWidth + player.Width/2 && player.posY > 180) {
+  gameState = "LOSE";
+} else if (player.posX + player.Width >= bossX + bossWidth - player.Width/2 && player.posX + player.Width <= bossX + bossWidth + player.Width/2 && player.posY > 125 && player.posY < 140 ){
+      score = score + 10;
+  gameState = "PLAY";
+}
+  timer += getDeltaTime();
+}
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
@@ -381,15 +435,6 @@ void playGame() {
     cloud.display();
   }
 
-
-  //display the socre on the top right 
-  //Score Image
-  image(sc, width - 220, 15, width/13, height/10); // x was 520
-    //Display Score Number
-  fill(0);
-  textSize(24);
-  text(score, width - 90, 35);
-
   //Player Controller
   player.update();
   player.setSize(100,100);
@@ -400,14 +445,12 @@ void playGame() {
     copyCat.update();
     copyCat.display();
   }
-  //////DOING SCORE
-  if (player.posY < 207) {
-    // Check if the jump was successful (i.e. player's y position increased)
-    if (player.posY > belowBoundary){
-      score = score +5;
-      // Jump was successful
-    }
-  }
+  //Score over time
+ if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
+  score += 10; // Increment score by 1
+  lastScoreUpdateTime = millis(); // Update the time the score was last updated
+}
+
 
   //Obstacles Controller
   for(Obstacle obs:obsList){
@@ -431,7 +474,11 @@ void playGame() {
       gameState = "LOSE";
     }
   }
-  
+  //Change to boss level
+  if (score >= 50 && score % 50 == 0) {
+        bossXOffset = 850;
+        gameState = "BOSS";
+  }
   generateObstacles(); // Call the new generateObstacles() method here
 }
 
@@ -510,9 +557,13 @@ void displayPositionData() {
   text(s, 150, 50);
   // Display score
   
-  textSize(24);
+  //display the score on the top right 
+  image(sc, width - 220, 15, width/13, height/10); // x was 520
+    //Display Score Number
   fill(0);
-  text(score, 670, 40);
+  textSize(24);
+  text(score, width - 90, 35);
+
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

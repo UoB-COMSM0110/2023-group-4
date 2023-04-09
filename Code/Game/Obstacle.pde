@@ -1,22 +1,11 @@
-class Obstacle{
-  float w,h,x,y; //Width Hieght posX posY
-  float halfWidth, halfHeight;
-  float velocityX;
-  PImage img;
+
+class Obstacle extends Object{
 
   Obstacle(float _x, float _y, float _w, float _h,PImage img,float velocityX){
-    w = _w;
-    h = _h;
-    x = _x;
-    y = _y;
-    this.img = img;
-
-    halfWidth = w/2;
-    halfHeight = h/2;
-    
+    super(_x,_y,_w,_h,img,velocityX,0);
     this.velocityX = velocityX;
   }
-  void display(){
+  @Override void display(){
     if(img !=null){
       image(img,x,y,w,h);
     }else{
@@ -25,12 +14,13 @@ class Obstacle{
     }
   }
 
-  void update(){
+  @Override void update(){
     x -= velocityX;
   }
 
-  void init(){
+  @Override void init(){
     x = 500;
     y = 460;
   }
+
 }

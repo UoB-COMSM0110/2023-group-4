@@ -1,19 +1,9 @@
-class Player{
+class Player extends PEObject{
   Boolean winLose;
-  PImage cat;
-  float posX,posY;
-  float Width;
-  float Height;
-  //Move Function
-  float velocityX, velocityY,accX,accY,speedLimit;
-  float friction,gravity;
   boolean isOnGround;
   float jumpForce;   
-  float halfWidth,halfHeight;
   String collisionSide;
   boolean touched;
-
-  float lowBoundary;
   
   //image variables
   int walkFrame;
@@ -31,35 +21,16 @@ class Player{
   int frames;
   //Time(ms)
   int timeGap = 500;
+
   Player(Boolean winLose, PImage img, float posX,float posY,float wid,float hei,String filePath){
-    this.winLose = winLose;
-    this.cat = img;
-    //Position
-    this.posX = posX;
-    this.posY = posY;
-    this.lowBoundary = height-58;
-    //Size
-    this.Width = wid;
-    this.Height = hei;
-    //Veloctiy
-    this.velocityX = 0;
-    this.velocityY = 0;
+    super(img,posX,posY,wid,hei,0,width,height-58,0,0);
     //Accelaration
-    this.accX = 0;
-    this.accY = 0;
-    this.speedLimit = 5;
     this.isOnGround = false;
     touched =false;
     //The (0,0) for the screen  is left above corner, The jumpforce is negative
     //Gravity controlls the jump force  velocity = jumpForce + gravity
     //To decrease the jump distance. Either decrease the jumpforce or increase the gravity
-    this.jumpForce = -11;
-    //world values
-    friction = 0.96;
-    gravity = .3;
-    
-    halfWidth = wid/2;
-    halfHeight = hei/2;
+    this.jumpForce = -9;
     //Colisssion detection
     collisionSide = "";
     //Animation
@@ -126,7 +97,7 @@ class Player{
     
   }
   void setcat(PImage image){
-    cat = image;
+    img = image;
   }
   void setwinLose(){
     if(winLose==false){
@@ -137,9 +108,9 @@ class Player{
   }
   void display(){
     if (abs(velocityY) > 0) {
-        image(moveImages[walkFrame+0], posX,posY,Width,Height);
+        image(moveImages[walkFrame+0], posX,posY,wid,hei);
     }else{
-        image(idleImages[idleFrame+0], posX,posY,Width,Height);
+        image(idleImages[idleFrame+0], posX,posY,wid,hei);
     }
     //If the frames is 60, 1000/60 = 16 ms. Each frame would run for 16 ms
     
@@ -164,6 +135,11 @@ class Player{
   }
   public void setCollisionSide(String side){
     collisionSide = side;
+  }
+  
+  public void setSize(float w,float h) {
+    wid = w;
+    hei = h;
   }
   
   
@@ -196,18 +172,18 @@ class Player{
       posX = 0;
     }
     //// right
-    if (posX + Width > width){
-      posX = width - Width;
+    if (posX + wid > rightEdge){
+      posX = width - wid;
     }
     ////top
     if (posY < 0){
       posY = 0;
     }
     //Below
-    if (posY + Height > lowBoundary){
+    if (posY + hei > lowEdge){
       isOnGround = true;
       velocityY = 0;
-      posY = lowBoundary- Height;
+      posY = lowEdge- hei;
     }
   }
 

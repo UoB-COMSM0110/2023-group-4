@@ -1,95 +1,51 @@
-class Enemy{
-
-  float w, h, x, y, vx, vy, 
-    accelerationX, accelerationY, 
-    speedLimit;
-
-  float leftEdge, rightEdge, ground;
-
-  //world variables
-  float gravity;
- 
-  //boolean isOnGround;
-  //float jumpForce;
-
-  float halfWidth, halfHeight;
-  //String collisionSide;
-
-  //image variables
-  int currentFrame;
-  int frameSequence;
-  int frameOffset;
-
-  color c;
+class Enemy extends PEObject{
 
   Boolean dead;
-
-  Enemy(float x,float y) {
-    w = 80;
-    h = 80;
-    this.x = x-w;
-    this.y = y-h;
-    vx = (random(10)<5)? -5 : 5;
-
-    halfWidth = w/2;
-    halfHeight = h/2;
-    
-    ground = y;
-
-    leftEdge = 0;
-    rightEdge = width/2;
-    //if condition is true do the first thing otherwise do the second
-    //ternary operator
-    vy = 0;
-    gravity = .3;
-    //collisionSide = "";
-    currentFrame = 0;
-    frameSequence = 6;//number of frames in each animation sequence
-    frameOffset = 0;
-
-    c = color(255);
+  float vx;
+  Enemy(PImage img,float x,float y) {
+    super(img,x-80,y-80,80,80,0,width/2,y,0,0);
+    vx = 0;
     dead = false;
   }
   void setX(float x){
-    this.x = x-w;
+    this.posX = x-wid;
   }
-  void update() {
-    vy += gravity;
-    float abc = height -h;
-    if (abs(vy) < 0.2) {
-      vy = 0;
+  @Override void update() {
+    velocityY += gravity;
+    if (abs(velocityY) < 0.2) {
+      velocityY = 0;
     }
-    x = Math.max(0, Math.min(x + vx, rightEdge - w)); 
-    y = Math.max(0, Math.min(y + vy, ground - h));
+    posX = Math.max(0, Math.min(posX + vx, rightEdge - wid)); 
+    println("posX:"+posX + "Vx:"+vx);
+    posY = Math.max(0, Math.min(posY + velocityY, lowEdge - hei));
     checkBoundaries();
   }
 
-  void display() {
+  @Override void display() {
     fill(255, 255, 0);
-    rect(x, y, w, h);
+    //rect(posX, posY, wid, hei);
+    image(img,posX, posY, wid, hei);
   }
 
-  void checkBoundaries() {
+  @Override void checkBoundaries() {
     ////check boundaries
     ////left
-    if (x <= leftEdge) {
-      vx *= -1;
-      //accelerationX *= -1;
-      x = leftEdge;
+    if (posX <= leftEdge) {
+      velocityX *= -1;
+      posX = leftEdge;
     }
     //// right
-    if (x >= rightEdge - w) {
-      vx *= -1;
-      //accelerationX *= -1;
-      x = rightEdge - w;
+    if (velocityX >= rightEdge - wid) {
+      velocityX *= -1;
+      posX = rightEdge - wid;
     }
   }
 
   void deadJump(){
     //Value vy controls the jump height of copy Cat
-    vy = -9;
-    vx = 0;
-    ground = height +200;
+    velocityY = -9;
+    velocityX = 0;
+    lowEdge = height +200;
     dead = true;
   }
 }

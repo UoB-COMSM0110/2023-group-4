@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Cloud extends Object {
   float velocity;
   Cloud(float x, float y, PImage img, float speed) {
@@ -10,6 +11,7 @@ class Cloud extends Object {
  
  @Override void update() {
     x += velocityX * velocity;
+
     if (x + img.width < 0) {
       x = width;
     }

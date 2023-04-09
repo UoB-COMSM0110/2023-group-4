@@ -90,7 +90,6 @@ void setup(){
   
   clouds = new ArrayList<>();
   initClouds();
-  
    // Load obstacle images
    PImage[] obstacleImages = new PImage[8];
 
@@ -382,6 +381,7 @@ void finalBoss() {
   int bossWidth = fB.width / 14;
   int bossHeight = fB.height / 14;
   displayPositionData();
+
   // Update the boss's X position based on the bossXDirection and bossXSpeed
   bossXOffset += bossXDirection * bossXSpeed;
   // Reverse the bossXDirection when the boss reaches the left or right limits
@@ -409,7 +409,6 @@ void finalBoss() {
   player.update();
   player.setSize(100, 100);
   player.display();
-
   if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
   gameState = "LOSE";
 } else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
@@ -450,6 +449,9 @@ void playGame() {
   score += 10; // Increment score by 1
   lastScoreUpdateTime = millis(); // Update the time the score was last updated
 }
+
+
+
   //Obstacles Controller
   for(Obstacle obs:obsList){
     obs.update();

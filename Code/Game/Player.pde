@@ -31,6 +31,9 @@ class Player extends PEObject{
     //Gravity controlls the jump force  velocity = jumpForce + gravity
     //To decrease the jump distance. Either decrease the jumpforce or increase the gravity
     this.jumpForce = -9;
+<<<<<<< HEAD
+=======
+>>>>>>> fa964358616435da9e9486a1590bb33dd1ca296b
     //Colisssion detection
     collisionSide = "";
     //Animation

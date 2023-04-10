@@ -3,8 +3,8 @@ class Enemy extends PEObject{
   Boolean dead;
   float vx;
   Enemy(PImage img,float x,float y) {
-    super(img,x-80,y-80,80,80,0,width/2,y,0,0);
-    vx = 0;
+    super(img,x-80,y-80,80,80,0,width,y,0,0);
+    vx = -5;
     dead = false;
   }
   void setX(float x){
@@ -35,9 +35,9 @@ class Enemy extends PEObject{
       posX = leftEdge;
     }
     //// right
-    if (posX >= rightEdge ) {
+    if (posX >= rightEdge-wid ) {
       velocityX *= -1;
-      posX = rightEdge ;
+      posX = rightEdge-wid;
     }
   }
 

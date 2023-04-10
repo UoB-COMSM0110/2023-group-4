@@ -385,6 +385,43 @@ void finalBoss() {
   textAlign(CENTER);
   textSize(25);
   fill(255, 255, 255);
+  // Clouds Controller
+  // cloud movement 
+  float averageObstacleVelocity = 0;
+  if (obsList.size() > 0) {
+    averageObstacleVelocity = obsList.get(0).velocityX;
+  }
+  displayPositionData();
+  for (Cloud cloud : clouds) {
+    cloud.velocity = -averageObstacleVelocity;
+    cloud.update();
+    cloud.display();
+  }
+  player.update();
+  player.setSize(80, 50); //100,62
+  player.display();
+  copyCat.update();
+  copyCat.display();
+  if(copyCat.dead == false){
+  player.collisionSide = collisionsPVE(player,copyCat);
+  }
+  //CopyCat collision detection
+  if(player.collisionSide!="none"&&copyCat.dead == false){
+    if(player.collisionSide == "top"||player.collisionSide == "bottom"){
+      //Remove the coptCat
+      copyCat.deadJump();
+      player.collisionSide = "none";
+      gameState = "PLAY";
+      copyCat = new Enemy(fB,width,player.lowEdge);
+    }else{
+      gameState = "LOSE";
+    }
+  }
+/*PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  textAlign(CENTER);
+  textSize(25);
+  fill(255, 255, 255);
   int bossWidth = fB.width / 14;
   int bossHeight = fB.height / 14;
   displayPositionData();
@@ -433,11 +470,12 @@ void finalBoss() {
   }*/
   if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
   gameState = "LOSE";
-} else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
+/*} else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
       score = score + 10;
-  gameState = "PLAY";
+  gameState = "PLAY";*/
 }
-  timer += getDeltaTime();
+  timer += getDeltaTime();*/
+  
 }
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");

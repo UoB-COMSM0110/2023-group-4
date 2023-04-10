@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 class Cloud extends Object {
   float velocity;
   Cloud(float x, float y, PImage img, float speed) {

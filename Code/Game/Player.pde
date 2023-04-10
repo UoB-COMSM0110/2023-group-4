@@ -156,11 +156,11 @@ class Player extends PEObject{
       moveImages = new PImage[frames];
       idleImages = new PImage[4];
       for (int i = 0; i<frames; i++){
-        moveImages[i]=loadImage(filePath+"walk/"+ i + ".png");
+        moveImages[i]=loadImage(filePath+"walk/"+ i + ".tiff"); //change from here
       }
       //Idle animation
       for (int i = 0; i<4; i++){
-        idleImages[i]=loadImage(filePath+"Idle/"+ i + ".png");
+        idleImages[i]=loadImage(filePath+"Idle/"+ i + ".tiff");
       }
     }
   }

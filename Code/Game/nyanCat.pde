@@ -154,9 +154,7 @@ void buttonListener(){
 }
 //If you want ot create new buttons, Put them into buttonArray
 void buttonInit(){
-  
 
-  
   //Start Button
   startButton = new Button(width/2-50,height/2,90,40,"Start",149,75,12,null,null,null,255,255,255);
   buttonArray.add(startButton);
@@ -419,6 +417,21 @@ void finalBoss() {
   player.update();
   player.setSize(80, 50); //100,62
   player.display();
+  //Boss function
+ /* if(appear){
+    copyCat.update();
+    copyCat.display();
+    player.collisionSide = collisionsPVE(player,copyCat);
+    //CopyCat collision detection
+    if(player.collisionSide!="none"&&copyCat.dead == false){
+      if(player.collisionSide == "top"||player.collisionSide == "bottom"){
+        //Remove the coptCat
+        copyCat.deadJump();
+      }else{
+        gameState = "LOSE";
+      }
+    }
+  }*/
   if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
   gameState = "LOSE";
 } else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
@@ -450,18 +463,11 @@ void playGame() {
   player.display();
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
-  if(appear){
-    copyCat.update();
-    copyCat.display();
-  }
   //Score over time
  if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
   score += 10; // Increment score by 1
   lastScoreUpdateTime = millis(); // Update the time the score was last updated
 }
-
-
-
   //Obstacles Controller
   for(Obstacle obs:obsList){
     obs.update();
@@ -471,16 +477,6 @@ void playGame() {
   //Collission detection
   for(Obstacle obs:obsList){
     if(collisionDetection(player,obs)){
-      gameState = "LOSE";
-    }
-  }
-  //CopyCat collision detection
-  player.collisionSide = collisionsPVE(player,copyCat);
-  if(player.collisionSide!="none"&&copyCat.dead == false){
-    if(player.collisionSide == "top"||player.collisionSide == "bottom"){
-      //Remove the coptCat
-      copyCat.deadJump();
-    }else{
       gameState = "LOSE";
     }
   }
@@ -607,8 +603,8 @@ String collisionsPVE(Player player,Enemy copyCat){
   float dx = (player.posX+player.wid/2) - (copyCat.posX+copyCat.wid/2);
   float dy = (player.posY+player.hei/2) - (copyCat.posY+copyCat.hei/2);
 
-  float combinedHalfWidths =player.halfWidth + copyCat.halfWidth-60;
-  float combinedHalfHeights = player.halfHeight + copyCat.halfHeight-60;
+  float combinedHalfWidths =player.halfWidth + copyCat.halfWidth-30;
+  float combinedHalfHeights = player.halfHeight + copyCat.halfHeight-30;
 
   if (abs(dx) < combinedHalfWidths) {
     ////collision has happened on the x axis

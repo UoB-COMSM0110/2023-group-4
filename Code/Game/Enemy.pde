@@ -35,9 +35,9 @@ class Enemy extends PEObject{
       posX = leftEdge;
     }
     //// right
-    if (velocityX >= rightEdge - wid) {
+    if (posX >= rightEdge ) {
       velocityX *= -1;
-      posX = rightEdge - wid;
+      posX = rightEdge ;
     }
   }
 

@@ -193,7 +193,6 @@ class Player extends PEObject{
       isOnGround = true;
       velocityY = 0;
       touched = true;
-      println("top");
     } else if (collisionSide == "top" && velocityY <= 0) {
       velocityY = 0;
       touched = true;

@@ -380,6 +380,7 @@ void generateObstacles() {
   }
 }
 void finalBoss() {
+  
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   textAlign(CENTER);
@@ -403,9 +404,10 @@ void finalBoss() {
   copyCat.update();
   copyCat.display();
   if(copyCat.dead == false){
-  player.collisionSide = collisionsPVE(player,copyCat);
+    player.collisionSide = collisionsPVE(player,copyCat);
   }
   //CopyCat collision detection
+  
   if(player.collisionSide!="none"&&copyCat.dead == false){
     if(player.collisionSide == "top"||player.collisionSide == "bottom"){
       //Remove the coptCat
@@ -413,10 +415,11 @@ void finalBoss() {
       player.collisionSide = "none";
       gameState = "PLAY";
       copyCat = new Enemy(fB,width,player.lowEdge);
-    }else{
+    }else if(player.collisionSide == "left"||player.collisionSide == "right"){
       gameState = "LOSE";
     }
   }
+  
 /*PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   textAlign(CENTER);
@@ -468,13 +471,13 @@ void finalBoss() {
       }
     }
   }*/
-  if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
-  gameState = "LOSE";
+  //if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
+ // gameState = "LOSE";
 /*} else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
       score = score + 10;
-  gameState = "PLAY";*/
+  gameState = "PLAY";
 }
-  timer += getDeltaTime();*/
+  //timer += getDeltaTime();*/
   
 }
 void playGame() {

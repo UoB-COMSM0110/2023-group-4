@@ -31,12 +31,13 @@ class Enemy extends PEObject{
     ////check boundaries
     ////left
     if (posX <= leftEdge) {
-      velocityX *= -1;
+      println("Chengae");
+      vx *= -1;
       posX = leftEdge;
     }
     //// right
     if (posX >= rightEdge-wid ) {
-      velocityX *= -1;
+      vx *= -1;
       posX = rightEdge-wid;
     }
   }

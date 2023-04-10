@@ -32,7 +32,7 @@ class Player extends PEObject{
     //To decrease the jump distance. Either decrease the jumpforce or increase the gravity
     this.jumpForce = -9;
     //Colisssion detection
-    collisionSide = "";
+    collisionSide = "none";
     //Animation
     //Walk sequence
     walkFrame = 0;

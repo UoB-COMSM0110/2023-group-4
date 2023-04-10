@@ -235,7 +235,7 @@ void startGame(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
 
-
+  score = 0;
   textAlign(CENTER);
   fill(238,175,54);
   PFont font = createFont("PressStart2P-Regular.ttf", 60);
@@ -346,7 +346,7 @@ void showFakeQuit() {
   PImage cat = loadImage("../Game/Cat4.png");
 
   image(cat, width/7-150, height/4-20, 441, 450);
-
+    score = 0;
   if (pauseStart == 0) {
     pauseStart = millis(); 
   } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {
@@ -413,6 +413,7 @@ void finalBoss() {
       //Remove the coptCat
       copyCat.deadJump();
       player.collisionSide = "none";
+      reset();
       gameState = "PLAY";
       copyCat = new Enemy(fB,width,player.lowEdge);
     }else if(player.collisionSide == "left"||player.collisionSide == "right"){
@@ -521,7 +522,7 @@ void playGame() {
     }
   }
   //Change to boss level
-  if (score >= 50 && score % 50 == 0) {
+  if (score >= 150 && score % 150 == 0) {
       bossXOffset = 850;
       gameState = "BOSS";
   }
@@ -531,6 +532,7 @@ void playGame() {
 void winGame(){}
 void loseGame(){
   //Stop the game
+  score = 0;
   loseGamePage();
   for(int i=5;i<=6;i++){
     buttonArray.get(i).update();
@@ -582,7 +584,13 @@ void reset(){
     player.setposX(0);
     player.setposY((float)height-100);
   }
+    if (score > 0){
+    score = score + 0;
+    }else {
     score = 0;
+    }
+    
+    //score = 0;
   obsList = new ArrayList<>();
   PImage obstacle = loadImage("obstacles.png");
   for(Button button:buttonArray){

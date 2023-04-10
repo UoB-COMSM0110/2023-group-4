@@ -78,12 +78,13 @@ void setup(){
   obstacleVelocityX = 10.0;
   gameState = "START";
   initialX = width/2 + 255;
-  initialY = height/2 + 20 - 100;
+  initialY = height/2 - 78;
 
-  int newWidth = 100;
-  int newHeight = 62;
+  int newWidth = 50;
+  int newHeight = 20;
   
-  player = new Player(false, null, initialX, initialY, newWidth, newHeight, "Images/ratOne/");
+  player = new Player(false, null, initialX, initialY, 50, 20, "Images/ratOne/");
+
   copyCat = new Enemy(fB,width,player.lowEdge);
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
@@ -144,7 +145,7 @@ void buttonListener(){
       reset();
     }else if(index>=1 && index<=4){
       Button button = buttonArray.get(index);
-      player = new Player(false,button.getCat(),width/2 + 255,height/2 + 20 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
+      player = new Player(false,button.getCat(),width/2 + 255,height/2 + 27 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
     } else if(index == 9) {
       gameState = "Choose";
       reset();
@@ -536,7 +537,7 @@ void reset(){
   if(gameState == "START" || gameState == "Character"){
     player.setposX(initialX);
     player.setposY(initialY);
-    player.setSize(160,160);
+    player.setSize(145,100);
     obstacleVelocityX = 10.0;
   }else{//gameState  is "Play"
     player.setposX(0);

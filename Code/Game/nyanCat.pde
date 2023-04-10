@@ -458,23 +458,9 @@ void finalBoss() {
   player.setSize(80, 50); //100,62
   player.display();
   //Boss function
- /* if(appear){
-    copyCat.update();
-    copyCat.display();
-    player.collisionSide = collisionsPVE(player,copyCat);
-    //CopyCat collision detection
-    if(player.collisionSide!="none"&&copyCat.dead == false){
-      if(player.collisionSide == "top"||player.collisionSide == "bottom"){
-        //Remove the coptCat
-        copyCat.deadJump();
-      }else{
-        gameState = "LOSE";
-      }
-    }
-  }*/
-  //if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
+  //if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 230) {
  // gameState = "LOSE";
-/*} else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 125 && player.posY < 140 ){
+/*} else if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 160 && player.posY < 185 ){
       score = score + 10;
   gameState = "PLAY";
 }

@@ -347,8 +347,6 @@ void showFakeQuit() {
 
   image(cat, width/7-150, height/4-20, 441, 450);
 
-
-  
   if (pauseStart == 0) {
     pauseStart = millis(); 
   } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {

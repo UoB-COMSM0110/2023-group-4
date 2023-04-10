@@ -31,9 +31,8 @@ class Player extends PEObject{
     //Gravity controlls the jump force  velocity = jumpForce + gravity
     //To decrease the jump distance. Either decrease the jumpforce or increase the gravity
     this.jumpForce = -9;
-<<<<<<< HEAD
-=======
->>>>>>> fa964358616435da9e9486a1590bb33dd1ca296b
+
+
     //Colisssion detection
     collisionSide = "";
     //Animation
@@ -159,11 +158,11 @@ class Player extends PEObject{
       moveImages = new PImage[frames];
       idleImages = new PImage[4];
       for (int i = 0; i<frames; i++){
-        moveImages[i]=loadImage(filePath+"walk/"+ i + ".png");
+        moveImages[i]=loadImage(filePath+"walk/"+ i + ".tiff"); //change from here
       }
       //Idle animation
       for (int i = 0; i<4; i++){
-        idleImages[i]=loadImage(filePath+"Idle/"+ i + ".png");
+        idleImages[i]=loadImage(filePath+"Idle/"+ i + ".tiff");
       }
     }
   }

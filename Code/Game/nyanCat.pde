@@ -77,13 +77,18 @@ void setup(){
   buttonArray = new ArrayList<>();
   obstacleVelocityX = 10.0;
   gameState = "START";
-  initialX = width/2+250;
-  initialY = height/7-9;
-  player = new Player(false,null,initialX,initialY,160,160,"Images/ratOne/");
+  initialX = width/2 + 255;
+  initialY = height/2 + 20 - 100;
+
+  int newWidth = 100;
+  int newHeight = 62;
+  
+  player = new Player(false, null, initialX, initialY, newWidth, newHeight, "Images/ratOne/");
   copyCat = new Enemy(fB,width,player.lowEdge);
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
-    test[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
+    test[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff"); //from png to tiff
+    test[i].resize(newWidth, newHeight);
   }
   
   buttonInit();
@@ -139,7 +144,7 @@ void buttonListener(){
       reset();
     }else if(index>=1 && index<=4){
       Button button = buttonArray.get(index);
-      player = new Player(false,button.getCat(),width/2+250,height/7-9,button.getWidth() * 1.6,button.getHeight() * 1.6,button.getFilePath());
+      player = new Player(false,button.getCat(),width/2 + 255,height/2 + 20 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
     } else if(index == 9) {
       gameState = "Choose";
       reset();
@@ -149,6 +154,9 @@ void buttonListener(){
 }
 //If you want ot create new buttons, Put them into buttonArray
 void buttonInit(){
+  
+
+  
   //Start Button
   startButton = new Button(width/2-50,height/2,90,40,"Start",149,75,12,null,null,null,255,255,255);
   buttonArray.add(startButton);
@@ -159,25 +167,27 @@ void buttonInit(){
   int frames = 4;
   PImage[] character = new PImage[4];
   for (int i = 0; i<4; i++){
-    character[i]=loadImage("Images/ratOne/Idle/" + i + ".png");
+    character[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff"); //change from png 
   }
-  chaOne = new Button(0,height-158,100,100,null,0,200,0,"Images/ratOne/",null,character,0,0,0);
+  chaOne = new Button(100,height-118,90,62,null,0,200,0,"Images/ratOne/",null,character,0,0,0);
   buttonArray.add(chaOne);
   for (int i = 0; i<frames; i++){
-    character[i]=loadImage("Images/ratTwo/Idle/" + i + ".png");
+    character[i]=loadImage("Images/ratTwo/Idle/" + i + ".tiff");
   }
-  chaTwo = new Button(100,height-158,100,100,null,0,200,0,"Images/ratTwo/",null,character,0,0,0);
+  chaTwo = new Button(0,height-118,90,62,null,0,200,0,"Images/ratTwo/",null,character,0,0,0);
   buttonArray.add(chaTwo);
   for (int i = 0; i<frames; i++){
-    character[i]=loadImage("Images/catOne/Idle/" + i + ".png");
+    character[i]=loadImage("Images/catOne/Idle/" + i + ".tiff");
   }
-  chaThree = new Button(200,height-158,100,100,null,0,200,0,"Images/catOne/",null,character,0,0,0);
+  chaThree = new Button(200,height-118,90,62,null,0,200,0,"Images/catOne/",null,character,0,0,0);
   buttonArray.add(chaThree);
    for (int i = 0; i<frames; i++){
-    character[i]=loadImage("Images/catTwo/Idle/" + i + ".png");
+    character[i]=loadImage("Images/catTwo/Idle/" + i + ".tiff");
   }
-  chaFour = new Button(300,height-158,100,100,null,0,200,0,"Images/catTwo/",null,character,0,0,0);
+  chaFour = new Button(300,height-118,90,62,null,0,200,0,"Images/catTwo/",null,character,0,0,0);
   buttonArray.add(chaFour);
+  
+  
   //Restar quit button
   Button restartButton = new Button(width/2-130,height/3+40,260,30,"Play Again",149,75,12,null,null,null,225,225,225);
   buttonArray.add(restartButton);
@@ -361,7 +371,7 @@ void generateObstacles() {
     // Resize the obstacle while maintaining its aspect ratio
     float originalWidth = 1890;
     float originalHeight = 1417;
-    float newWidth = 110; //size of obstalce
+    float newWidth = 100; //size of obstalce
     float newHeight = (newWidth * originalHeight) / originalWidth;
 
     float obstacleY = height - newHeight - 58; // Set the desired height position for the obstacle
@@ -407,7 +417,7 @@ void finalBoss() {
   }
   //Player Controller
   player.update();
-  player.setSize(100, 100);
+  player.setSize(80, 50); //100,62
   player.display();
   if (player.posX + player.wid >= bossX + bossWidth - player.wid/2 && player.posX + player.wid <= bossX + bossWidth + player.wid/2 && player.posY > 180) {
   gameState = "LOSE";
@@ -436,7 +446,7 @@ void playGame() {
 
   //Player Controller
   player.update();
-  player.setSize(100,100);
+  player.setSize(80,50); //100,62
   player.display();
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear

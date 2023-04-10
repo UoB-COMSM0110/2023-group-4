@@ -1,8 +1,8 @@
 
-<<<<<<< HEAD
+
 class Obstacle extends Object{
-=======
->>>>>>> fa964358616435da9e9486a1590bb33dd1ca296b
+
+
 
   Obstacle(float _x, float _y, float _w, float _h,PImage img,float velocityX){
     super(_x,_y,_w,_h,img,velocityX,0);

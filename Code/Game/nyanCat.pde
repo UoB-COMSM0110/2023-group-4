@@ -309,19 +309,19 @@ void showInstruction() {
 
   float totalWidth = 80 + 40 + 36 + 40 + 90; // Width of text "Use", up-arrow, "&", right-arrow, and "to"
   float startX = (width - totalWidth) / 2;
-
-  text("Use", startX + 30, height / 3 + 15);
-  PImage keyUp = loadImage("../Game/up-arrow.png");
-  image(keyUp, startX + 80, height / 3 - 20, 40, 40);
-  
-  text("&", startX + 80 + 60, height / 3 + 15);
   
   PImage keyRight = loadImage("../Game/right-arrow.png");
-  image(keyRight, startX + 80 + 40 + 36, height / 3 - 20, 40, 40);
+  image(keyRight, startX - 85, height / 3 - 43, 40, 40);
   
-  text("to", startX + 80 + 40 + 36 + 40 + 35, height / 3 + 15);
+  PImage keyLeft = loadImage("../Game/left-arrow.png");
+  image(keyLeft, startX - 130, height / 3 - 43, 40, 40);
 
-  text("Jump over obstacles", width / 2, height / 2);
+  text("Go backward/forward", width / 2 + 70, height / 3 - 10);
+  
+  PImage keyUp = loadImage("../Game/up-arrow.png");
+  image(keyUp, startX - 110, height / 3 + 17, 40, 40);
+
+  text("Jump over obstacles", width / 2 + 40, height / 2 - 10);
   fill(238, 175, 54);
   rect(width / 2 - 78, height / 2 + 32, 180, 40, 4);
 

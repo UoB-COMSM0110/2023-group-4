@@ -78,7 +78,7 @@ void setup(){
   obstacleVelocityX = 10.0;
   gameState = "START";
   initialX = width/2 + 255;
-  initialY = height/2 + 20 - 100;
+  initialY = height/2 + 20 - 97;
 
   int newWidth = 100;
   int newHeight = 62;
@@ -145,7 +145,7 @@ void buttonListener(){
       reset();
     }else if(index>=1 && index<=4){
       Button button = buttonArray.get(index);
-      player = new Player(false,button.getCat(),width/2 + 255,height/2 + 20 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
+      player = new Player(false,button.getCat(),width/2 + 255,height/2 + 25 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
     } else if(index == 9) {
       gameState = "Choose";
       reset();

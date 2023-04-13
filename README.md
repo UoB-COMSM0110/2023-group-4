@@ -6,9 +6,12 @@
 
 
 ## INTRODUCTION
-Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:\n
-![Game_Vote](/Diagrams/GameVote.png)\n
+<html>
+Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
+![Game_Vote](/Diagrams/GameVote.png)<br/>
 After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons: 
+
+</html>
 
 
 ## REQUIREMENTS

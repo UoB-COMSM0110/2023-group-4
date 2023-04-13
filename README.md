@@ -6,8 +6,9 @@
     </head>
     <h1>2023-group-4</h1>
 
-    <h2> TEAM MEMBERS</h2>
+<h2> TEAM MEMBERS</H2>
     <img src=/Group_Pics/Group4.jpeg>
+</html>
 
 ## INTRODUCTION
 <html>

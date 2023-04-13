@@ -1,15 +1,15 @@
 <html>
   <h1>2023-group-4</h1>
 
-  <h2>Team Members</h2>
+## TEAM MEMBERS
 
-  <img src=https://user-images.githubusercontent.com/115186584/215521710-d9c85960-1257-4b2b-a89c-cf05d7b6ae0a.jpeg/>
+  <img id="GroupPic" src=/Group_Pics/Group4.jpeg>
 
 
 ## INTRODUCTION
 
 Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
-<img src=/Diagrams/GameVote.png/><br/>
+<img id="GameVote" src=/Diagrams/GameVote.png/><br/>
 After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons: 
 
 </html>

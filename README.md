@@ -3,16 +3,16 @@
         <link rel="stylesheet" href="README.css" />
         <meta charset="utf-8">
         <meta name="eng_report" content="eng_report">
-        <title>Flexbox 0 — starting code</title>
     </head>
     <h1>2023-group-4</h1>
-
+</html>
 ## TEAM MEMBERS
-
+<html>
     <img src=/Group_Pics/Group4.jpeg>
-
+</html>
 
 ## INTRODUCTION
+<html>
     <div class="GameVote">
 Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
         <img  class="GameVote" src=/Diagrams/GameVote.png/><br/>

@@ -9,7 +9,7 @@
 
 ## TEAM MEMBERS
 
-    <img id="GroupPic" src=/Group_Pics/Group4.jpeg>
+    <img src=/Group_Pics/Group4.jpeg>
 
 
 ## INTRODUCTION

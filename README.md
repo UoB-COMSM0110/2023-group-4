@@ -1,7 +1,5 @@
 <html lang="en-us">
     <head>
-        <link rel="stylesheet" href="README.css" />
-        <meta charset="utf-8">
         <meta name="eng_report" content="eng_report">
     </head>
     <h1>2023-group-4</h1>

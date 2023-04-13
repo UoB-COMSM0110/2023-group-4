@@ -5,11 +5,9 @@
         <meta name="eng_report" content="eng_report">
     </head>
     <h1>2023-group-4</h1>
-</html>
-## TEAM MEMBERS
-<html>
+
+    <h2> TEAM MEMBERS</h2>
     <img src=/Group_Pics/Group4.jpeg>
-</html>
 
 ## INTRODUCTION
 <html>

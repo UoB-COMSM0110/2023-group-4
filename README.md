@@ -1,21 +1,17 @@
 ## 2023-group-4
 
-## WHO ARE WE?
+## Team Members
 
 ![Group4](https://user-images.githubusercontent.com/115186584/215521710-d9c85960-1257-4b2b-a89c-cf05d7b6ae0a.jpeg)
 
 
-## Team Members
+## INTRODUCTION
+Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:
+/Diagrams/GameVote.png
+After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons: 
 
-| Name         | Email                 | Game Preference Vote                  |
-|--------------|-----------------------|---------------------------------------|
-| Antalya      | yj22925@bristol.ac.uk | T-Rex Game ft. Nyan Cat / flappy bird |
-| Kate Hunter  | bq22223@bristol.ac.uk | Baba is you                           |
-| Marcin       | ep22762@bristol.ac.uk | T-Rex Game ft. Nyan Cat               |
-| Mike         | oe22158@bristol.ac.uk | T-Rex Game ft. Nyan Cat / flappy bird |
-| Yuchen Zhang | vg22038@bristol.ac.uk | baba is you/flappy bird               |
 
-## FINAL DECISION
+## REQUIREMENTS
 T-Rex Game ft. Nyan Cat   
 (Game of life! or maybe Game of cat!)
 

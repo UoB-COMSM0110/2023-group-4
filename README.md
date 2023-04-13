@@ -14,9 +14,9 @@
 <html>
     <div class="GameVote">
 Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
-<!--trying to make this image smaller-->
+
         <figure>
-            <img class="GameVote" src=/Diagrams/GameVote.png width="400", height="200"/>
+            <img class="GameVote" src=/Diagrams/GameVote.png width="500", height="200">
             <figcaption>Game Votes Cast By Team Members</figcaption><br/>
         </figure>
 

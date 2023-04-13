@@ -2,18 +2,18 @@
 # 2023-group-4
 
 ## TEAM MEMBERS
-    <img src="/Group_Pics/Group4.jpeg">
+![GroupPic](/Group_Pics/Group4.jpeg)
 
 
 ## INTRODUCTION
-Initially we had two main game concepts, the T-Rex jumping style game, featured on the Google Chrome browser, and Baba is you, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
+Initially we had two main game concepts, <b>the T-Rex jumping style game</b> (featured on the Google Chrome browser) and <b>Baba is you</b>, a puzzle based platform game. So we each voted for out preferred game to develop, results shown below:<br/>
      <img src="/Diagrams/GameVote.png" width="600" height="200"><br>
 
 
-After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons:<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Firstly, jumping games are fun, intuitive and easy for everyone to play.<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Secondly, we realised that designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;Lastly, we had lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game. Incorporating one of our favourite internet memes (Nyan Cat) and portraying the obstacles as being similar to overcoming adversities in life. Our game would not just be a jumping game but also a “game of life”.<br>
+After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons:<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Firstly, jumping games are fun, intuitive and easy for everyone to play.<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Secondly, we realised that designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.<br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;Lastly, we had lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game. Incorporating one of our favourite internet memes (Nyan Cat) and portraying the obstacles as being similar to overcoming adversities in life. Our game would not just be a jumping game but also a “game of life”.<br><br>
 
 
 ## REQUIREMENTS

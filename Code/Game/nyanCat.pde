@@ -7,6 +7,9 @@ Button chaThree;
 Button chaFour;
 Button confirmButton;
 Button beginButton;
+//music
+import processing.sound.*;
+SoundFile file;
 
 Button normal;
 Button hard;
@@ -64,7 +67,8 @@ void setup(){
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
   fB = loadImage("../design_and_interface/game_BG/boss.png");
-
+  //music 
+  file = new SoundFile(this, "../Music/Nyan_Cat.wav");
 
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
@@ -218,6 +222,7 @@ void draw(){
   }else if(gameState == "WIN"){
     winGame();
   }else if(gameState == "LOSE"){
+   // file.stop();
     loseGame();
   }else if(gameState == "HELP"){
     helpMenu();
@@ -330,6 +335,7 @@ void showInstruction() {
 
   if (beginButton.isClicked()) {
     gameState = "PLAY";
+    file.play();
   }
 }
 
@@ -352,6 +358,7 @@ void showFakeQuit() {
   } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {
     pauseStart = 0;
     gameState = "PLAY";
+    file.play();
   } else {
     textSize(25);
     fill(255,255,255);
@@ -520,12 +527,14 @@ void loseGame(){
   //Stop the game
   score = 0;
   loseGamePage();
+  file.stop();
   for(int i=5;i<=6;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
   if(buttonArray.get(5).isClicked()){
     gameState = "PLAY";
+    file.play();
     reset();
     buttonArray.get(5).Clicked = false;
   }else if(buttonArray.get(6).isClicked()){

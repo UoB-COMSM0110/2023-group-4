@@ -3,7 +3,7 @@ class Enemy extends PEObject{
   Boolean dead;
   float vx;
   Enemy(PImage img,float x,float y) {
-    super(img,x-80,y-80,80,80,0,width,y,0,0);
+    super(img,x-80,y,60,60,0,width,y,0,0);
     vx = -5;
     dead = false;
   }
@@ -24,7 +24,7 @@ class Enemy extends PEObject{
   @Override void display() {
     fill(255, 255, 0);
     //rect(posX, posY, wid, hei);
-    image(img,posX, posY, wid, hei);
+    image(img,posX, posY+10, wid, hei);
   }
 
   @Override void checkBoundaries() {

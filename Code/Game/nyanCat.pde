@@ -400,6 +400,7 @@ void finalBoss() {
     averageObstacleVelocity = obsList.get(0).velocityX;
   }
   displayPositionData();
+  displayScore();
   for (Cloud cloud : clouds) {
     cloud.velocity = -averageObstacleVelocity;
     cloud.update();
@@ -478,6 +479,13 @@ void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
 
+    //display the score on the top right 
+  image(sc, width - 200, 10, width/20, height/10); // x was 520
+     //Display Score Number
+  fill(0);
+  textSize(24);
+  text(score, width - 90, 33); 
+  
   // cloud movement
   float averageObstacleVelocity = 0;
   if (obsList.size() > 0) {
@@ -495,19 +503,23 @@ void playGame() {
   player.update();
   player.setSize(80,50); //100,62
   player.display();
+ 
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
   //Score over time
- if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
-  score += 10; // Increment score by 1
+ if (millis() - lastScoreUpdateTime >= 100) { // Update score every 1000 milliseconds (1 second)
+  score += 1; // Increment score by 1
   lastScoreUpdateTime = millis(); // Update the time the score was last updated
 }
+
   //Obstacles Controller
   for(Obstacle obs:obsList){
     obs.update();
     obs.display();
   }
-  displayPositionData();
+  // displayPositionData(); 
+  // displayScore();
+
   //Collission detection
   for(Obstacle obs:obsList){
     if(collisionDetection(player,obs)){
@@ -515,7 +527,7 @@ void playGame() {
     }
   }
   //Change to boss level
-  if (score >= 150 && score % 150 == 0) {
+  if (score >= 100 && score % 100 == 0) { // score when boss appear
       bossXOffset = 850;
       gameState = "BOSS";
   }
@@ -600,19 +612,29 @@ void clear(){
 }
 
 void displayPositionData() {
-  fill(0);
-  String s = "\nvx: "+player.velocityX+"  vy: "+player.velocityY + 
-    "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
-  text(s, 150, 50);
+  // fill(0);
+  // String s = "\nvx: "+player.velocityX+"  vy: "+player.velocityY + 
+  //   "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
+  // text(s, 150, 50);
   // Display score
   
-  //display the score on the top right 
-  image(sc, width - 220, 15, width/13, height/10); // x was 520
-    //Display Score Number
+  // //display the score on the top right 
+  // image(sc, width - 200, 10, width/20, height/10); // x was 520
+  //   //Display Score Number
+  // fill(0);
+  // textSize(24);
+  // text(score, width - 90, 43); 
+
+}
+
+void displayScore(){
+   //display the score on the top right 
+  image(sc, width - 200, 10, width/20, height/10); // x was 520
+     //Display Score Number
   fill(0);
   textSize(24);
-  text(score, width - 90, 35);
-
+  text(score, width - 90, 43); 
+  
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

@@ -1,5 +1,3 @@
-import java.util.Timer;
-import java.util.TimerTask;
 String gameState;
 Button startButton;
 Button helpButton;
@@ -13,7 +11,6 @@ Button beginButton;
 import processing.sound.*;
 SoundFile file;
 
-int modeNumber = 1;
 Button normal;
 Button hard;
 float belowBoundary = height - 110;
@@ -41,6 +38,7 @@ int timeGap = 2000;
 float oldtime;
 float nowtime;
 float deltatime;
+float timer; 
 int score = 0;
 int quitTime = 0;
 int pauseStart = 0;
@@ -92,7 +90,6 @@ void setup(){
   player = new Player(false, null, initialX, initialY, newWidth, newHeight, "Images/ratOne/");
 
   copyCat = new Enemy(fB,width,player.lowEdge);
-  copyCat.modeOne();
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
     test[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff"); //from png to tiff
@@ -419,38 +416,22 @@ void finalBoss() {
   //CopyCat collision detection
   if(player.collisionSide!="none"&&copyCat.dead == false){
     if(player.collisionSide == "top"||player.collisionSide == "bottom"){
-      //Remove the copyCat
-      copyCat.deadJump();    
-      oldtime = millis();
-      modeNumber++;
+      //Remove the coptCat
+      copyCat.deadJump();      
     }else if(player.collisionSide == "left"||player.collisionSide == "right"){
       gameState = "LOSE";
     }
   }
   if(copyCat.dead){
-    deltatime = millis()-oldtime;
-    if(deltatime>800){
-      player.collisionSide = "none";
-      reset();
-      copyCat = new Enemy(fB,width,player.lowEdge);
-      if(difficulty == "EAST"){
-        obstacleVelocityX += 1;
-        copyCat.setVx("EASY");
-      }else{
-        obstacleVelocityX += 2;
-        copyCat.setVx("HARD");
+      timer += ;
+      if(timer>=1000){
+        player.collisionSide = "none";
+        reset();
+        gameState = "PLAY";
+        copyCat = new Enemy(fB,width,player.lowEdge);
       }
-      println(modeNumber);
-      if(modeNumber == 2){
-        copyCat.modeTwo();
-        println(copyCat.dead);
-        println(copyCat.velocityY);
-      }else if(modeNumber >=3){
-        copyCat.modeThree();
-      }
-      gameState = "PLAY";
-    }
   }
+
 }
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
@@ -504,7 +485,7 @@ void playGame() {
     }
   }
   //Change to boss level
-  if (score >= 50 && score % 50 == 0) { // score when boss appear
+  if (score >= 10 && score % 10 == 0) { // score when boss appear
       bossXOffset = 850;
       gameState = "BOSS";
   }
@@ -521,17 +502,12 @@ void loseGame(){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
-  //Restart the game
   if(buttonArray.get(5).isClicked()){
     gameState = "PLAY";
     file.play();
     reset();
-    copyCat.modeOne();
-    modeNumber = 1;
-    buttonArray.get(5).Clicked = false;  
-  }
-  //Quit the game
-  else if(buttonArray.get(6).isClicked()){
+    buttonArray.get(5).Clicked = false;
+  }else if(buttonArray.get(6).isClicked()){
     if (quitTime < 3) {
       gameState = "Fake Quit";
       quitTime++;
@@ -695,6 +671,13 @@ String collisionsPVE(Player player,Enemy copyCat){
     return "none";
   }
 }
+float getDeltaTime()
+{
+  nowtime = millis();
+  deltatime = nowtime - oldtime;
+  oldtime = nowtime;
+  return deltatime;
+} 
 //Keyboard monitor
 void keyPressed() {
   switch (keyCode) {

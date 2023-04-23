@@ -9,9 +9,13 @@ Button chaThree;
 Button chaFour;
 Button confirmButton;
 Button beginButton;
+Button mute;
+Button unmute;
 //music
 import processing.sound.*;
 SoundFile file;
+SoundFile initBgMusicFile;
+SoundFile currentFile;
 
 int modeNumber = 1;
 Button normal;
@@ -53,6 +57,7 @@ Boolean paused;
 Boolean appear;
 float initialX;
 float initialY;
+Boolean isMute;
 /*
 Index of Button
 0: Start Button
@@ -69,8 +74,12 @@ void setup(){
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
   fB = loadImage("../design_and_interface/game_BG/boss.png");
+  isMute = false;
+  
   //music 
   file = new SoundFile(this, "../Music/Nyan_Cat.wav");
+  initBgMusicFile = new SoundFile(this, "../Music/Fluffing-a-Duck.wav");
+  //initBgMusicFile.play();
 
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
@@ -100,7 +109,6 @@ void setup(){
   }
   
   buttonInit();
-  
   clouds = new ArrayList<>();
   initClouds();
    // Load obstacle images
@@ -156,6 +164,8 @@ void buttonListener(){
     } else if(index == 9) {
       gameState = "Choose";
       reset();
+    } else if (index == 11 || index == 12) {
+      isMute = !isMute;
     }
   }
   //Play Menu
@@ -210,8 +220,14 @@ void buttonInit(){
   
   beginButton = new Button(width/2-80,height/2+30,180,40,"Let's Go",149,75,12,null,null,null,255,255,255);
   buttonArray.add(beginButton);
+  
+  mute = new Button(width - 90, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/game_BG/mute.png"),null,255,255,255);
+  buttonArray.add(mute);
+  unmute = new Button(width - 50, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/game_BG/unmute.png"),null,255,255,255);
+  buttonArray.add(unmute);
 }
 void draw(){
+  displaySpeaker();
   clear();
   //println("GameState: "+ gameState);
   if(gameState == "START"){
@@ -238,10 +254,79 @@ void draw(){
   }
 }
 
+void displaySpeaker() {
+  int menuW = 80;
+  int menuH = 30;
+  int x = width - 95;
+  int y = 10;
+  
+  if (isMute) {
+    fill(192,192,192);
+  } else {
+    fill(60,179,113);
+  }
+ 
+  noStroke();
+  rect(x,y,menuW,menuH, 10);
+  buttonArray.get(11).update();
+  buttonArray.get(11).renderButton();
+  buttonArray.get(12).update();
+  buttonArray.get(12).renderButton();
+  
+  fill(255,255,255);
+  noStroke();
+  if (isMute) {
+    rect(width - 52,12,35,25, 40);
+  } else {
+    rect(width - 93,12,35,25, 40);
+  }
+  
+  toggleFile();
+  
+  if (unmute.isClicked() && isMute == false) {
+    isMute = true;
+    currentFile.stop();
+    buttonArray.get(11).update();
+  } else if (mute.isClicked() && isMute == true) {
+    isMute = false;
+    currentFile.play();
+    buttonArray.get(12).update();
+  }
+}
+
+void toggleFile() {
+  if(gameState == "PLAY" || gameState == "BOSS") {
+    if(getMusicFile() != currentFile) {
+      initBgMusicFile.stop();
+      if (!isMute) {
+        file.play();
+        currentFile = file;
+      }
+    }
+  } else {
+    if(getMusicFile() != currentFile) {
+      file.stop();
+      if (!isMute) {
+        initBgMusicFile.play();
+        currentFile = initBgMusicFile;
+      }
+    }
+  }
+}
+
+SoundFile getMusicFile() {
+  if(gameState == "PLAY" || gameState == "BOSS") {
+    return file;
+  } else {
+    return initBgMusicFile;
+  }
+}
+
 void startGame(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
 
   score = 0;
   textAlign(CENTER);
@@ -261,6 +346,7 @@ void startGame(){
 void chooseCharacter(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   fill(255, 255, 255);
   textSize(18);
   text("Click to choose\nyour character", width / 5 ,height/3);
@@ -281,6 +367,7 @@ void chooseCharacter(){
 void difficultyChose(){
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   textAlign(CENTER);
   textSize(25);
   fill(255,255,255);
@@ -311,6 +398,7 @@ void difficultyChose(){
 void showInstruction() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   textAlign(CENTER);
   textSize(25);
   fill(255, 255, 255);
@@ -338,7 +426,6 @@ void showInstruction() {
 
   if (beginButton.isClicked()) {
     gameState = "PLAY";
-    file.play();
   }
 }
 
@@ -347,6 +434,7 @@ void showInstruction() {
 void showFakeQuit() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   textAlign(CENTER);
   textSize(25);
   fill(255,255,255);
@@ -361,7 +449,6 @@ void showFakeQuit() {
   } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {
     pauseStart = 0;
     gameState = "PLAY";
-    file.play();
   } else {
     textSize(25);
     fill(255,255,255);
@@ -392,6 +479,7 @@ void generateObstacles() {
 void finalBoss() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   textAlign(CENTER);
   textSize(25);
   fill(255, 255, 255);
@@ -455,14 +543,9 @@ void finalBoss() {
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
 
-    //display the score on the top right 
-  image(sc, width - 200, 10, width/20, height/10); // x was 520
-     //Display Score Number
-  fill(0);
-  textSize(24);
-  text(score, width - 90, 33); 
-  
+  displayScore();
   // cloud movement
   float averageObstacleVelocity = 0;
   if (obsList.size() > 0) {
@@ -516,7 +599,7 @@ void loseGame(){
   //Stop the game
   score = 0;
   loseGamePage();
-  file.stop();
+  
   for(int i=5;i<=6;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
@@ -524,7 +607,6 @@ void loseGame(){
   //Restart the game
   if(buttonArray.get(5).isClicked()){
     gameState = "PLAY";
-    file.play();
     reset();
     copyCat.modeOne();
     modeNumber = 1;
@@ -547,6 +629,7 @@ void loseGamePage(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   //Menu BackGround
   int menuW = 500;
   int menuH = 230;
@@ -611,11 +694,12 @@ void displayPositionData() {
 
 void displayScore(){
    //display the score on the top right 
-  image(sc, width - 200, 10, width/20, height/10); // x was 520
+  image(sc, width - 300, 10, width/20, height/10); // x was 520
      //Display Score Number
   fill(0);
   textSize(24);
-  text(score, width - 90, 43); 
+  text(score, width - 190, 43); 
+  
 }
 boolean collisionDetection(Player player, Obstacle obs) {
     ////r1 is the player

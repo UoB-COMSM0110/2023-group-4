@@ -18,6 +18,7 @@
 - [Process](#process)
 - [Conclusion](#conclusion)
 - [Documentation of code](#documentation-of-code)
+- [Acknowledgements](#acknowledgements)
 
 
 ---
@@ -175,3 +176,14 @@ Quality of report writing, presentation, use of figures and visual material (5%)
 ## Documentation of code
 
 Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.
+
+
+--
+
+## Acknowledgements
+
+#### Audio
+- Fluffing a Duck Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+Music promoted by https://www.chosic.com/free-music/all/

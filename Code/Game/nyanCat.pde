@@ -16,6 +16,8 @@ import processing.sound.*;
 SoundFile file;
 SoundFile initBgMusicFile;
 SoundFile currentFile;
+SoundFile jumpSound;
+SoundFile failSound;
 
 int modeNumber = 1;
 Button normal;
@@ -68,7 +70,6 @@ Index of Button
 */ 
 void setup(){
   size(1000,366);
-  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
 
@@ -79,6 +80,8 @@ void setup(){
   //music 
   file = new SoundFile(this, "../Music/Nyan_Cat.wav");
   initBgMusicFile = new SoundFile(this, "../Music/Fluffing-a-Duck.wav");
+  jumpSound = new SoundFile(this, "../Music/SoundsEffect/jump.wav");
+  failSound = new SoundFile(this, "../Music/SoundsEffect/gameover.wav");
   //initBgMusicFile.play();
 
   //The key listener:⬅ ⬆ ➡ ⬇
@@ -140,6 +143,7 @@ void setup(){
   clouds.add(cloud3);
   clouds.add(cloud4);
 }
+
 
 
 
@@ -489,8 +493,10 @@ void finalBoss() {
   if (obsList.size() > 0) {
     averageObstacleVelocity = obsList.get(0).velocityX;
   }
-  displayPositionData();
-  displayScore();
+  // displayPositionData();
+  displayScore(); 
+ 
+
   for (Cloud cloud : clouds) {
     cloud.velocity = -averageObstacleVelocity;
     cloud.update();
@@ -540,12 +546,13 @@ void finalBoss() {
     }
   }
 }
+
+
 void playGame() {
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
 
-  displayScore();
   // cloud movement
   float averageObstacleVelocity = 0;
   if (obsList.size() > 0) {
@@ -564,6 +571,12 @@ void playGame() {
   player.setSize(80,50); //100,62
   player.display();
  
+ if (!isMute){
+ if (up) {
+  jumpSound.play();
+}
+ }
+
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
   //Score over time
@@ -577,13 +590,16 @@ void playGame() {
     obs.update();
     obs.display();
   }
-  // displayPositionData(); 
-  // displayScore();
+
+  displayScore(); // Call the function to display the score once, after the obstacle controllers
 
   //Collission detection
   for(Obstacle obs:obsList){
     if(collisionDetection(player,obs)){
       gameState = "LOSE";
+      if(!isMute){
+      failSound.play();
+    }
     }
   }
   //Change to boss level
@@ -594,6 +610,7 @@ void playGame() {
   generateObstacles(); // Call the new generateObstacles() method here
 }
 
+
 void winGame(){}
 void loseGame(){
   //Stop the game
@@ -603,6 +620,9 @@ void loseGame(){
   for(int i=5;i<=6;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
+  }
+   if (!isMute) {
+    failSound.play();
   }
   //Restart the game
   if(buttonArray.get(5).isClicked()){
@@ -676,21 +696,21 @@ void clear(){
   rect(0,0,width,height);
 }
 
-void displayPositionData() {
-  // fill(0);
-  // String s = "\nvx: "+player.velocityX+"  vy: "+player.velocityY + 
-  //   "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
-  // text(s, 150, 50);
-  // Display score
+// void displayPositionData() {
+//   // fill(0);
+//   // String s = "\nvx: "+player.velocityX+"  vy: "+player.velocityY + 
+//   //   "\ncollisionSide: "+player.collisionSide+"\nposX:"+player.posX+"  posY: "+player.posY;
+//   // text(s, 150, 50);
+//   // Display score
   
-  // //display the score on the top right 
-  // image(sc, width - 200, 10, width/20, height/10); // x was 520
-  //   //Display Score Number
-  // fill(0);
-  // textSize(24);
-  // text(score, width - 90, 43); 
+//   // //display the score on the top right 
+//   // image(sc, width - 200, 10, width/20, height/10); // x was 520
+//   //   //Display Score Number
+//   // fill(0);
+//   // textSize(24);
+//   // text(score, width - 90, 43); 
 
-}
+// }
 
 void displayScore(){
    //display the score on the top right 

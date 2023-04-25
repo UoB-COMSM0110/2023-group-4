@@ -18,6 +18,12 @@ SoundFile initBgMusicFile;
 SoundFile currentFile;
 SoundFile jumpSound;
 SoundFile failSound;
+//Leaderboard
+String playerName = "";
+Leaderboard leaderboard;
+import controlP5.*;
+ControlP5 cp5;
+PFont textfieldFont;
 
 int modeNumber = 1;
 Button normal;
@@ -85,7 +91,20 @@ void setup(){
   jumpSound = new SoundFile(this, "../Music/SoundsEffect/jump.wav");
   failSound = new SoundFile(this, "../Music/SoundsEffect/gameover.wav");
   //initBgMusicFile.play();
-
+  //Leaderboard
+  textfieldFont = createFont("Arial", 24); // Change 24 to the desired font size
+  leaderboard = new Leaderboard(10); // Initialize the leaderboard with a maximum of 10 entries
+   cp5 = new ControlP5(this);
+   cp5.addTextfield("playerName")
+   .setPosition(width / 2 + 1, height / 2 + 50)
+   .setSize(180, 40) // Set width to 200 and height to 40
+   .setColorBackground(color(139, 69, 19)) // Set brown background
+   .setColorForeground(color(255, 255, 255)) // Set white foreground
+   .setColorActive(color(255, 255, 255))
+   .setFont(textfieldFont) // Set the font for the textfield
+   .setLabelVisible(false);
+   cp5.get(Textfield.class, "playerName").hide();
+   
   //The key listener:⬅ ⬆ ➡ ⬇
   left = false;
   right = false;
@@ -168,8 +187,9 @@ void buttonListener(){
       Button button = buttonArray.get(index);
       player = new Player(false,button.getCat(),width/2 + 255,height/2 + 25 - 100,button.getWidth() * 1.6, button.getHeight() * 1.6,button.getFilePath());
     } else if(index == 9) {
+      if (!playerName.equals("")) { // Check if the player has entered a name
       gameState = "Choose";
-      reset();
+      reset();}
     } else if (index == 11 || index == 12) {
       isMute = !isMute;
     }
@@ -368,6 +388,13 @@ void chooseCharacter(){
   buttonArray.get(9).renderButton();
   player.display();
   buttonListener();
+  // Show or hide the playerName text field based on the game state
+  if (gameState == "Character") {
+    cp5.getController("playerName").setVisible(true);
+  } else {
+    cp5.getController("playerName").setVisible(false);
+  }
+  
 }
 
 void difficultyChose(){
@@ -582,7 +609,7 @@ void playGame() {
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
   //Score over time
- if (millis() - lastScoreUpdateTime >= 100) { // Update score every 1000 milliseconds (1 second)
+ if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
   score += 1; // Increment score by 1
   lastScoreUpdateTime = millis(); // Update the time the score was last updated
 }
@@ -598,6 +625,7 @@ void playGame() {
   //Collission detection
   for(Obstacle obs:obsList){
     if(collisionDetection(player,obs)){
+      leaderboard.addScore(playerName, score);
       gameState = "LOSE";
       if(!isMute){
       failSound.play();
@@ -678,20 +706,24 @@ void loseGamePage(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
-  displaySpeaker();
   //Menu BackGround
-  int menuW = 500;
-  int menuH = 230;
+  int menuW = 400;
+  int menuH = 130;
   String text = "GAME OVER";
   int x = (width-menuW)/2;
   int y = (height-menuH)/2-30;
   fill(149,75,12);
   noStroke();
   rect(x,y,menuW,menuH);
-  textSize(50);
+  textSize(30);
   textAlign(CENTER);
   fill(238,175,54);
   text(text,width/2,y+70);
+   // Display leaderboard on the side
+  fill(255);
+  textSize(17);
+  text("Leaderboard:", 130, 20);
+  leaderboard.display(50, 50);
 }
 void helpMenu(){}
 

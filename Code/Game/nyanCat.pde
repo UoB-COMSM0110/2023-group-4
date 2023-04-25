@@ -679,7 +679,7 @@ void loseGame(){
     buttonArray.get(i).renderButton();
   }
    if (!isMute) {
-    failSound.play();
+    //failSound.play();
   }
   //Restart the game
   if(buttonArray.get(5).isClicked()){

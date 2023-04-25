@@ -51,6 +51,8 @@ int score = 0;
 int quitTime = 0;
 int pauseStart = 0;
 int pauseDuration = 3000;
+int bossMsgShowStart = 0;
+int bossMsgShowDuration = 2000;
 ///
 PImage sc, fB;
 
@@ -602,6 +604,11 @@ void playGame() {
     }
     }
   }
+  int msgDisplayStart = difficulty == "NORMAL" ? 40 : 35;
+  if (score >= msgDisplayStart && score % 50 >= msgDisplayStart && score % 50 <= 49) { // score when boss appear
+      showBossComingMsg();
+  }
+  
   //Change to boss level
   if (score >= 50 && score % 50 == 0) { // score when boss appear
       bossXOffset = 850;
@@ -610,6 +617,28 @@ void playGame() {
   generateObstacles(); // Call the new generateObstacles() method here
 }
 
+void showBossComingMsg() {   
+  if (bossMsgShowStart == 0) {
+    bossMsgShowStart = millis(); 
+  } else if (bossMsgShowStart > 0 && millis() - bossMsgShowStart >= bossMsgShowDuration) {
+    bossMsgShowStart = 0;
+    gameState = "PLAY";
+  } else {
+    textSize(25);
+    fill(255,255,255);
+    
+    int timeLeft = (pauseDuration - millis() + pauseStart + 200)/200;
+    boolean isShow = (timeLeft % 2) != 0;
+    if (isShow) {
+      rect(width/2, height/2-120, 70, 70, 28);   
+      text("Boss is coming",width/2+20,height/2-20);
+      text("Step on it",width/2+20,height/2 + 15);
+      fill(255,102,102);
+      textSize(40);
+      text("!",width/2 + 35, height/2-75);
+    }
+  }
+}
 
 void winGame(){}
 void loseGame(){

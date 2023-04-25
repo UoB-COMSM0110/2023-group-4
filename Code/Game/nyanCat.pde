@@ -18,12 +18,18 @@ SoundFile initBgMusicFile;
 SoundFile currentFile;
 SoundFile jumpSound;
 SoundFile failSound;
+SoundFile fakeQuitSound;
+SoundFile killBossSound;
+
 //Leaderboard
 String playerName = "";
 Leaderboard leaderboard;
 import controlP5.*;
 ControlP5 cp5;
 PFont textfieldFont;
+PFont promptFont;
+
+
 
 int modeNumber = 1;
 Button normal;
@@ -90,13 +96,16 @@ void setup(){
   initBgMusicFile = new SoundFile(this, "../Music/Fluffing-a-Duck.wav");
   jumpSound = new SoundFile(this, "../Music/SoundsEffect/jump.wav");
   failSound = new SoundFile(this, "../Music/SoundsEffect/gameover.wav");
+  fakeQuitSound = new SoundFile(this, "../Music/SoundsEffect/fakeQuit.wav");
+  killBossSound = new SoundFile(this, "../Music/SoundsEffect/killBoss.wav");
+
   //initBgMusicFile.play();
   //Leaderboard
-  textfieldFont = createFont("Arial", 24); // Change 24 to the desired font size
+  textfieldFont = createFont("PressStart2P-Regular.ttf", 16); // Change 24 to the desired font size
   leaderboard = new Leaderboard(10); // Initialize the leaderboard with a maximum of 10 entries
    cp5 = new ControlP5(this);
    cp5.addTextfield("playerName")
-   .setPosition(width / 2 + 1, height / 2 + 50)
+   .setPosition(width/2-45,height/2+20)   //width / 2 + 1, height / 2 + 50
    .setSize(180, 40) // Set width to 200 and height to 40
    .setColorBackground(color(139, 69, 19)) // Set brown background
    .setColorForeground(color(255, 255, 255)) // Set white foreground
@@ -375,8 +384,8 @@ void chooseCharacter(){
   displaySpeaker();
   fill(255, 255, 255);
   textSize(18);
-  text("Click to choose\nyour character", width / 5 ,height/3);
-  textSize(40);
+  text("Step 1:\nClick to choose\nyour character", width / 5 ,height/3);
+  textSize(35);
   text("↓", width / 5 ,height/2);
   for(int i = 1; i < 5; i++){
     buttonArray.get(i).update();
@@ -389,6 +398,11 @@ void chooseCharacter(){
   player.display();
   buttonListener();
   // Show or hide the playerName text field based on the game state
+  fill(255, 255, 153);
+  textSize(18);
+  text("Step 2:\nInput your name\nand press enter", width/2+50 ,height/3);
+  textSize(35);
+  text("↓", width/2+50 ,height/2);
   if (gameState == "Character") {
     cp5.getController("playerName").setVisible(true);
   } else {
@@ -477,6 +491,11 @@ void showFakeQuit() {
 
   image(cat, width/7-150, height/4-20, 441, 450);
     score = 0;
+  if(!isMute){
+    initBgMusicFile.stop();
+    fakeQuitSound.play();
+  }
+
   if (pauseStart == 0) {
     pauseStart = millis(); 
   } else if (pauseStart > 0 && millis() - pauseStart >= pauseDuration) {
@@ -609,7 +628,7 @@ void playGame() {
   //Enemy controller
   //You want to make the copyCat appear just change the paramater appear
   //Score over time
- if (millis() - lastScoreUpdateTime >= 1000) { // Update score every 1000 milliseconds (1 second)
+ if (millis() - lastScoreUpdateTime >= 100) { // Update score every 1000 milliseconds (1 second)
   score += 1; // Increment score by 1
   lastScoreUpdateTime = millis(); // Update the time the score was last updated
 }
@@ -628,10 +647,13 @@ void playGame() {
       leaderboard.addScore(playerName, score);
       gameState = "LOSE";
       if(!isMute){
-      failSound.play();
+      failSound.play();}
+      if(failSound.isPlaying()){
+      initBgMusicFile.stop();
     }
     }
-  }
+    }
+  
   int msgDisplayStart = difficulty == "NORMAL" ? 40 : 35;
   if (score >= msgDisplayStart && score % 50 >= msgDisplayStart && score % 50 <= 49) { // score when boss appear
       showBossComingMsg();
@@ -677,9 +699,6 @@ void loseGame(){
   for(int i=5;i<=6;i++){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
-  }
-   if (!isMute) {
-    //failSound.play();
   }
   //Restart the game
   if(buttonArray.get(5).isClicked()){
@@ -878,7 +897,6 @@ void keyPressed() {
     down = true;
     break;
   }
-
 }
 void keyReleased() {
   switch (keyCode) {

@@ -102,15 +102,15 @@ In conclusion, our ideation process was an iterative and collaborative effort th
 ![UseCase4](https://user-images.githubusercontent.com/115186584/234690970-902fc3c5-fa82-404a-8788-e5ccccc5ef87.png)
 
 ## User Stories:
-As a user, I want to mute the game music, so that I am less distracted when playing the game.
-As a user, I want to change character, so that I can play as my preferred character.
-As a user, I want to read the acknowledgements, so that I can find out who made this awesome game.
-As a user, I want to change the game difficulty, so that I am being challenged the correct amount.
-As a user, I want to view the highscores, so that I can see who has performed the best at this game.
-As a user, I want to jump over obstacles, so that I don’t lose the game.
-As a user, I want to quit the game, so that I can exit without killing my character.
-As a user, I want to restart the game, so that I can improve my score (and maybe get on the leaderboard)
-As a user, I want to quit the game, so that I can do other things
+- As a user, I want to mute the game music, so that I am less distracted when playing the game.
+- As a user, I want to change character, so that I can play as my preferred character.
+- As a user, I want to read the acknowledgements, so that I can find out who made this awesome game.
+- As a user, I want to change the game difficulty, so that I am being challenged the correct amount.
+- As a user, I want to view the highscores, so that I can see who has performed the best at this game.
+- As a user, I want to jump over obstacles, so that I don’t lose the game.
+- As a user, I want to quit the game, so that I can exit without killing my character.
+- As a user, I want to restart the game, so that I can improve my score (and maybe get on the leaderboard)
+- As a user, I want to quit the game, so that I can do other things
 
 
 ---

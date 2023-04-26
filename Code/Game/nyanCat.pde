@@ -744,6 +744,7 @@ void loseGamePage(){
   text("Leaderboard:", 130, 20);
   leaderboard.display(50, 50);
 }
+
 void helpMenu(){}
 
 void reset(){

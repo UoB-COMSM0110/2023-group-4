@@ -57,12 +57,11 @@ One of the key steps in our ideation process was thinking about the flow of the 
 At this point we had a game concept with a quirky narrative, a main character and a twist. We were now in a position to make a paper prototype of how the game was going to work. Below is a video of our initial paper prototype:
 
 <p align="center">
-  <h3>Click the image below to watch the video:</h3>
+  Click the image below to watch the video:<br>
   <a href="https://www.youtube.com/watch?v=H8TkaA0i4RQ">
     <img src="https://img.youtube.com/vi/H8TkaA0i4RQ/0.jpg" alt="YouTube Video">
   </a>
 </p>
-
 
 
 ---

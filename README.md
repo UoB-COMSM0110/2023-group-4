@@ -33,11 +33,14 @@ After discussing lots of questions and concepts surrounding both ideas, ultimate
 - Secondly, we realised that designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.
 - Lastly, we had lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game. Incorporating one of our favourite internet memes (Nyan Cat) and portraying the obstacles as being similar to overcoming adversities in life. Our game would not just be a jumping game but also a “game of life”.
 
-![NyanCat Gif](/Code/Animation/NyanCat.gif)
+![previwe](https://user-images.githubusercontent.com/115186584/234675414-1145062c-2e77-44c9-b8a0-42c76d686a2d.gif)
 
 Now we knew our game concept, but we were yet to come up with a significant twist for the game. We wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a new character, “Copy Cat”, Nayancats nemesis who was the biggest obstacle of all. We thought of Copy Cat as being a boss character, after clearing a certain number of obstacles Nyancat would face a much bigger challenge as they would have to defeat this boss before they could proceed any further in this “game of life”. Copy Cat would be defeated if the player manages to jump on Copy Cats head. In order to dodge and battle this boss character we decided that we would also need the character to be able to move left and right as well as jump up and down, therefore our game character would have more freedom of movement than in a traditional jump based game.
 
 As a result of brainstorming for a twist we actually came up with a second twist, the fake quit scenario. The player would not be able to quit the game the first three times they tried to quit after losing. This twist came with a tagline of “you cannot quit the game of life!”.
+
+![fakequit](https://user-images.githubusercontent.com/115186584/234676427-f851c859-2d44-406b-b9a6-48fdb2717d82.gif)
+
 
 One of the key steps in our ideation process was thinking about the flow of the game, we continued to refer to our use-case diagram and user stories (which we had started very early on) and updated them to incorporate the new twist. We wanted to ensure that our game would be easy to understand and play, while still providing a fun and challenging experience for the user.
 
@@ -47,10 +50,7 @@ Click the image below to watch the video:<br>
 [![YouTube Video](https://img.youtube.com/vi/H8TkaA0i4RQ/0.jpg)](https://www.youtube.com/watch?v=H8TkaA0i4RQ)
 
 
-T-Rex Game ft. Nyan Cat   
-(Game of life! or maybe Game of cat!)
-
-![IMG_2904](https://user-images.githubusercontent.com/115186584/217028826-182e2c2f-2d6e-426f-8134-99309c3bacef.jpeg)
+![logo-black](https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png)
 
 
 ---

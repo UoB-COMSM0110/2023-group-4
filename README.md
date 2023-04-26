@@ -1,6 +1,9 @@
-<div align="center">
-![logo-black](https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png)
-</div>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png" alt="logo-black">
+</p>
+
+
+
 # 2023-group-4
 ![GroupPic](/Group_Pics/Group4.jpeg)
 

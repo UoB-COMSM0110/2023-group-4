@@ -1,4 +1,5 @@
 
+![logo-black](https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png)
 # 2023-group-4
 ![GroupPic](/Group_Pics/Group4.jpeg)
 
@@ -48,10 +49,6 @@ At this point we had a game concept with a quirky narrative, a main character an
 
 Click the image below to watch the video:<br>
 [![YouTube Video](https://img.youtube.com/vi/H8TkaA0i4RQ/0.jpg)](https://www.youtube.com/watch?v=H8TkaA0i4RQ)
-
-
-![logo-black](https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png)
-
 
 ---
 

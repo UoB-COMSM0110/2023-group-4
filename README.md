@@ -38,21 +38,31 @@ After discussing lots of questions and concepts surrounding both ideas, ultimate
 - Secondly, we realised that designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.
 - Lastly, we had lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game. Incorporating one of our favourite internet memes (Nyan Cat) and portraying the obstacles as being similar to overcoming adversities in life. Our game would not just be a jumping game but also a “game of life”.
 
-![previwe](https://user-images.githubusercontent.com/115186584/234675414-1145062c-2e77-44c9-b8a0-42c76d686a2d.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/234675414-1145062c-2e77-44c9-b8a0-42c76d686a2d.gif" alt="preview">
+</p>
+
 
 Now we knew our game concept, but we were yet to come up with a significant twist for the game. We wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a new character, “Copy Cat”, Nayancats nemesis who was the biggest obstacle of all. We thought of Copy Cat as being a boss character, after clearing a certain number of obstacles Nyancat would face a much bigger challenge as they would have to defeat this boss before they could proceed any further in this “game of life”. Copy Cat would be defeated if the player manages to jump on Copy Cats head. In order to dodge and battle this boss character we decided that we would also need the character to be able to move left and right as well as jump up and down, therefore our game character would have more freedom of movement than in a traditional jump based game.
 
 As a result of brainstorming for a twist we actually came up with a second twist, the fake quit scenario. The player would not be able to quit the game the first three times they tried to quit after losing. This twist came with a tagline of “you cannot quit the game of life!”.
 
-![fakequit](https://user-images.githubusercontent.com/115186584/234676427-f851c859-2d44-406b-b9a6-48fdb2717d82.gif)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/234676427-f851c859-2d44-406b-b9a6-48fdb2717d82.gif" alt="fakequit">
+</p>
 
 
 One of the key steps in our ideation process was thinking about the flow of the game, we continued to refer to our use-case diagram and user stories (which we had started very early on) and updated them to incorporate the new twist. We wanted to ensure that our game would be easy to understand and play, while still providing a fun and challenging experience for the user.
 
 At this point we had a game concept with a quirky narrative, a main character and a twist. We were now in a position to make a paper prototype of how the game was going to work. Below is a video of our initial paper prototype:
 
-Click the image below to watch the video:<br>
-[![YouTube Video](https://img.youtube.com/vi/H8TkaA0i4RQ/0.jpg)](https://www.youtube.com/watch?v=H8TkaA0i4RQ)
+<p align="center">
+  Click the image below to watch the video:<br>
+  <a href="https://www.youtube.com/watch?v=H8TkaA0i4RQ">
+    <img src="https://img.youtube.com/vi/H8TkaA0i4RQ/0.jpg" alt="YouTube Video">
+  </a>
+</p>
+
 
 ---
 

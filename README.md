@@ -237,15 +237,23 @@ On Top of these meetings, on the day we formed our team we created a WhatsApp gr
 Team Roles
 By the time we started the development phase of the project it was clear that everyone had assumed roles which suited their skills and interests. We thought it would be a good idea to formalise these positions for the duration of the project. Each team member played a crucial role in our project's success.
 
-<b>Lead Developer</b>, Ivan was responsible for developing the game's skeleton and details, ensuring a solid foundation for the gameplay. 
+### Team Roles
 
-<b>Front End Developer</b>, Mike, skillfully handled the interface design and overall look, creating an engaging and visually appealing experience for users.
+**Lead Developer** - Ivan  
+Ivan was responsible for developing the game's skeleton and details, ensuring a solid foundation for the gameplay.
 
-<b>Back End Developer</b>, Marcin, worked closely with Ivan to develop the game's back end, ensuring seamless functionality and performance.
+**Front End Developer** - Mike  
+Mike skillfully handled the interface design and overall look, creating an engaging and visually appealing experience for users.
 
-<b>Creative Lead</b>, Antalya, generated the game's core ideas and concepts, providing innovative designs that set our project apart.
+**Back End Developer** - Marcin  
+Marcin worked closely with Ivan to develop the game's back end, ensuring seamless functionality and performance.
 
-<b>Administrator</b>, Kate, effectively managed the entire process, organising meetings for regular updates and facilitating communication between team members. 
+**Creative Lead** - Antalya  
+Antalya generated the game's core ideas and concepts, providing innovative designs that set our project apart.
+
+**Administrator** - Kate  
+Kate effectively managed the entire process, organizing meetings for regular updates and facilitating communication between team members.
+
 
 By understanding and utilising the strengths of each team member, we were able to create a successful and enjoyable project, learning valuable lessons for future collaborations.
 

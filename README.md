@@ -88,7 +88,12 @@ The paper prototype involved putting our ideas into practice and seeing how the 
 
 To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By Super Mario world.
 
-If Nyan-Cat defeated the Copy Cat boss they would be rewarded with a rainbow trail. This would give the player a goal to aim for, aside from just aiming to get a high score.
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/234697399-e2bfda4f-5efc-42af-9c5a-66fe394c5b43.gif" alt="obstacles">
+</p>
+
+
+If Nyan-Cat defeated the Copy Cat boss they would be rewarded with a rainbow trail. This would give the player a goal to aim for, aside from just aiming to get a high score. (change that later)
 We could include the Nyan-Cat theme tune playing on a loop while the game was in play, this is a memorable characteristic associated with the Nyan-Cat meme.
 
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players
@@ -146,12 +151,14 @@ Once we had our concept, we focused on how to implement the game; collaborativel
 
 The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game. Our approach involved finding GIFs online that we wanted to use as characters, exporting the GIFs into .tiff formatted images frame by frame, and then removing the background of each image frame. In the code, we simply looped through the image frames to create the appearance of animation. The key challenge was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
 
+
 ```java
 int frames = 4;
 PImage[] character = new PImage[4];
 for (int i = 0; i<4; i++){
   character[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff");
 }
+```java
 
 
 <img width="978" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">

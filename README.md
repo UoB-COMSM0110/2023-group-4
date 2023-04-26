@@ -24,7 +24,7 @@
 
 ---
 
-## INTRODUCTION
+# INTRODUCTION
 In this game, the player takes on the role of a brave cat that must navigate through a series of obstacles to reach its ultimate goal. With quick reflexes and agility, the cat must leap and dodge its way through daily challenges and unexpected twists of fate.
 Throughout its journey, the cat faces new obstacles. However, the cat's greatest challenge is a copycat that threatens to steal its place in life's grand design.
 
@@ -47,9 +47,9 @@ Another novel aspect of the game is the entire re-design of the aesthetics and n
 
 ---
 
-## Requirements
+# Requirements
 
-### Early Stage Design
+## Early Stage Design
 
 Initially we had two main game concepts, the T-Rex jumping style platform game, featured on the Google Chrome browser, and Baba is you, a puzzle based top-down game. So we each voted for our preferred game to develop, results shown below:
 
@@ -65,7 +65,7 @@ Lastly, we had lots of initial thoughts on how to incorporate an interesting nar
   <img src="https://user-images.githubusercontent.com/115186584/234689697-6ecf1f8d-f2ec-44e4-b69c-aa45948c992e.gif" alt="NyanCat">
 </p>
 
-### Ideation Process
+## Ideation Process
 We knew our game concept, but we were yet to come up with a twist for the game. We wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a new character, “Copy Cat”, Nyan-Cats nemesis who was the biggest obstacle of all. We thought of Copy Cat as being a boss character, after clearing a certain number of obstacles Nyan-Cat would face a much bigger challenge as they would have to defeat this boss before they could proceed any further in this “game of life”. 
 
 Copy Cat would be defeated if the player manages to jump on Copy Cats head. In order to dodge and battle this boss character we decided that we would also need the character to be able to move left and right as well as jump up and down, therefore our game character would have more freedom of movement than in a traditional jump based game.
@@ -83,7 +83,7 @@ At this point we had a game concept with a quirky narrative, a main character an
   </a>
 </p>
 
-### Paper Prototype
+## Paper Prototype
 The paper prototype involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine. Some design decisions we made after creating the paper prototype were:
 
 To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By Super Mario world.
@@ -94,11 +94,11 @@ We could include the Nyan-Cat theme tune playing on a loop while the game was in
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players
 
 
-### USE CASE DIAGRAM
+## USE CASE DIAGRAM
 
 ![UseCase4](https://user-images.githubusercontent.com/115186584/234690970-902fc3c5-fa82-404a-8788-e5ccccc5ef87.png)
 
-### User Stories:
+## User Stories:
 As a user, I want to mute the game music, so that I am less distracted when playing the game.
 As a user, I want to change character, so that I can play as my preferred character.
 As a user, I want to read the acknowledgements, so that I can find out who made this awesome game.
@@ -136,17 +136,15 @@ When designing our system architecture, we took the approach that it would be be
  
 During the game design phase we had identified that the three main challenges of our game were going to be:
 
-## 1. Creating animations for the characters
+1. Creating animations for the characters
 
-## 2. Creating the fake quit scenario which was an important part of our design
+2. Creating the fake quit scenario which was an important part of our design
 
-## 3. Creating the global leader board which remembered the high scoring players every time the program is restarted
+3. Creating the global leader board which remembered the high scoring players every time the program is restarted
 
 Once we had our concept, we focused on how to implement the game; collaboratively as a team. The first step of the implementation phase was compiling research around game design on the Processing platform. This involved completing the processing challenges set for us to do from the tutorials, each team member completed a different challenge to develop everyone's understanding of the Processing language. We also all familiarised ourselves with the Processing documentation online.
 
 The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game. Our approach involved finding GIFs online that we wanted to use as characters, exporting the GIFs into .tiff formatted images frame by frame, and then removing the background of each image frame. In the code, we simply looped through the image frames to create the appearance of animation. The key challenge was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
-
-To include a code snippet in a Markdown file, you can use triple backticks (```) followed by the language (optional) on a new line, then paste your code, and finally close the code block with another set of triple backticks. Here's how to add the code snippet you provided:
 
 <pre>
 ```java

@@ -28,8 +28,7 @@ import controlP5.*;
 ControlP5 cp5;
 PFont textfieldFont;
 PFont promptFont;
-
-
+boolean playerNameEntered = false;
 
 int modeNumber = 1;
 Button normal;
@@ -111,7 +110,7 @@ void setup(){
    .setColorForeground(color(255, 255, 255)) // Set white foreground
    .setColorActive(color(255, 255, 255))
    .setFont(textfieldFont) // Set the font for the textfield
-   .setLabelVisible(false);
+   .setCaptionLabel(""); // Set the caption label to an empty string
    cp5.get(Textfield.class, "playerName").hide();
    
   //The key listener:⬅ ⬆ ➡ ⬇
@@ -408,7 +407,11 @@ void chooseCharacter(){
   } else {
     cp5.getController("playerName").setVisible(false);
   }
-  
+   if (playerNameEntered) {
+    fill(255, 255, 255);
+    textSize(18);
+    text("Hi " + playerName + "!", width / 2 + 50, height / 3 + 140);
+  }
 }
 
 void difficultyChose(){
@@ -882,6 +885,13 @@ String collisionsPVE(Player player,Enemy copyCat){
 }
 //Keyboard monitor
 void keyPressed() {
+  //Enter
+  if (key == ENTER || key == RETURN) {
+    if (gameState.equals("Character") && !playerNameEntered) {
+      playerName = cp5.get(Textfield.class, "playerName").getText();
+      playerNameEntered = true;
+    }
+  }
   switch (keyCode) {
   case 37://left
     left = true;

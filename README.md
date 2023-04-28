@@ -85,7 +85,7 @@ View our [evaluation document](/Report/Evaluation.md) to see our:
 
 # Process
 
-View our [evaluation document](/Report/Process.md) to see our:
+View our [process document](/Report/Process.md) to see our:
 - Git Usage
 - The Kanban Board Usage
 - Sprints Usage

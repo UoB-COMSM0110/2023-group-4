@@ -7,13 +7,27 @@
 ## Table of Contents
 - [Introduction](#introduction)
 - [Requirements](#requirements)
-  - [Use case diagram](#use-case-diagram)
-  - [User story](#credits)
-  - [Ideation process](#ideation-process)
+  - [Early Stage Design](#early-stage-design)
+  - [Ideation Process](#ideation-process)
+  - [Paper Prototype](#paper-prototype)
+  - [Use Case Diagram](#use-case-diagram)
+  - [User Stories](#user-stories)
 - [Design](#design)
+  - [Class diagrams](#class-diagrams)
+  - [Behavioral Diagram](#behavioral-diagram)
 - [Implementation](#implementation)
+  - [Skeleton Model](#skeleton-model)
+  - [Challenge 2](#challenge-2)
+  - [Challenge 3](#challenge-3)
+  - [Task Strategy](#task-strategy)
 - [Evaluation](#evaluation)
 - [Process](#process)
+  - [Git](#git)
+  - [The Kanban Board](#the-kanban-board)
+  - [Sprints](#sprints)
+  - [Team Meetings](#team-meetings)
+  - [Team Roles](#team-roles)
+  - [Reflection](#reflection)
 - [Conclusion](#conclusion)
 - [Documentation of code](#documentation-of-code)
 - [Acknowledgements](#acknowledgements)
@@ -21,7 +35,7 @@
 
 ---
 
-# INTRODUCTION
+# Introduction
 In this game, the player takes on the role of a brave cat that must navigate through a series of obstacles to reach its ultimate goal. With quick reflexes and agility, the cat must leap and dodge its way through daily challenges and unexpected twists of fate.
 Throughout its journey, the cat faces new obstacles. However, the cat's greatest challenge is a copycat that threatens to steal its place in life's grand design.
 
@@ -97,16 +111,16 @@ We could include the Nyan-Cat theme tune playing on a loop while the game was in
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players
 
 
-## USE CASE DIAGRAM
+## Use Case Diagram
 
 ![UseCase4](https://user-images.githubusercontent.com/115186584/234690970-902fc3c5-fa82-404a-8788-e5ccccc5ef87.png)
 
-## User Stories:
+## User Stories
 - As a user, I want to mute the game music, so that I am less distracted when playing the game.
 - As a user, I want to change character, so that I can play as my preferred character.
 - As a user, I want to read the acknowledgements, so that I can find out who made this awesome game.
 - As a user, I want to change the game difficulty, so that I am being challenged the correct amount.
-- As a user, I want to view the highscores, so that I can see who has performed the best at this game.
+- As a user, I want to view the high scores, so that I can see who has performed the best at this game.
 - As a user, I want to jump over obstacles, so that I don’t lose the game.
 - As a user, I want to quit the game, so that I can exit without killing my character.
 - As a user, I want to restart the game, so that I can improve my score (and maybe get on the leaderboard)
@@ -121,15 +135,16 @@ In conclusion, our ideation process was an iterative and collaborative effort th
 
 When designing our system architecture, we took the approach that it would be better to have a higher number of discrete classes, each responsible for doing a specific functions well, rather than having a smaller number of classes, each performing for lots of tasks.
  
- Class diagrams, 
+### Class diagrams
  
  ![ClassDiagram](https://user-images.githubusercontent.com/115186584/234691242-91ad3357-0b8d-488b-a6d0-d98b9b9a026a.jpeg)
 
  
- behavioural diagrams.
+### Behavioral Diagram
  
  ![SequenceDiagram3](https://user-images.githubusercontent.com/115186584/234691294-15f4200f-aea6-4d1a-a57e-96b55aa8abfc.png)
 (Describe the sequence diagram)
+
 ---
 
 ## Implementation
@@ -268,12 +283,14 @@ Reflect on project as a whole. Lessons learned. Reflect on challenges. Future wo
 
 Quality of report writing, presentation, use of figures and visual material (5%)
 
+---
+
 ## Documentation of code
 
 Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.
 
 
---
+---
 
 ## Acknowledgements
 

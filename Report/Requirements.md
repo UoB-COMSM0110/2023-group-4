@@ -19,7 +19,7 @@ Initially we had two main game concepts:
 
 We each voted for our preferred game to develop, results shown below:
 
-<center>
+<div align="center">
 
 | Name         |  Game Preference Vote                |
 |--------------|--------------------------------------|
@@ -29,7 +29,8 @@ We each voted for our preferred game to develop, results shown below:
 | Mike         |  T-Rex Game ft. Nyan Cat/flappy bird | 
 | Yuchen Zhang |  Baba is you / flappy bird           |
 
-</center>
+</div>
+
 
 
 <p align="center">

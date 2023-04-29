@@ -36,9 +36,12 @@ During the game design phase we had identified that the three main challenges of
 Once we had our concept, we focused on how to implement the game; collaboratively as a team. The first step of the implementation phase was compiling research around game design on the Processing platform. This involved completing the processing challenges set for us to do from the tutorials, each team member completed a different challenge to develop everyone's understanding of the Processing language. We also all familiarised ourselves with the Processing documentation online.
 
 ## Challenge 1
-The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game. Our approach involved finding GIFs online that we wanted to use as characters, exporting the GIFs into .tiff formatted images frame by frame, and then removing the background of each image frame. In the code, we simply looped through the image frames to create the appearance of animation. The key challenge was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
+The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game. 
 
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/235325864-f6975b98-27c1-41b4-a4c4-0f1ffd1804d8.jpg" alt="84a59261-57db-41b0-82ec-31d110df3e25">
+</p>
 
 ```java
 int frames = 4;
@@ -48,10 +51,7 @@ for (int i = 0; i<4; i++){
 }
 ```
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235325864-f6975b98-27c1-41b4-a4c4-0f1ffd1804d8.jpg" alt="84a59261-57db-41b0-82ec-31d110df3e25">
-</p>
-
+Our approach involved finding GIFs online that we wanted to use as characters, exporting the GIFs into .tiff formatted images frame by frame, and then removing the background of each image frame. In the code, we simply looped through the image frames to create the appearance of animation. The key challenge was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
 
 <img width="978" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">
 

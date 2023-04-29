@@ -80,6 +80,7 @@ View our [design document](/Report/Design.md) to see our:
 
 View our [implementation document](/Report/Implementation.md) to see our:
 - Skeleton Model
+- First challenge we faced
 - Second challenge we faced
 - Third challenge we faced
 - Task Strategy

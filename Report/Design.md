@@ -19,7 +19,6 @@ The object-oriented design principles followed in this architecture allow for th
 The sequence diagram below describes in order how actions in the game are performed.
 
 ![SequenceDiagram3](https://user-images.githubusercontent.com/115186584/234691294-15f4200f-aea6-4d1a-a57e-96b55aa8abfc.png)
-(Describe the sequence diagram)
 
 Firstly the user interacts with a series of menus, selecting a character, difficulty level and entering a username. Once the game begins the player jumps over a series of randomly generated obstacles, the generation of each obstacle is one iteration in the Obstacle Loop.
 

@@ -61,8 +61,9 @@ To represent obstacles as representations of life's obstacles (bills, deadlines,
 
 </div>
 
-If Nyan-Cat defeated the Copy Cat boss they would be rewarded with a rainbow trail. This would give the player a goal to aim for, aside from just aiming to get a high score. (change that later)
-We could include the Nyan-Cat theme tune playing on a loop while the game was in play, this is a memorable characteristic associated with the Nyan-Cat meme.
+If the player successfully defeats the Copy Cat boss, they will be rewarded with celebratory messages. This provides the player with a goal to strive for, besides just aiming to achieve a high score.
+
+We could incorporate the Nyan Cat theme tune playing on a loop during gameplay, which is a memorable feature associated with the Nyan Cat meme, further enhancing the overall gaming experience.
 
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players
 

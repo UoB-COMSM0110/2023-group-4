@@ -31,8 +31,9 @@ After discussing lots of questions and concepts surrounding both ideas, we unani
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/234689697-6ecf1f8d-f2ec-44e4-b69c-aa45948c992e.gif" alt="NyanCat">
+  <img src="https://user-images.githubusercontent.com/115186584/235323907-dec0a750-96b1-48eb-87ce-9b791dac8371.gif" alt="NyanCat">
 </p>
+
 
 ## Ideation Process
 We started to question the game concept and wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a boss character, “Copy Cat”, Nyan-Cats nemesis who was the biggest obstacle of all. After clearing a certain number of obstacles Nyan-Cat would have to defeat the boss to progress further in the game.

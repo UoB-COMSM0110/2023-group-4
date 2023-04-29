@@ -84,7 +84,7 @@ In conclusion, our ideation process was an iterative and collaborative effort th
 - As a game player, I want to move forward and backward so that I can dodge obstacles.
 - As a player I want to see my score on a leaderboard so that I can compare my achievement against other players
 
-##Functional Requirements
+## Functional Requirements
 - The system must have a start menu where the user can configure the game settings.
 - The system must enable users to select a different character to play as by selecting with the mouse from several character options.
 - The system must allow the user to enter a username by typing into a text box.

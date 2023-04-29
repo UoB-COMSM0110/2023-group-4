@@ -3,8 +3,10 @@
   <a href="https://www.youtube.com/watch?v=3tliJh7fqAs&feature=youtu.be" target="_blank">
     <img src="https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png" alt="logo-black">
   </a>
-  <br>
-  <span style="font-weight: bold; font-size: 1.2em; color: #f00;">Click the image to see the trailer</span>
+</p>
+
+<p align="center">
+  <b><a href="https://www.youtube.com/watch?v=3tliJh7fqAs&feature=youtu.be">Click the image to see the trailer</a></b>
 </p>
 
 

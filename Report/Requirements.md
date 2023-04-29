@@ -19,13 +19,13 @@ Initially we had two main game concepts:
 
 We each voted for our preferred game to develop, results shown below:
 
-| Name         | Email                    | Game Preference Vote                |
-|--------------|--------------------------|-------------------------------------|
-| Antalya      |  yj22925@bristol.ac.uk   | T-Rex Game ft. Nyan Cat/flappy bird | 
-| Kate Hunter  |  bq22223@bristol.ac.uk   | Baba is you                         |
-| Marcin       |  ep22762@bristol.ac.uk   | T-Rex Game ft. Nyan Cat             |
-| Mike         |  oe22158@bristol.ac.uk   | T-Rex Game ft. Nyan Cat/flappy bird | 
-| Yuchen Zhang |  vg22038@bristol.ac.uk   | Baba is you / flappy bird           |
+| Name         |  Game Preference Vote                |
+|--------------|--------------------------------------|
+| Antalya      |  T-Rex Game ft. Nyan Cat/flappy bird | 
+| Kate Hunter  |  Baba is you                         |
+| Marcin       |  T-Rex Game ft. Nyan Cat             |
+| Mike         |  T-Rex Game ft. Nyan Cat/flappy bird | 
+| Yuchen Zhang |  Baba is you / flappy bird           |
 
 
 

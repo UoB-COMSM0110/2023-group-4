@@ -53,7 +53,7 @@ At this point we had a game concept with a quirky narrative, a main character an
 
 The paper prototype involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine. Some design decisions we made after creating the paper prototype were:
 
-To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By Super Mario world.
+To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By [Super Mario](https://mario.nintendo.com/) world.
 
 <div align="center">
 

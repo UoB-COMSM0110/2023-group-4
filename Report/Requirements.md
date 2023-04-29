@@ -14,8 +14,8 @@
 ## Early Stage Design
 
 Initially we had two main game concepts: 
-- The T-Rex jumping style platform game - featured on the Google Chrome browser.
-- Baba is you - a puzzle based top-down game. 
+- The [T-Rex](https://trex-runner.com/) jumping style platform game - featured on the Google Chrome browser.
+- [Baba is you](https://hempuli.com/baba/) - a puzzle based top-down game. 
 
 We each voted for our preferred game to develop, results shown below:
 

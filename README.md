@@ -1,6 +1,10 @@
 # 2023-group-4
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png" alt="logo-black">
+  <a href="https://www.youtube.com/watch?v=3tliJh7fqAs&feature=youtu.be" target="_blank">
+    <img src="https://user-images.githubusercontent.com/115186584/234676499-1ae72f70-5714-48dd-84e0-f50ff50b7a88.png" alt="logo-black">
+  </a>
+  <br>
+  <span>Click the image to see the trailer</span>
 </p>
 
 

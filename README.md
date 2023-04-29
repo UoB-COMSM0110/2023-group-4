@@ -39,6 +39,13 @@ Our game is based on the classic T-Rex jumping game built into google chrome. Th
 
 Another novel aspect of the game is the entire re-design of the aesthetics and narrative.The game is designed to evoke a sense of familiarity and continuity, while the obstacles represent metaphorical life challenges, such as peer pressure, bills, loud alarms, and bad luck to mention a few. This creative design approach captivates players and contributes to the overall gaming experience.
 
+
+<div align="center">
+
+![obstacles](https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gif)
+
+</div>
+
 ---
 
 # Requirements

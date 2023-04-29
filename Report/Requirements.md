@@ -13,30 +13,36 @@
 
 ## Early Stage Design
 
-Initially we had two main game concepts, the T-Rex jumping style platform game, featured on the Google Chrome browser, and Baba is you, a puzzle based top-down game. So we each voted for our preferred game to develop, results shown below:
+Initially we had two main game concepts: 
+- The T-Rex jumping style platform game - featured on the Google Chrome browser.
+- Baba is you - a puzzle based top-down game. 
+
+We each voted for our preferred game to develop, results shown below:
 
 <img src="/Diagrams/GameVote.png" width="550" height="200"><br>
 
-After discussing lots of questions and concepts surrounding both ideas, ultimately we unanimously decided on developing a jumping style game for several reasons: 
+After discussing lots of questions and concepts surrounding both ideas, we unanimously decided on developing a jumping style game for several reasons: 
 
-Firstly, jumping games are fun, intuitive and easy for everyone to play.
-Secondly, we realised that designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.
-Lastly, we had lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game. Incorporating one of our favourite internet memes (Nyan-Cat) and portraying the obstacles as being similar to overcoming adversities in life. Our game would not just be a jumping game but also a “game of life”.
+- Jumping games are fun, intuitive and easy for everyone to play.
+
+- Designing many levels for a platform based game could be quite time consuming, in terms of creative and programming resources. A jumping game where the principle is similar throughout was deemed to be the more sensible choice.
+
+- There were lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game.
+
 
 <p align="center">
   <img src="https://user-images.githubusercontent.com/115186584/234689697-6ecf1f8d-f2ec-44e4-b69c-aa45948c992e.gif" alt="NyanCat">
 </p>
 
 ## Ideation Process
-We knew our game concept, but we were yet to come up with a twist for the game. We wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a new character, “Copy Cat”, Nyan-Cats nemesis who was the biggest obstacle of all. We thought of Copy Cat as being a boss character, after clearing a certain number of obstacles Nyan-Cat would face a much bigger challenge as they would have to defeat this boss before they could proceed any further in this “game of life”. 
+We started to question the game concept and wondered if it would be engaging enough for players to simply jump over a number of obstacles in order to gain a high score. After a quick brainstorming session we arrived at our twist, we would introduce a boss character, “Copy Cat”, Nyan-Cats nemesis who was the biggest obstacle of all. After clearing a certain number of obstacles Nyan-Cat would have to defeat the boss to progress further in the game.
 
-Copy Cat would be defeated if the player manages to jump on Copy Cats head. In order to dodge and battle this boss character we decided that we would also need the character to be able to move left and right as well as jump up and down, therefore our game character would have more freedom of movement than in a traditional jump based game.
+As a result of brainstorming for a twist we actually came up with a second twist, the “fake quit scenario”. The player would not be able to quit the game easily when they died. This twist came with a tagline of “you cannot quit the game of life!”.
 
-As a result of brainstorming for a twist we actually came up with a second twist, the fake quit scenario. The player would not be able to quit the game the first three times they tried to quit after losing. This twist came with a tagline of “you cannot quit the game of life!”.
+At this point we had a game concept with a quirky narrative, a main character and a twist. So we made a paper prototype.
 
-One of the key steps in our ideation process was thinking about the flow of the game, we continued to refer to our use-case diagram and user stories (which we had started very early on) and updated them to incorporate the new twist. We wanted to ensure that our game would be easy to understand and play, while still providing a fun and challenging experience for the user.
 
-At this point we had a game concept with a quirky narrative, a main character and a twist. We were now in a position to make a paper prototype of how the game was going to work. Below is a video of our initial paper prototype:
+## Paper Prototype
 
 <p align="center">
   <b>Click the image below to watch the video:</b><br>
@@ -45,7 +51,6 @@ At this point we had a game concept with a quirky narrative, a main character an
   </a>
 </p>
 
-## Paper Prototype
 The paper prototype involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine. Some design decisions we made after creating the paper prototype were:
 
 To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By Super Mario world.
@@ -67,12 +72,28 @@ In conclusion, our ideation process was an iterative and collaborative effort th
 ![UseCase4](https://user-images.githubusercontent.com/115186584/234690970-902fc3c5-fa82-404a-8788-e5ccccc5ef87.png)
 
 ## User Stories
-- As a user, I want to mute the game music, so that I am less distracted when playing the game.
-- As a user, I want to change character, so that I can play as my preferred character.
-- As a user, I want to read the acknowledgements, so that I can find out who made this awesome game.
-- As a user, I want to change the game difficulty, so that I am being challenged the correct amount.
-- As a user, I want to view the high scores, so that I can see who has performed the best at this game.
-- As a user, I want to jump over obstacles, so that I don’t lose the game.
-- As a user, I want to quit the game, so that I can exit without killing my character.
-- As a user, I want to restart the game, so that I can improve my score (and maybe get on the leaderboard)
-- As a user, I want to quit the game, so that I can do other things
+- As a player, I want to be able to select a character so that I can choose a different character to play as.
+- As a player, I want to select a difficulty so that I can play as a level which suits my ability
+- As a player, I want to see instructions so that I  know how to play the game.
+- As a player, I want to jump over the obstacles so that I can get a higher score.
+- As a player, I want to see a game over page when I die so that I know when I have lost the game.
+- As a player, I want to be able to play again when the game is over so that I can try to get a higher score next time.
+- As a player, I want to see an encouraging message when I lose the game so that I am encouraged to play again.
+- As a game player, I want some gratification for completing a hard challenge so that I am encouraged to play more
+- As a game player, I want to move forward and backward so that I can dodge obstacles.
+- As a player I want to see my score on a leaderboard so that I can compare my achievement against other players
+
+##Functional Requirements
+- The system must have a start menu where the user can configure the game settings.
+- The system must enable users to select a different character to play as by selecting with the mouse from several character options.
+- The system must allow the user to enter a username by typing into a text box.
+- The system must have two difficulty option buttons which vary the speed of the game and can be selected with a mouse.
+- The system must provide clear written instructions explaining how to use the menu pages and play the game.
+- The system must allow the player to move forwards, backwards and jump by using the left right and up arrows on the keyboard.
+- The system must allow the user to defeat the boss by jumping on its head.
+- The system must have a game over menu where the user can select quit or play again.
+- The system must send the user to the beginning of the game the first three times they attempt to quit.
+- The system must have user feedback when they defeat the boss with animation and sound effects.
+- The system must implement a leaderboard.
+
+

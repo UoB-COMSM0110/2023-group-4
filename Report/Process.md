@@ -42,7 +42,8 @@ As the development of the game was underway we took a more agile approach using 
 On Top of these meetings, on the day we formed our team we created a WhatsApp group as a means of informal communication. We use the group to arrange meetings, share spontaneous ideas, and ask day to day questions.
 
 
-<p align="center"><b>Some Screenshots of our effective communication</b></p>
+
+<h2 align="center"><b>Some Screenshots of our effective communication</b></h2>
 
 
 ### Discuss about difficulty

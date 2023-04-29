@@ -38,12 +38,32 @@ As a team we usually met every week to discuss the development of the game and a
 
 
 In the early phases of design we would meet as a whole team so everyone could contribute to the ideation process and ensure that we were all on the same page in terms of the fundamental game concepts.
-As the development of the game was underway we took a more agile approach using the Scrum project management style. We conducted short 10 minute meetings after Software Engineering workshops where the Scrum Master proposed topics for discussion and we updated our Kanban board according to the newly completed/assigned tasks. During  the development phase we also met in sub groups to discuss details relevant to specific tasks and team members, based on the tasks assigned on the Kanban board. The subgroup meetings worked autonomously from the rest of the group, the team trusted the outcomes decided by the relevant team members.  
+As the development of the game was underway we took a more agile approach using the Scrum project management style. We conducted short 10 minute meetings after Software Engineering workshops where the Scrum Master proposed topics for discussion and we updated our Kanban board according to the newly completed/assigned tasks. During  the development phase we also met in sub groups to discuss details relevant to specific tasks and team members, based on the tasks assigned on the Kanban board. The subgroup meetings worked autonomously from the rest of the group, the team trusted the outcomes decided by the relevant team members. [Meeting minutes](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/MeetingMinutes)
 On Top of these meetings, on the day we formed our team we created a WhatsApp group as a means of informal communication. We use the group to arrange meetings, share spontaneous ideas, and ask day to day questions.
-Team Roles
-By the time we started the development phase of the project it was clear that everyone had assumed roles which suited their skills and interests. We thought it would be a good idea to formalise these positions for the duration of the project. Each team member played a crucial role in our project's success.
+
+
+(Some Screenshots of our effective communication)
+
+Discuss about difficulty
+![Difficulty](https://user-images.githubusercontent.com/115186584/235327218-c60e4ac7-6ef3-4785-9fee-bc290fd463fe.png)
+
+Discuss about Boss
+![Boss](https://user-images.githubusercontent.com/115186584/235327221-89aa0c73-1df4-4e08-aea1-24114cf536db.png)
+
+Updating Obstacles
+![Obsticles](https://user-images.githubusercontent.com/115186584/235327227-279d7926-6d09-4779-91f2-6c56cc4aeaaf.png)
+
+Updating scores
+![Score](https://user-images.githubusercontent.com/115186584/235327231-6425651e-df51-415f-9516-9c910fc8bb47.png)
+
+Updating scores
+![Score1](https://user-images.githubusercontent.com/115186584/235327232-3c2b7a93-82ed-4bbd-bbdb-354dea280c2b.png)
+
+
+
 
 ## Team Roles
+By the time we started the development phase of the project it was clear that everyone had assumed roles which suited their skills and interests. We thought it would be a good idea to formalise these positions for the duration of the project. Each team member played a crucial role in our project's success.
 
 **Lead Developer** - Ivan  
 Ivan was responsible for developing the game's skeleton and details, ensuring a solid foundation for the gameplay.

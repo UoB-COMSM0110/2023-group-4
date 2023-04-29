@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <b><a href="https://www.youtube.com/watch?v=3tliJh7fqAs&feature=youtu.be">Click the image to see the trailer</a></b>
+  <b><a href="https://www.youtube.com/watch?v=3tliJh7fqAs&feature=youtu.be">Click here or the image above to see the TRAILER</a></b>
 </p>
 
 

@@ -121,7 +121,6 @@ Quality of report writing, presentation, use of figures and visual material (5%)
 
 # Documentation of code
 
-I
 ## Individual Contribution table
 
 | Name       | Role               | Contribution                                 | Individual Weight  |

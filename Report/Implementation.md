@@ -47,7 +47,7 @@ The online Processing documentation provided us with a solution to our initial c
 int frames = 4;
 PImage[] character = new PImage[4];
 for (int i = 0; i<4; i++){
-  character[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff");
+  character[i]=loadImage("Images/catOne/Idle/" + i + ".tiff");
 }
 ```
 

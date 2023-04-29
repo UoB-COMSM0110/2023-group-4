@@ -34,21 +34,22 @@ When the player dies, they can restart the game or quit. If the player decides t
 
 When designing our system architecture, we took the approach that it would be better to have a higher number of discrete classes, each responsible for doing a specific function well, rather than having a smaller number of classes, each performing for lots of tasks.
 
-NyanCat Class - This is the main class which handles the game states, the in-game play collision detection and keeps track of the score. It is the highest level class and renders all visible objects in the game.
+<b>NyanCat Class</b> - This is the main class which handles the game states, the in-game play collision detection and keeps track of the score. It is the highest level class and renders all visible objects in the game.
 
-Button Class - This class renders all the selectable buttons in the game.
+<b>Button Class</b> - The Button class handles the rendering of all selectable buttons in the game. It features functions for updating the button's status, rendering the button with either an image, animation, or text, and detecting if the button has been clicked. Additionally, the class provides methods for accessing the button's width, height, position, and image file path.
 
-PEObject Class - The player enemy object class is an abstract parent class of the player and enemy classes. It provides functionality for the dynamic, moving objects in the games, and it has a generalisation relationship with the Player and Enemy classes. 
+<b>PEObject Class</b> - The player enemy object class is an abstract parent class of the player and enemy classes. It provides functionality for the dynamic, moving objects in the games, and it has a generalisation relationship with the Player and Enemy classes. 
 
-Player Class - a child class of the PEObject class handles the movement of the player.
+<b>Player Class</b> - The Player class is a child class of the PEObject class, which handles the movement of the player character. It includes variables and methods to manage collisions with other objects in the game, as well as animation files and display functions for rendering the player character on screen.
 
-Enemy Class - a child class of the PEObject class handles the movement of the enemy.
+<b>Enemy Class</b> - The Enemy class is responsible for handling the movement and behaviour of the game's enemies. It is a child class of the PEObject class, which provides common functionality for dynamic, moving objects in the game. The Enemy class also includes methods for setting the enemy's velocity and behaviour based on the game's difficulty level.
 
-Object Class - The object class is an abstract parent class of the static game objects, the obstacles and the cloud objects, which are not interacted with. It has a generalisation relationship with the Obstacle and Cloud classes. 
+<b>Object Class</b> - The object class is an abstract parent class of the static game objects, the obstacles and the cloud objects, which are not interacted with. It has a generalisation relationship with the Obstacle and Cloud classes. 
 
-Obstacle Class - a child class of the Object class and renders the obstacles in the game.
+<b>Obstacle Class>/b> - The Obstacle class is a child class of the Object class that displays and updates the obstacles in the game by changing their positions horizontally. The class is initialised with the obstacle's properties such as its x and y position, width and height, velocityX and its image.
 
-Cloud Class - a child class of the Object class and renders the clouds in the background of the game.
+<b>Cloud Class</b> - a child of the Object class that handles rendering the background clouds in the game. It also implements the necessary methods for updating and moving the clouds on the screen.
+  
 [aggregation relationships]
 
 From grammatical parse of the system requirements we identified the following possible class types:

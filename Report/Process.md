@@ -42,23 +42,22 @@ As the development of the game was underway we took a more agile approach using 
 On Top of these meetings, on the day we formed our team we created a WhatsApp group as a means of informal communication. We use the group to arrange meetings, share spontaneous ideas, and ask day to day questions.
 
 
-(Some Screenshots of our effective communication)
+<b>Some Screenshots of our effective communication</b>
 
-Discuss about difficulty
+### Discuss about difficulty
 ![Difficulty](https://user-images.githubusercontent.com/115186584/235327218-c60e4ac7-6ef3-4785-9fee-bc290fd463fe.png)
 
-Discuss about Boss
+### Discuss about Boss
 ![Boss](https://user-images.githubusercontent.com/115186584/235327221-89aa0c73-1df4-4e08-aea1-24114cf536db.png)
 
-Updating Obstacles
+### Updating Obstacles
 ![Obsticles](https://user-images.githubusercontent.com/115186584/235327227-279d7926-6d09-4779-91f2-6c56cc4aeaaf.png)
 
-Updating scores
+### Updating scores
 ![Score](https://user-images.githubusercontent.com/115186584/235327231-6425651e-df51-415f-9516-9c910fc8bb47.png)
 
-Updating scores
+### Updating scores
 ![Score1](https://user-images.githubusercontent.com/115186584/235327232-3c2b7a93-82ed-4bbd-bbdb-354dea280c2b.png)
-
 
 
 
@@ -80,8 +79,6 @@ Antalya generated the game's core ideas and concepts, providing innovative desig
 **Administrator** - Kate  
 Kate effectively managed the entire process, organizing meetings for regular updates and facilitating communication between team members.
 
-
-By understanding and utilising the strengths of each team member, we were able to create a successful and enjoyable project, learning valuable lessons for future collaborations.
 
 | Name       | Role               | Contribution                                 | Individual Weight  |
 |------------|--------------------|----------------------------------------------|--------------------|

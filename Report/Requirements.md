@@ -19,7 +19,15 @@ Initially we had two main game concepts:
 
 We each voted for our preferred game to develop, results shown below:
 
-<img src="/Diagrams/GameVote.png" width="550" height="200"><br>
+| Name         | Email                    | Game Preference Vote                |
+|--------------|--------------------------|-------------------------------------|
+| Antalya      |  yj22925@bristol.ac.uk   | T-Rex Game ft. Nyan Cat/flappy bird | 
+| Kate Hunter  |  bq22223@bristol.ac.uk   | Baba is you                         |
+| Marcin       |  ep22762@bristol.ac.uk   | T-Rex Game ft. Nyan Cat             |
+| Mike         |  oe22158@bristol.ac.uk   | T-Rex Game ft. Nyan Cat/flappy bird | 
+| Yuchen Zhang |  vg22038@bristol.ac.uk   | Baba is you / flappy bird           |
+
+
 
 After discussing lots of questions and concepts surrounding both ideas, we unanimously decided on developing a jumping style game for several reasons: 
 

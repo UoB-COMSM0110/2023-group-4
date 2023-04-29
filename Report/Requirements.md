@@ -19,6 +19,8 @@ Initially we had two main game concepts:
 
 We each voted for our preferred game to develop, results shown below:
 
+<center>
+
 | Name         |  Game Preference Vote                |
 |--------------|--------------------------------------|
 | Antalya      |  T-Rex Game ft. Nyan Cat/flappy bird | 
@@ -26,6 +28,8 @@ We each voted for our preferred game to develop, results shown below:
 | Marcin       |  T-Rex Game ft. Nyan Cat             |
 | Mike         |  T-Rex Game ft. Nyan Cat/flappy bird | 
 | Yuchen Zhang |  Baba is you / flappy bird           |
+
+</center>
 
 
 <p align="center">

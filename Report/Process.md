@@ -17,6 +17,9 @@ Then we ensured everyone knew the basics of Git branches and the concept of merg
 Early on in the project we did have some git problems. There were several merge conflicts we had to overcome in the beginning, we had to manually overcome some conflicts as some branches were not merged for a long time and were much further ahead than main. We learnt from these initial mistakes and from then on would check out a branch for every assigned task and merged to main more regularly. We also would checkout new branches for bug 
 fixing later on in the process.
 
+<img width="1005" alt="截屏2023-04-29 18 10 01" src="https://user-images.githubusercontent.com/115186584/235322955-6310a5b0-ea20-481e-a023-fb13046c1471.png">
+
+
 ## The Kanban Board
 The Kanban board was the most useful tool we used as a team. We created a Kanban board on the web application Trello and added all the team members early on in the project. The main uses of the Kanban board became apparent during the implementation stage of the project, when the bulk of the coding was being done. The majority of tasks were set during meetings, but individuals were also allowed to assign tasks to themselves/others as and when necessary. On top of being an organisational tool, it was also a good source of motivation for the team. As members moved their assigned tasks around from “Backlog” all the way through to “Done”. 
 [link to kanban board images]

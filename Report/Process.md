@@ -63,5 +63,14 @@ Kate effectively managed the entire process, organizing meetings for regular upd
 
 By understanding and utilising the strengths of each team member, we were able to create a successful and enjoyable project, learning valuable lessons for future collaborations.
 
+| Name       | Role               | Contribution                                 | Individual Weight  |
+|------------|--------------------|----------------------------------------------|--------------------|
+| Ivan       | Lead Developer     | Developed game's skeleton and details        |         1          |
+| Mike       | Front End Developer| Designed engaging and visually appealing UI  |         1          |
+| Marcin     | Back End Developer | Global leader board, adding scores           |         1          |
+| Antalya    | Creative Lead      | Generated innovative concepts and designs    |         1          |
+| Kate       | Administrator      | Effectively managed the project and team     |         1          |
+
+
 ## Reflection
 As a group, we worked well together. We were fortunate that we had a good mix of skills and interests, so everyone in the team got to work on what they enjoyed most. This fortune was also partly due to our agile working strategy and strong communication. Regular meetings played a crucial role in keeping the team aligned and focused on our goals. One of the reasons we worked so well as a team is because once we had a game concept, the lead developer implemented the framework of our minimum viable product, following the structure of our Class Diagram in a way which was easy to update and easy for others to understand. After this was achieved, it was straightforward for other developers to work simultaneously on the code, refining the mechanics of the game, updating the game aesthetics, and enhancing all things user experience related.

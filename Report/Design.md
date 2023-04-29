@@ -67,7 +67,7 @@ From grammatical parse of the system requirements we identified the following po
 
 ## Visual Design Resources:
 Sketches outlining the visual layout for the game menus, in game play,  fake quit scenario and leaderboard can be found here: 
-[Game Visual Sketches](Diagrams/classDiagram/ClassDiagram.jpeg](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/classDiagram/ClassDiagram.jpeg)
+[Game Visual Sketches](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/classDiagram/ClassDiagram.jpeg)
 Note the obstacles in these sketches are represented as pipes as at this point but are to be replaced with the following designs:
 [Obstacle Designs](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code/design_and_interface/game_BG/obstacle)
 

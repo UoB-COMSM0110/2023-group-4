@@ -68,8 +68,21 @@ The second challenge we were able to resolve was the challenge of the fake quit 
 </p>
 
 ## Challenge 3
-The third challenge of implementing the global leaderboard was the largest of the three and the one we tackled last. Creating a leaderboard where the scores persist when the game is closed and reopened requires the manipulation of an external text file…
-(to be finished)
+The third challenge of implementing the global leaderboard was the largest of the three challenges and the one we tackled last.
+The first aspect of this challenge was creating an input text box for entering a username to be saved alongside each high score. After some research, we decided to use the ControlP5 import to implement the username text field on the character selection menu page. In the interest of the “visibility of system status” heuristic we also redesigned the character selection page to include some instructions on how to enter a username and start the game.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/235326233-1225a800-b726-442c-83b7-a2f6fed7b86d.gif" alt="test">
+</p>
+
+
+The second aspect of this challenge was reading and writing to a file so the high score records were persistent and remembered after closing and re-opening the program. We used the Java  NIO import to implement the dataflow between the external text file and the Leaderboard class, manipulating table object methods to store the data.
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/115186584/235326236-ea40e3fe-c0f7-48ad-9b86-eaed0a8e64d6.gif" alt="record">
+</p>
+
+Within the time constraints, we did not have time to implement a global leaderboard on the web, where all downloaded instances of the game could view the global results, this still remains for future game development. However, for now, we have implemented a leaderboard that is persistent for each download of the game.
 
 
 ## Task Strategy

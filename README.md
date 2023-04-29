@@ -37,7 +37,7 @@ Join the cat on its journey through life and experience the thrill of the chase 
 Our game is based on the classic T-Rex jumping game built into google chrome. The novel twist is the boss character “Copy Cat” who is a moving obstacle who must be defeated by taking a blow to the head.
 
 
-Another novel aspect of the game is the entire re-design of the aesthetics and narrative.
+Another novel aspect of the game is the entire re-design of the aesthetics and narrative.The game is designed to evoke a sense of familiarity and continuity, while the obstacles represent metaphorical life challenges, such as peer pressure, bills, loud alarms, and bad luck to mention a few. This creative design approach captivates players and contributes to the overall gaming experience.
 
 ---
 

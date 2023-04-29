@@ -127,7 +127,7 @@ Quality of report writing, presentation, use of figures and visual material (5%)
 |------------|--------------------|----------------------------------------------|--------------------|
 | Ivan       | Lead Developer     | Developed game's skeleton and details        |         1          |
 | Mike       | Front End Developer| Designed engaging and visually appealing UI  |         1          |
-| Marcin     | Back End Developer | Global leader board, adding scores           |         1          |
+| Marcin     | Back End Developer | Global leader board, adding scores, boss     |         1          |
 | Antalya    | Creative Lead      | Generated innovative concepts and designs    |         1          |
 | Kate       | Administrator      | Effectively managed the project and team     |         1          |
 

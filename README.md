@@ -121,7 +121,16 @@ Quality of report writing, presentation, use of figures and visual material (5%)
 
 # Documentation of code
 
-Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.
+I
+## Individual Contribution table
+
+| Name       | Role               | Contribution                                 | Individual Weight  |
+|------------|--------------------|----------------------------------------------|--------------------|
+| Ivan       | Lead Developer     | Developed game's skeleton and details        |         1          |
+| Mike       | Front End Developer| Designed engaging and visually appealing UI  |         1          |
+| Marcin     | Back End Developer | Global leader board, adding scores           |         1          |
+| Antalya    | Creative Lead      | Generated innovative concepts and designs    |         1          |
+| Kate       | Administrator      | Effectively managed the project and team     |         1          |
 
 
 ---

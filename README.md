@@ -132,7 +132,7 @@ In terms of future work, there are several areas where our game could be improve
 
 
 
-## Individual Contribution table
+# Individual Contribution table
 
 | Name       | Role               | Contribution                                 | Individual Weight  |
 |------------|--------------------|----------------------------------------------|--------------------|

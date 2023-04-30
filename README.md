@@ -152,3 +152,6 @@ In terms of future work, there are several areas where our game could be improve
 Licensed under Creative Commons: By Attribution 3.0 License
 http://creativecommons.org/licenses/by/3.0/
 Music promoted by https://www.chosic.com/free-music/all/
+
+### Character design
+ https://dotown.maeda-design-room.net/ 

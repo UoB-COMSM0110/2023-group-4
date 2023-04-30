@@ -113,13 +113,24 @@ View our [process document](/Report/Process.md) to see our:
 
 # Conclusion
 
-Reflect on project as a whole. Lessons learned. Reflect on challenges. Future work.
+In conclusion, our game design project was an overall success, marked by a strong sense of teamwork, effective communication, and valuable learning experiences. The project's achievements can be attributed to the diverse skill sets of our team members and the knowledge we gained from collaborating with other teams. By incorporating qualitative and quantitative evaluation methods, such as NASA TLX, SUS, and Think Aloud, we were able to gather insightful feedback from users and make critical improvements to the game.
 
-Quality of report writing, presentation, use of figures and visual material (5%)
+Although we did not implement all of the user stories we had initially planned, the game still functioned well and received positive reception from players. The introduction of power-ups and a global leaderboard could add more excitement to the game. One more area where we could have improved was the implementation of the copycat character, which we intended to be more like a copycat rather than a boss character. This can be considered for future development of the game.
 
----
+Reflecting on the challenges we faced throughout the project, time management stands out as an area in need of improvement. Although we ultimately accomplished our objectives, a more structured schedule and clear deadlines for each task could have enhanced our efficiency and resource allocation. Better organisation would have allowed us to maximise productivity while reducing stress levels within the team.
 
-# Documentation of code
+Despite these challenges, we managed to complete the project while juggling other assignments and responsibilities. This experience has helped us develop resilience and adaptability, as we learned to balance various demands on our time and energy. Additionally, our capacity to work under pressure has increased, as we pushed ourselves to meet deadlines and deliver a high-quality product.
+
+Furthermore, this project has broadened our perspective on game design and development by teaching us how to effectively use Processing for creating engaging games. It also introduced us to agile development methods, which proved to be invaluable for team collaboration. The implementation of agile methodologies, such as sprints, greatly influenced our workflow by promoting iterative development and encouraging regular communication within the team. This allowed us to adapt to changes quickly and make consistent progress throughout the project.
+
+In addition to the agile development methods, we also made use of powerful tools like GitHub and Kanban boards, which significantly enhanced our team's efficiency and organisation. GitHub provided a centralised platform for version control and code management, ensuring that our work remained synchronised and up-to-date. Kanban boards, on the other hand, offered a visual representation of our tasks, enabling us to track progress and identify any bottlenecks in the development process.
+
+As we move forward with future projects, we can use the lessons learned from this experience to refine our collaboration and time management skills. 
+By continuing to prioritise effective communication and leveraging the unique strengths of each team member, we are confident in our ability to achieve even greater success as a team. This game design project has not only provided us with a valuable learning opportunity but has also laid the groundwork for further growth and improvement in our game development journey.
+
+In terms of future work, there are several areas where our game could be improved and expanded upon. For instance, we could revisit the copycat character and refine its design to better align with our original vision. Additionally, we could introduce new power-ups and gameplay mechanics, further enhancing the game's replayability and appeal to a broader audience.
+
+
 
 ## Individual Contribution table
 

@@ -43,7 +43,7 @@ At this stage of evaluation, we have addressed all known bugs and made significa
     <img src="https://user-images.githubusercontent.com/115186584/235491121-73e1edd9-e482-445b-b35d-856d108f9152.gif" alt="hci">
 </div>
 
-Second iteration of qualitative evaluation was a <b>“talk aloud”</b> evaluation. We found four students with no experience in game development to perform our evaluation. 
+Second iteration of qualitative evaluation was a <b>“Think aloud”</b> evaluation. We found four students with no experience in game development to perform our evaluation. 
 Questions to be answered from the evaluation:
 - Is it clear the users should choose a character before playing?
 - Is it clear how to play the game once it starts?

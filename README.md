@@ -19,7 +19,6 @@
 - [Evaluation](#evaluation)
 - [Process](#process)
 - [Conclusion](#conclusion)
-- [Documentation of code](#documentation-of-code)
 - [Acknowledgements](#acknowledgements)
 
 

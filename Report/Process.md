@@ -13,31 +13,37 @@
 
 ## Git
 One of the first things we did as a team was to organise our [Git page](https://github.com/UoB-COMSM0110/2023-group-4) and decide on a folder structure. Having an initial discussion about creating folders for [code](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code), [videos](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Video), [Diagrams](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Diagrams) , [meeting minutes](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/MeetingMinutes), research etc… which saved us time in the long run as it was clear to everyone where to upload their contributions, or where to find any materials on our git page.
+
 Then we ensured everyone knew the basics of Git branches and the concept of merging to main so that it was possible to concurrently work on the project code and avoid any disasters like accidentally saving over someone else's work.
-Early on in the project we did have some git problems. There were several merge conflicts we had to overcome in the beginning, we had to manually overcome some conflicts as some branches were not merged for a long time and were much further ahead than main. We learnt from these initial mistakes and from then on would check out a branch for every assigned task and merged to main more regularly. We also would checkout new branches for bug 
-fixing later on in the process.
 
-<img width="1005" alt="截屏2023-04-29 18 10 01" src="https://user-images.githubusercontent.com/115186584/235322955-6310a5b0-ea20-481e-a023-fb13046c1471.png">
-
+Early on in the project there were several merge conflicts we had to manually overcome as some branches were not merged for a long time and were much further ahead than main. We learnt from these initial mistakes and from then on would check out a branch for every assigned task and merged to main more regularly. We also checkedout new branches for bug fixing
 
 
 ## The Kanban Board
-The [Kanban board](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Diagrams/KanbanBoard) was the most useful tool we used as a team. We created a Kanban board on the web application Trello and added all the team members early on in the project. The main uses of the Kanban board became apparent during the implementation stage of the project, when the bulk of the coding was being done. The majority of tasks were set during meetings, but individuals were also allowed to assign tasks to themselves/others as and when necessary. On top of being an organisational tool, it was also a good source of motivation for the team. As members moved their assigned tasks around from “Backlog” all the way through to “Done”. 
+The [Kanban board](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Diagrams/KanbanBoard) was the most useful tool we used as a team. 
+
+We created a Kanban board on the web application Trello and added all the team members early on in the project. The main uses of the Kanban board became apparent during the implementation stage of the project, when the bulk of the coding was being done. 
+
+The majority of tasks were set during meetings, but individuals were also allowed to assign tasks to themselves/others as and when necessary. 
+
+On top of being an organisational tool, it was also a good source of motivation for the team, as developers moved their assigned tasks around from “Backlog” all the way through to “Done”. 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235485367-b8bf9830-e9aa-4851-abbf-d4ebda14aab4.gif" alt="kanban">
+  <img width="400" src="https://user-images.githubusercontent.com/115186584/235485367-b8bf9830-e9aa-4851-abbf-d4ebda14aab4.gif" alt="kanban">
 </p>
 
 ## Sprints
-Our sprints were two weeks long. We chose a sprint length of two weeks as we were not working full time on this project due to other work commitments. At the beginning of each sprint we would assign Kanban tasks. We practised the playing poker method to estimate the time and effort each task, based on the collective knowledge of the team. After several weeks we had a rough idea of our team velocity (around 10 tasks per sprint). Having an idea of our team velocity was useful for determining how many of the features of our game we would have time to implement. We considered factors external to the project, knowing our team velocity would decrease during the April exam period and so we made allowances for this when assigning tasks during this period.
+Our sprints were two weeks long. We chose a sprint length of two weeks as we were not working full time on this project due to other work commitments. At the beginning of each sprint we would assign Kanban tasks. 
 
-At the end of each sprint we would test the new features which had been implemented, each member of the team would play the game and report back any feedback and suggestions. This was a good form of regular testing and highlighted any new bugs. Bug fixing tasks were added to the tasks for the next sprint.
+We practised the playing poker method to estimate the time and effort each task, based on the collective knowledge of the team. After several weeks we had a rough idea of our team velocity (around 6 tasks per sprint). Having an idea of our team velocity was useful for determining how many of the features of our game we would have time to implement. We considered factors external to the project, knowing our team velocity would decrease during the April exam period and so we made allowances for this when assigning tasks during this period.
+
+At the end of each sprint we tested the new features, each member of the team played the game and would report back any feedback and suggestions. This was a good form of regular testing and highlighted any new bugs. Bug fixing tasks were added to the tasks for the next sprint.
 
 ## Team Meetings
 As a team we usually met every week to discuss the development of the game and assign tasks. We adopted several different approaches for team meetings. 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/234696293-f8709d2f-2938-4d3a-8a08-ee3404cd3bf4.gif" alt="team">
+  <img width="300" src="https://user-images.githubusercontent.com/115186584/234696293-f8709d2f-2938-4d3a-8a08-ee3404cd3bf4.gif" alt="team">
 </p>
 
 
@@ -47,23 +53,15 @@ On Top of these meetings, on the day we formed our team we created a WhatsApp gr
 
 
 
-<h2 align="center"><b>Some Screenshots of our effective communication</b></h2>
+<h2 align="center"><b>Some Screenshots of our effective communication:</b></h2>
 
-
-### Discuss about difficulty
-![Difficulty](https://user-images.githubusercontent.com/115186584/235327218-c60e4ac7-6ef3-4785-9fee-bc290fd463fe.png)
-
-### Discuss about Boss
-![Boss](https://user-images.githubusercontent.com/115186584/235327221-89aa0c73-1df4-4e08-aea1-24114cf536db.png)
-
-### Updating Obstacles
-![Obsticles](https://user-images.githubusercontent.com/115186584/235327227-279d7926-6d09-4779-91f2-6c56cc4aeaaf.png)
-
-### Updating scores
-![Score](https://user-images.githubusercontent.com/115186584/235327231-6425651e-df51-415f-9516-9c910fc8bb47.png)
-
-### Updating scores
-![Score1](https://user-images.githubusercontent.com/115186584/235327232-3c2b7a93-82ed-4bbd-bbdb-354dea280c2b.png)
+<p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/115186584/235327218-c60e4ac7-6ef3-4785-9fee-bc290fd463fe.png" alt="difficulty">
+<img width="300" src="https://user-images.githubusercontent.com/115186584/235327221-89aa0c73-1df4-4e08-aea1-24114cf536db.png" alt="boss">
+<img width="300" src="https://user-images.githubusercontent.com/115186584/235327227-279d7926-6d09-4779-91f2-6c56cc4aeaaf.png" alt="obsticles">
+<img width="300" src="https://user-images.githubusercontent.com/115186584/235327231-6425651e-df51-415f-9516-9c910fc8bb47.png" alt="score1">
+<img width="300" src="https://user-images.githubusercontent.com/115186584/235327232-3c2b7a93-82ed-4bbd-bbdb-354dea280c2b.png" alt="score2">
+</p>
 
 
 

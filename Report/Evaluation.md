@@ -44,9 +44,9 @@ At this stage of evaluation, we have addressed all known bugs and made significa
 
 <br>
 <p align="center">
-    <img width="700" src="https://user-images.githubusercontent.com/115186584/235491121-73e1edd9-e482-445b-b35d-856d108f9152.gif" alt="hci">
+    <img width="300" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
+    <img width="300" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
 </p>
-<br>
 <br>
 
 We found four students with no experience in game development to perform our evaluation. 
@@ -97,10 +97,8 @@ Results show below:
     <img width="700" src="https://user-images.githubusercontent.com/115186584/235492393-e06cdf48-9a37-40b6-bda3-afb662b5d7c3.png" alt="Normal Difficulty">
 </p>
 <br>
-<br>
 
 
-<br>
 <p align="center">
     <img width="700" src="https://user-images.githubusercontent.com/115186584/235492375-1a0a9ca8-759c-4d29-83ab-d26ef4c78a6b.png" alt="Hard Difficulty">
 </p>
@@ -108,5 +106,17 @@ Results show below:
 <br>
 
 For both SUS evaluations the results were promising. Both results were significantly over the average of 68 meaning users find our game easy to use.
+
+####Wilcoxon Signed Rank Test Results
+**W test statistic = 0**
+**Number of non-tied pairs (n) = 5**
+<br>
+From a visual inspection of the data, one would say there is no there is no significant difference in the usability of the game when played on the normal difficulty mode compared to when played on the hard difficulty mode.
+<br>
+From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation showed no difference between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. It is shown in the [critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) the difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test did not work for this data set. There was deemed to be no significant difference between the two data sets.
+<br>
+[This report](http://users.sussex.ac.uk/~grahamh/RM1web/WilcoxonHandoout2011.pdf)	 walks through the  issue we faced when doing the Wilcoxon Signed Rank calculator on our data.
+
+
 
 ## Code Testing

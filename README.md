@@ -144,7 +144,7 @@ In terms of future work, there are several areas where our game could be improve
 
 ---
 
-# How To Download and Play Out Game
+# How To Download and Play Our Game
 
 - Download processing from the following link : [download here](https://processing.org/download)
       This downloads the graphical library and integrated development environment that the game will run on.

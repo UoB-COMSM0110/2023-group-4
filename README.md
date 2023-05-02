@@ -129,7 +129,7 @@ By continuing to prioritise effective communication and leveraging the unique st
 
 In terms of future work, there are several areas where our game could be improved and expanded upon. For instance, we could revisit the copycat character and refine its design to better align with our original vision. Additionally, we could introduce new power-ups and gameplay mechanics, further enhancing the game's replayability and appeal to a broader audience.
 
-
+---
 
 # Individual Contribution table
 
@@ -159,7 +159,7 @@ In terms of future work, there are several areas where our game could be improve
 
 - Press play in the nyanCat.pde window and enjoy!
 
-
+---
 
 # Acknowledgements
 

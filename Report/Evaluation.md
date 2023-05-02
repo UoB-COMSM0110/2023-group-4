@@ -59,20 +59,29 @@ Key points taken by the two observers of the the evaluation are categorised belo
 
 **Game Aesthetic:**
 >Menu design is nice, good aesthetic
+
 >Character selection is fun (all participants chose a character)
+
 >Test in the top left is distracting (position coordinates)
+
 
 **Game Dynamics**
 >It's quite fast paced to begin with but you soon get used to it
+
 >It’s not obvious you have the ability to move left and right
+
 >Fake quit scenario is harsh but funny
+
 
 **Suggested Features**
 >How do you actually quit?
 
+
 **Potential Bugs**
 >The collision detection with obstacles is sometimes a bit harsh/inaccurate.
+
 >If a player navigates to the top right corner and jumps continuously, the player hovers and would never die – is this supposed to happen?
+
 
 ## Quantitative Evaluation
 ### System Usability Scale Evaluations

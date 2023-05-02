@@ -660,7 +660,7 @@ void playGame() {
   
   int msgDisplayStart = difficulty == "NORMAL" ? 40 : 35;
   if (score >= msgDisplayStart && score % 50 >= msgDisplayStart && score % 50 <= 49) { // score when boss appear
-      showBossComingMsg();
+      showBossComingMsg();//50,50,49
   }
   
   //Change to boss level

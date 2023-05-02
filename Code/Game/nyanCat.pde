@@ -20,6 +20,12 @@ SoundFile jumpSound;
 SoundFile failSound;
 SoundFile fakeQuitSound;
 SoundFile killBossSound;
+//save to file
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 
 //Leaderboard
 String playerName = "";
@@ -85,6 +91,9 @@ void setup(){
   size(1000,366);
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+int maxLeaderboardEntries = 10;
+leaderboard = new Leaderboard(maxLeaderboardEntries);
+leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
 
   sc = loadImage("../design_and_interface/game_BG/score.png");
   fB = loadImage("../design_and_interface/game_BG/boss.png");
@@ -570,7 +579,12 @@ void finalBoss() {
       copyCat.deadJump();    
       oldtime = millis();
       modeNumber++;
+<<<<<<< HEAD
     }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "top"){
+=======
+    }else if(player.collisionSide == "left"||player.collisionSide == "right"){
+      leaderboard.addScore(playerName, score);
+>>>>>>> b0e6322ba61db1be4fefbd5d87976188de3e3237
       gameState = "LOSE";
     }
   }
@@ -649,6 +663,7 @@ void playGame() {
   for(Obstacle obs:obsList){
     if(collisionDetection(player,obs)){
       leaderboard.addScore(playerName, score);
+      leaderboard.saveToFile(Leaderboard.DEFAULT_FILENAME);
       gameState = "LOSE";
       if(!isMute){
       failSound.play();}

@@ -97,6 +97,7 @@ void setup(){
   failSound = new SoundFile(this, "../Music/SoundsEffect/gameover.wav");
   fakeQuitSound = new SoundFile(this, "../Music/SoundsEffect/fakeQuit.wav");
   killBossSound = new SoundFile(this, "../Music/SoundsEffect/killBoss.wav");
+  
 
   //initBgMusicFile.play();
   //Leaderboard
@@ -751,6 +752,7 @@ void loseGamePage(){
 void helpMenu(){}
 
 void reset(){
+  player.collisionSide = "";
   if(gameState == "START" || gameState == "Character"){
     player.setposX(initialX);
     player.setposY(initialY);
@@ -892,6 +894,7 @@ void keyPressed() {
       playerNameEntered = true;
     }
   }
+  println(keyCode);
   switch (keyCode) {
   case 37://left
     left = true;

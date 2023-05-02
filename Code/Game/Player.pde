@@ -50,6 +50,7 @@ class Player extends PEObject{
     //Just call this function in the scenario you want.Hint: in the draw function
     //If you dont want the horizotanl movement Just remove the code posX += velocityX below
     //Go Left
+    println("right:" + right);
     if(left && !right &&collisionSide!="left" ){
       accX = -0.2;
       friction = 1;

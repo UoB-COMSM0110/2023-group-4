@@ -557,20 +557,20 @@ void finalBoss() {
   player.update();
   player.setSize(80, 50); //100,62
   player.display();
-  copyCat.update();
+  //copyCat.update();
   copyCat.display();
   if(copyCat.dead == false){
     player.collisionSide = collisionsPVE(player,copyCat);
-    println("collissionSide"+player.collisionSide);
   }
   //CopyCat collision detection
   if(player.collisionSide!="none"&&copyCat.dead == false){
-    if(player.collisionSide == "bottom"){
+    println("collissionSide"+player.collisionSide);
+    if(player.collisionSide == "top"){
       //Remove the copyCat
       copyCat.deadJump();    
       oldtime = millis();
       modeNumber++;
-    }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "top"){
+    }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "bottom"){
       gameState = "LOSE";
     }
   }
@@ -587,6 +587,7 @@ void finalBoss() {
         obstacleVelocityX += 2;
         copyCat.setVx("HARD");
       }
+      println(modeNumber);
       if(modeNumber == 2){
         copyCat.modeTwo();
         println(copyCat.dead);
@@ -894,6 +895,7 @@ void keyPressed() {
       playerNameEntered = true;
     }
   }
+  println(keyCode);
   switch (keyCode) {
   case 37://left
     left = true;

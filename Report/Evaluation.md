@@ -40,22 +40,7 @@ This issue could also be resolved with some explanatory text before the game sta
 
 ## Think Aloud Evaluation
 
-At this stage of evaluation, we have addressed all known bugs and made significant improvements since the last evaluation. We have enhanced the interface and added additional instructional messages to improve user experience. 
-
-<br>
-<p align="center">
-    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
-    <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci"> 
-
-</p>
-<br>
-
-We found four students with no experience in game development to perform our evaluation. 
+Second iteration of qualitative evaluation was a “talk aloud” evaluation. We found four students with no experience in game development to perform our evaluation.
 
 **Questions to be answered during the evaluation:**
 - Is it clear the users should choose a character before playing?
@@ -71,7 +56,7 @@ Key points taken by the two observers of the the evaluation are categorised belo
 
 >Character selection is fun (all participants chose a character)
 
->Test in the top left is distracting (position coordinates)
+>Text in the top left is distracting (position coordinates)
 
 
 **Game Dynamics**
@@ -90,6 +75,21 @@ Key points taken by the two observers of the the evaluation are categorised belo
 >The collision detection with obstacles is sometimes a bit harsh/inaccurate.
 
 >If a player navigates to the top right corner and jumps continuously, the player hovers and would never die – is this supposed to happen?
+
+
+To understand the feedback provided, below are screenshots of the relevant scenes of our game at the time of this evaluation.
+<br>
+<p align="center">
+    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
+    <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci"> 
+
+</p>
+<br>
 
 
 ## Quantitative Evaluation
@@ -111,17 +111,24 @@ Results show below:
 <br>
 <br>
 
-For both SUS evaluations the results were promising. Both results were significantly over the average of 68 meaning users find our game easy to use.
+For both SUS evaluations the results were promising. Both results were significantly over the average of 68, meaning users find our game easy to use.
 
-####Wilcoxon Signed Rank Test Results
-**W test statistic = 0**
-**Number of non-tied pairs (n) = 5**
+**Wilcoxon Signed Rank Test Results**
+
+W test statistic = 0
+
+Number of non-tied pairs (n) = 5
+
 <br>
 From a visual inspection of the data, one would say there is no there is no significant difference in the usability of the game when played on the normal difficulty mode compared to when played on the hard difficulty mode.
 <br>
-From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation showed no difference between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. It is shown in the [critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) the difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test did not work for this data set. There was deemed to be no significant difference between the two data sets.
+From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation had no difference at all between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. 
+The [critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) shows that a significant difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test does not work for this data set. 
+
 <br>
 [This report](http://users.sussex.ac.uk/~grahamh/RM1web/WilcoxonHandoout2011.pdf)	 walks through the  issue we faced when doing the Wilcoxon Signed Rank calculator on our data.
+
+There was deemed to be no difference in usability when our game is played on different difficulty modes. We suggest that this is a good thing, on the harder difficulty setting the game is faster. This requires more skill, but was not designed to be more difficult in terms of useability.
 
 
 

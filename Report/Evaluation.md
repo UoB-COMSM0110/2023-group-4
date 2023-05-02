@@ -44,8 +44,14 @@ At this stage of evaluation, we have addressed all known bugs and made significa
 
 <br>
 <p align="center">
-    <img width="300" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
-    <img width="300" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
+    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
+    <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci"> 
+
 </p>
 <br>
 

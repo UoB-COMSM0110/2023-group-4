@@ -116,18 +116,21 @@ For both SUS evaluations the results were promising. Both results were significa
 **Wilcoxon Signed Rank Test Results**
 
 W test statistic = 0
-
+<br>
+<br>
 Number of non-tied pairs (n) = 5
-
+<br>
 <br>
 From a visual inspection of the data, one would say there is no there is no significant difference in the usability of the game when played on the normal difficulty mode compared to when played on the hard difficulty mode.
 <br>
-From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation had no difference at all between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. 
-The [critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) shows that a significant difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test does not work for this data set. 
-
 <br>
-[This report](http://users.sussex.ac.uk/~grahamh/RM1web/WilcoxonHandoout2011.pdf)	 walks through the  issue we faced when doing the Wilcoxon Signed Rank calculator on our data.
-
+From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation had no difference at all between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. 
+The [critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png)shows that a significant difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test does not work for this data set. 
+<br>
+<br>
+[This report](http://users.sussex.ac.uk/~grahamh/RM1web/WilcoxonHandoout2011.pdf)walks through the  issue we faced when doing the Wilcoxon Signed Rank calculator on our data.
+<br>
+<br>
 There was deemed to be no difference in usability when our game is played on different difficulty modes. We suggest that this is a good thing, on the harder difficulty setting the game is faster. This requires more skill, but was not designed to be more difficult in terms of useability.
 
 

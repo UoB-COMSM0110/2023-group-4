@@ -47,7 +47,7 @@ Another novel aspect of the game is the entire re-design of the aesthetics and n
 
 
 <p align="center">
-  <img width=300 src="https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gi"
+  <img width=300 src="https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gi" alt="obstacles">
 </p>
 
 

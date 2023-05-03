@@ -683,7 +683,7 @@ void playGame() {
   }
   
   //Change to boss level
-  if (score >= 50 && score % 50 == 0) { // score when boss appear
+  if (score >= 150 && score % 150 == 0) { // score when boss appear
       bossXOffset = 850;
       gameState = "BOSS";
   }

@@ -1,10 +1,10 @@
+test,450
+ttt,450
+jj,189
 aaa,176
 kewnlrnewlkrnoieqhriewncqrkqjnbweriukhiwuekrbcekjbrceilkjqbro;ik,114
 Antalya,97
 fnewlkfew,87
 er,81
 hi,67
-test,45
-aa,39
-kk,35
-,35
+k,66

@@ -14,9 +14,11 @@
 To understand the feedback provided, below are screenshots of the relevant scenes of our game at the time of evaluation. At this point, our game included basic functions such as character selection and jumping over simple obstacles. We did not consider the game to be a finished product but knew that the evaluation would provide useful feedback for the rest of the development process.
 <br>
 <p align="center">
-  <img width="700" alt="截屏2023-05-01 17 43 01" src="https://user-images.githubusercontent.com/115186584/235489989-56989ccf-6830-462a-a789-eea3debfef13.png">
+  <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/01_Character.png" alt="hci">
+  <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/02_Diffuculty.png" alt="hci">
+  <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/03_InGame.png" alt="hci">
+<img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/04_GameOver.png" alt="hci">
 </p>
-<br>
 <br>
 
 We chose three external game development experts to carry out the evaluation to see if we were breaking any of the 10 heuristic rules. The results of this evaluation can be seen in the table below:
@@ -25,8 +27,9 @@ We chose three external game development experts to carry out the evaluation to 
 <img width="700" alt="截屏2023-05-01 17 42 24" src="https://user-images.githubusercontent.com/115186584/235489908-2459c5bb-9d30-4281-bb13-640c52bae812.png">
 </p>
 <br>
-<br>
+
 We found the first heuristic evaluation to be very useful as it highlighted problems which we could not immediately see as the developers of our own game. Below are strategies for solving the four highlighted issues:
+<br>
 
 **Issues 1 & 3 - Choosing characters**<br>
 We needed to make the character selection more obvious to players and add some explanatory text to guide the user through the process. This required some redesign of the start page.
@@ -36,21 +39,22 @@ Making this change would add a lot of value to our game because currently most u
 Easily overcome by adding instructions on how to move the character before the game begins.
 
 **Issue 4 - Game Interface**<br>
-could be resolved by adding some explanatory text before the game starts, however it conflicts with our twist of the “Fake Quit Scenario”.
+Could be resolved by adding some explanatory text before the game starts, however it conflicts with our twist of the “Fake Quit Scenario”.
 This issue needed further evaluation.
+
 
 
 ## Think Aloud Evaluation (08/03/2023)
 To understand the feedback provided, below are screenshots of the relevant scenes of our game at the time of this evaluation.
 <br>
 <p align="center">
-    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci">
-    <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci">
+    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="thinkAloud">
+    <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="thinkAloud">
+<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="thinkAloud">
+<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="thinkAloud">
+<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="thinkAloud">
+<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="thinkAloud">
+<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="thinkAloud">
 
 </p>
 <br>
@@ -99,15 +103,13 @@ In response to this evaluation we:
 - Decided to keep the fake quit scenario as it was apart of our initial game design
 
 
+
 ## Quantitative Evaluation
 ### System Usability Scale Evaluations (29/03/2023)
 
-To understand the feedback provided, below are GIFs of our game on both difficulty levels:
+We asked 10 users to play our game on both difficulty levels and complete a SUS questionnaire after each. The hard difficulty level is 1.6 times the speed of the normal difficulty level.
 
-
-
-We asked 10 users to play our game on both difficulty levels and complete an [SUS questionnaire](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/SUS/SUSQuestions.pdf) after each.
-Results show below:
+SUS results shown below:
 
 <br>
 <p align="center">
@@ -142,8 +144,9 @@ The [Wilcoxon critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable
 There was deemed to be no difference in usability when our game is played on different difficulty modes. We suggest that this is a good thing. On the harder difficulty setting the game is faster, this requires more skill, but was not designed to be more difficult in terms of useability.
 
 
+
 ### NASA Task Load Index (01/04/2023)
-We asked 10 users to play our game on both difficulty levels and complete an [NASA TLX questionnaire](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/NASA_TLX/NASATLXquestions.pdf) after each.
+We asked 10 users to play our game on both difficulty levels and complete an NASA TLX questionnaire after each.
 Results show below:
 
 <br>
@@ -173,6 +176,7 @@ Number of non-tied pairs (n) = 10
 According to the [Wilcoxon critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) with a W value of 4 and an n value of 10, the difference in the two sets of results is significant to an alpha value of 0.025. Which surpasses our aim to have a significant difference in difficulty to an alpha value of 0.05.
 
 As a result of this evaluation we can definitively confirm that our game is more mentally demanding when played on hard mode as opposed to normal mode.
+
 
 
 ## Code Testing

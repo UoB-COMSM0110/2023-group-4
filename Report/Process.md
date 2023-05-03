@@ -44,11 +44,6 @@ At the end of each sprint we tested the new features, each member of the team pl
 ## Team Meetings
 As a team we usually met every week to discuss the development of the game and assign tasks. We adopted several different approaches for team meetings.
 
-<p align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/115186584/234696293-f8709d2f-2938-4d3a-8a08-ee3404cd3bf4.gif" alt="team">
-</p>
-
-
 In the early phases of design we would meet as a whole team so everyone could contribute to the ideation process and ensure that we were all on the same page in terms of the fundamental game concepts.
 As the development of the game was underway we took a more agile approach using the Scrum project management style. We conducted short 10 minute meetings after Software Engineering workshops where the Scrum Master proposed topics for discussion and we updated our Kanban board according to the newly completed/assigned tasks. During  the development phase we also met in sub groups to discuss details relevant to specific tasks and team members, based on the tasks assigned on the Kanban board. The subgroup meetings worked autonomously from the rest of the group, the team trusted the outcomes decided by the relevant team members. [Meeting minutes](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/MeetingMinutes)
 

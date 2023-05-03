@@ -588,6 +588,7 @@ void finalBoss() {
       oldtime = millis();
       modeNumber++;
     }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "top"){
+      leaderboard.addScore(playerName, score);
       gameState = "LOSE";
     }
   }

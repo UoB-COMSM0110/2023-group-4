@@ -65,13 +65,7 @@ At this point we had a game concept with a quirky narrative, a main character an
 
 The paper prototype involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine. Some design decisions we made after creating the paper prototype were:
 
-To represent obstacles as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By [Super Mario](https://mario.nintendo.com/) world.
-
-<div align="center">
-
-![obstacles](https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gif)
-
-</div>
+To represent [obstacles](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code/design_and_interface/game_BG/obstacle) as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By [Super Mario](https://mario.nintendo.com/) world.
 
 If the player successfully defeats the Copy Cat boss, they will be rewarded with celebratory messages. This provides the player with a goal to strive for, besides just aiming to achieve a high score.
 

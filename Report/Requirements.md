@@ -43,7 +43,7 @@ After discussing lots of questions and concepts surrounding both ideas, we unani
 - There were lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/115186584/235324060-93feb3e8-a606-4667-86dd-27eac69f9e85.gif" alt="NyanCat">
+<img width="200" src="https://user-images.githubusercontent.com/115186584/235324060-93feb3e8-a606-4667-86dd-27eac69f9e85.gif" alt="NyanCat">
 </p>
 
 

@@ -139,7 +139,10 @@ In terms of future work, there are several areas where our game could be improve
 | Antalya    | Creative Lead      | Generated innovative concepts and designs    |         1          |
 | Kate       | Administrator      | Effectively managed the project and team     |         1          |
 
-
+## Team photo
+<p align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/115186584/234696293-f8709d2f-2938-4d3a-8a08-ee3404cd3bf4.gif" alt="team">
+</p>
 ---
 
 # How To Download and Play Cat Adventure

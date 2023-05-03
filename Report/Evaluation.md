@@ -106,7 +106,7 @@ To understand the feedback provided, below are GIFs of our game on both difficul
 
 
 
-We asked 10 users to play our game on both difficulty levels and complete an SUS questionnaire after each.
+We asked 10 users to play our game on both difficulty levels and complete an [SUS questionnaire](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/SUS/SUSQuestions.pdf) after each.
 Results show below:
 
 <br>
@@ -143,7 +143,7 @@ There was deemed to be no difference in usability when our game is played on dif
 
 
 ### NASA Task Load Index (01/04/2023)
-We asked 10 users to play our game on both difficulty levels and complete an NASA TLX questionnaire after each.
+We asked 10 users to play our game on both difficulty levels and complete an [NASA TLX questionnaire](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/NASA_TLX/NASATLXquestions.pdf) after each.
 Results show below:
 
 <br>

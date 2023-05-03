@@ -46,18 +46,17 @@ Our game is based on the classic T-Rex jumping game built into google chrome. Th
 Another novel aspect of the game is the entire re-design of the aesthetics and narrative.The game is designed to evoke a sense of familiarity and continuity, while the obstacles represent metaphorical life challenges, such as peer pressure, bills, loud alarms, and bad luck to mention a few. This creative design approach captivates players and contributes to the overall gaming experience.
 
 
-<div align="center">
+<p align="center">
+  <img width=300 src="https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gi"
+</p>
 
-![obstacles](https://user-images.githubusercontent.com/115186584/234699042-85274579-3e91-49ca-a159-88e5e6103487.gif)
-
-</div>
 
 ---
 
 # Requirements
 
 View our [requirement document](/Report/Requirements.md) to see our:
-- Early stage design process 
+- Early stage design process
 - Ideation Process
 - Paper Prototype
 - Use Case Diagram
@@ -91,7 +90,7 @@ View our [implementation document](/Report/Implementation.md) to see our:
 
 View our [evaluation document](/Report/Evaluation.md) to see our:
 - Qualitative evaluation
-- Quantitative evaluation 
+- Quantitative evaluation
 - How our code was tested
 
 
@@ -124,7 +123,7 @@ Furthermore, this project has broadened our perspective on game design and devel
 
 In addition to the agile development methods, we also made use of powerful tools like GitHub and Kanban boards, which significantly enhanced our team's efficiency and organisation. GitHub provided a centralised platform for version control and code management, ensuring that our work remained synchronised and up-to-date. Kanban boards, on the other hand, offered a visual representation of our tasks, enabling us to track progress and identify any bottlenecks in the development process.
 
-As we move forward with future projects, we can use the lessons learned from this experience to refine our collaboration and time management skills. 
+As we move forward with future projects, we can use the lessons learned from this experience to refine our collaboration and time management skills.
 By continuing to prioritise effective communication and leveraging the unique strengths of each team member, we are confident in our ability to achieve even greater success as a team. This game design project has not only provided us with a valuable learning opportunity but has also laid the groundwork for further growth and improvement in our game development journey.
 
 In terms of future work, there are several areas where our game could be improved and expanded upon. For instance, we could revisit the copycat character and refine its design to better align with our original vision. Additionally, we could introduce new power-ups and gameplay mechanics, further enhancing the game's replayability and appeal to a broader audience.
@@ -170,4 +169,4 @@ http://creativecommons.org/licenses/by/3.0/
 Music promoted by https://www.chosic.com/free-music/all/
 
 ### Character design
- https://dotown.maeda-design-room.net/ 
+ https://dotown.maeda-design-room.net/

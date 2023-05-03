@@ -9,6 +9,7 @@
 - [Paper Prototype](#paper-prototype)
 - [Use Case Diagram](#use-case-diagram)
 - [User Stories](#user-stories)
+- [Functional Requirements](#Functional-Requirements)
 
 
 ## Early Stage Design
@@ -30,13 +31,6 @@ We each voted for our preferred game to develop, results shown below:
 | Yuchen Zhang |  Baba is you / flappy bird           |
 
 </div>
-
-
-
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235328780-e6b4d990-9d99-4933-88c1-7d560c1ea335.gif" alt="vote">
-</p>
-
 
 
 After discussing lots of questions and concepts surrounding both ideas, we unanimously decided on developing a jumping style game for several reasons: 

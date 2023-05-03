@@ -9,7 +9,7 @@
 - [Paper Prototype](#paper-prototype)
 - [Use Case Diagram](#use-case-diagram)
 - [User Stories](#user-stories)
-- [Functional Requirements](#Functional-Requirements)
+- [Functional Requirements](#functional-requirements)
 
 
 ## Early Stage Design

@@ -579,12 +579,7 @@ void finalBoss() {
       copyCat.deadJump();    
       oldtime = millis();
       modeNumber++;
-<<<<<<< HEAD
     }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "top"){
-=======
-    }else if(player.collisionSide == "left"||player.collisionSide == "right"){
-      leaderboard.addScore(playerName, score);
->>>>>>> b0e6322ba61db1be4fefbd5d87976188de3e3237
       gameState = "LOSE";
     }
   }

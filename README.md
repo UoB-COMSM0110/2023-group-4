@@ -123,9 +123,8 @@ To produce our game, we made good use of the powerful Git functionality, coding 
 
 Our qualitative evaluations of the game gave insightful feedback for making improvements and also highlighted a couple of bugs which were then resolved and further tested, which promoted iterative development of features. The quantitative evaluations provided evidence that there is a significant difference in task load index when the game is played on different difficulty modes, but the usability of the system remains the same. Although we did not implement all of the user stories we had initially planned, the game still functioned well and received positive reception from players.
 
-As we move forward with future projects, we can use the lessons learned from this experience to refine our collaboration and time management skills. By continuing to prioritise effective communication and leveraging the unique strengths of each team member, we are confident in our ability to achieve even greater success as a team.
-
 Furniture work tasks for the game could include the implementation of power-ups and a global leaderboard, which would add more excitement to the game. Another area of the game we could develop further is giving the boss character more functionality, having different themes for each boss encounter for example.
+
 
 
 ---

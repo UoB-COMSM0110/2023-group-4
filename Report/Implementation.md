@@ -14,7 +14,7 @@
 
 ## Skeleton Model
 
-Early on in the implementation phase, our lead developer produced a skeleton model of our game. This included three game states: 
+Early on in the implementation phase, our lead developer produced a skeleton model of our game. This included three game states:
 - Start (including a start menu)
 - In play state (including mechanics of a character jumping over simple blocks)
 - Game Over (including a game over menu)
@@ -36,7 +36,7 @@ During the game design phase we had identified that the three main challenges of
 Once we had our concept, we focused on how to implement the game; collaboratively as a team. The first step of the implementation phase was compiling research around game design on the Processing platform. This involved completing the processing challenges set for us to do from the tutorials, each team member completed a different challenge to develop everyone's understanding of the Processing language. We also all familiarised ourselves with the Processing documentation online.
 
 ## Challenge 1
-The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game. 
+The online Processing documentation provided us with a solution to our initial challenge of creating animations for our game characters. This challenge was one of the first implementation tasks outlined on our Kanban board. By adapting example code from the documentation, we were able to transform a series of images into animations for the characters in our game.
 
 
 <p align="center">
@@ -63,9 +63,9 @@ void setup() {
 }
 ```
 
-Our approach involved finding GIFs online that we wanted to use as characters, exporting the GIFs into .tiff formatted images frame by frame, and then removing the background of each image frame. In the code, we simply looped through the image frames to create the appearance of animation. The key challenge was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
+Our approach involved finding GIFs online that we wanted to use as characters, exporting them to .tiff images frame by frame, and removing the background of each frame. In the code, we simply looped through the image frames to create the appearance of animation. The key was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
 
-<img width="978" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">
+<img width="500" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">
 
 We continued to find and learn from online resources, such as Possessing games that shared similar concepts to ours, already published on Git. These resources were very useful for understanding how to implement the game mechanics for jumping, detecting obstacle collisions, and introducing the boss character which would move around on the screen.
 
@@ -76,7 +76,7 @@ We continued to find and learn from online resources, such as Possessing games t
 The second challenge we were able to resolve was the challenge of the fake quit scenario. The fake-quit scenario was part of our game concept. The first three times the player lost the game and decided to quit rather than play again, the player would be sent back to the start of the game. This challenge was about manipulating the states of the game. Since we had a solid implementation of the different game states from our skeleton model it was fairly straightforward to implement. It involved introducing a counter variable that incremented every time the user selected the “quit” option rather than the “play again” option. If the counter was less than 3,  an alternate pop-up screen was displayed (shown below left) declaring that you must play again, and the game restarted from the beginning.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/234676427-f851c859-2d44-406b-b9a6-48fdb2717d82.gif" alt="fakequit">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/FakeQuit.png" alt="fakequit">
 </p>
 
 ## Challenge 3
@@ -84,7 +84,7 @@ The third challenge of implementing the global leaderboard was the largest of th
 The first aspect of this challenge was creating an input text box for entering a username to be saved alongside each high score. After some research, we decided to use the ControlP5 import to implement the username text field on the character selection menu page. In the interest of the “visibility of system status” heuristic we also redesigned the character selection page to include some instructions on how to enter a username and start the game.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235326233-1225a800-b726-442c-83b7-a2f6fed7b86d.gif" alt="test">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName.png" alt="test">
 </p>
 
 

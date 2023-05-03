@@ -514,7 +514,7 @@ void showFakeQuit() {
     score = 0;
   if(!isMute){
     initBgMusicFile.stop();
-    fakeQuitSound.play();
+    //fakeQuitSound.play();
   }
 
   if (pauseStart == 0) {
@@ -677,8 +677,8 @@ void playGame() {
     }
     }
   
-  int msgDisplayStart = difficulty == "NORMAL" ? 40 : 35;
-  if (score >= msgDisplayStart && score % 50 >= msgDisplayStart && score % 50 <= 49) { // score when boss appear
+  int msgDisplayStart = difficulty == "NORMAL" ? 140 : 135;
+  if (score >= msgDisplayStart && score % 150 >= msgDisplayStart && score % 150 <= 149) { // score when boss appear
       showBossComingMsg();//50,50,49
   }
   

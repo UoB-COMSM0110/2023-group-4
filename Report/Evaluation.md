@@ -10,7 +10,7 @@
 
 
 ## Qualitative Evaluation
-### Heuristic Evaluation
+### Heuristic Evaluation (30/02/2023)
 To understand the feedback provided, below are screenshots of the relevant scenes of our game at the time of evaluation. At this point, our game included basic functions such as character selection and jumping over simple obstacles. We did not consider the game to be a finished product but knew that the evaluation would provide useful feedback for the rest of the development process.
 <br>
 <p align="center">
@@ -40,17 +40,17 @@ could be resolved by adding some explanatory text before the game starts, howeve
 This issue needed further evaluation.
 
 
-## Think Aloud Evaluation
+## Think Aloud Evaluation (08/03/2023)
 To understand the feedback provided, below are screenshots of the relevant scenes of our game at the time of this evaluation.
 <br>
 <p align="center">
-    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci"> 
+    <img width="400" src="/Diagrams/ThinkAloud/01_Start.png" alt="hci">
     <img width="400" src="/Diagrams/ThinkAloud/02_CharacterSelection.png" alt="hci">
-<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci"> 
-<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci"> 
+<img width="400" src="/Diagrams/ThinkAloud/03_DifficultySelection.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/04_LetsGo.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/05_InGame.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/06_GameOver.png" alt="hci">
+<img width="400" src="/Diagrams/ThinkAloud/07_Can'tQuit.png" alt="hci">
 
 </p>
 <br>
@@ -92,14 +92,21 @@ Key points taken by the two observers of the the evaluation are categorised belo
 >If a player navigates to the top right corner and jumps continuously, the player hovers and would never die – is this supposed to happen?
 
 
+In response to this evaluation we:
+- Added more instructions about how to control the character movement during the game
+- Updated the collision detection
+- Fixed the bug of being able to fly in the top right corner
+- Decided to keep the fake quit scenario as it was apart of our initial game design
+
+
 ## Quantitative Evaluation
-### System Usability Scale Evaluations
+### System Usability Scale Evaluations (29/03/2023)
 
 To understand the feedback provided, below are GIFs of our game on both difficulty levels:
 
 
 
-We asked 10 users to play our game on both difficulty levels and complete an SUS questionnaire after each. 
+We asked 10 users to play our game on both difficulty levels and complete an SUS questionnaire after each.
 Results show below:
 
 <br>
@@ -125,8 +132,8 @@ W test statistic = 0
 Number of non-tied pairs (n) = 5
 <br>
 <br>
-From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation had no difference at all between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5. 
-The [Wilcoxon critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) shows that a significant difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test does not work for this data set. 
+From the Wicoxon signed rank test, a calculated W value of 0 for a sample size of 10, implies there is a significant difference between the two two sets of results. However, because 5 pairs in our evaluation had no difference at all between the two difficulty levels, the number of non-tied pairs (number of pairs which actually affect the outcome of the calculation) is only 5.
+The [Wilcoxon critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable.png) shows that a significant difference cannot be achieved with an n value of 5 - hence the Wilcoxon signed rank test does not work for this data set.
 <br>
 <br>
 [This report](http://users.sussex.ac.uk/~grahamh/RM1web/WilcoxonHandoout2011.pdf) walks through the same issue we faced when doing the Wilcoxon Signed Rank Calculation.
@@ -135,8 +142,8 @@ The [Wilcoxon critical values table](/Diagrams/WilcoxonTable/CtiticalValuesTable
 There was deemed to be no difference in usability when our game is played on different difficulty modes. We suggest that this is a good thing. On the harder difficulty setting the game is faster, this requires more skill, but was not designed to be more difficult in terms of useability.
 
 
-### NASA Task Load Index
-We asked 10 users to play our game on both difficulty levels and complete an NASA TLX questionnaire after each. 
+### NASA Task Load Index (01/04/2023)
+We asked 10 users to play our game on both difficulty levels and complete an NASA TLX questionnaire after each.
 Results show below:
 
 <br>
@@ -169,3 +176,4 @@ As a result of this evaluation we can definitively confirm that our game is more
 
 
 ## Code Testing
+The evaluations were a useful form of testing, several bugs were identified as a result of the evaluations. On top of this, after each sprint all team members would play the game and attempt to identify any new bugs.

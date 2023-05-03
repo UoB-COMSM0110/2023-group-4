@@ -4,16 +4,10 @@
 
 
 ## Table of Contents
+  - [Behavioral Diagram](#behavioral-diagram)
   - [System architecture](#system-architecture)
   - [Class diagrams](#class-diagrams)
-  - [Behavioral Diagram](#behavioral-diagram)
-
-
-## System architecture
-
-The "Cat Adventure" game employs a custom, object-oriented system architecture that emphasises modularity and separation of concerns. This approach enables the efficient organisation and management of various components and functionalities within the game. The architecture is organised hierarchically, with a central class orchestrating the game's state and managing interactions between other classes.
-
-The object-oriented design principles followed in this architecture allow for the creation of abstract parent classes, which provide shared functionality for their child classes. This promotes code reuse and simplifies the implementation of specific behaviours and logic in the child classes. The communication between classes ensures smooth gameplay and responsiveness to user input, while also enabling the possibility of future enhancements and maintenance with ease.
+  - [Visual Design Resources](#Visual-Design-Resources)
 
  ## Behavioral Diagram
 The sequence diagram below describes in order how actions in the game are performed.
@@ -28,9 +22,17 @@ If the player clears the next set of randomly generated obstacles, they face the
 
 When the player dies, they can restart the game or quit. If the player decides to quit they are stuck in the “fake quit scenario” loop for three iterations, the game begins again after the first three times they attempt to quit the game.
 
+## System architecture
+
+The "Cat Adventure" game employs a custom, object-oriented system architecture that emphasises modularity and separation of concerns. This approach enables the efficient organisation and management of various components and functionalities within the game. The architecture is organised hierarchically, with a central class orchestrating the game's state and managing interactions between other classes.
+
+The object-oriented design principles followed in this architecture allow for the creation of abstract parent classes, which provide shared functionality for their child classes. This promotes code reuse and simplifies the implementation of specific behaviours and logic in the child classes. The communication between classes ensures smooth gameplay and responsiveness to user input, while also enabling the possibility of future enhancements and maintenance with ease.
+
+
+
 ## Class diagrams
  
-![ClassDiagram](https://user-images.githubusercontent.com/115186584/234691242-91ad3357-0b8d-488b-a6d0-d98b9b9a026a.jpeg)
+[!class Diagrams](Diagrams/classDiagram/nyanCat.png)
 
 When designing our system architecture, we took the approach that it would be better to have a higher number of discrete classes, each responsible for doing a specific function well, rather than having a smaller number of classes, each performing for lots of tasks.
 
@@ -50,21 +52,6 @@ When designing our system architecture, we took the approach that it would be be
 
 [<b>Cloud Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Cloud.pde) - a child of the Object class that handles rendering the background clouds in the game. It also implements the necessary methods for updating and moving the clouds on the screen.
   
-[aggregation relationships]
-
-From grammatical parse of the system requirements we identified the following possible class types:
-- Menu
-- Settings
-- Character
-- Player
-- Username [x]
-- Button
-- Obstacle
-- Boss
-- Instructions [x]
-- Animation
-- Sound effects
-- Leaderboard
 
 ## Visual Design Resources:
 Sketches outlining the visual layout for the game menus, in game play,  fake quit scenario and leaderboard can be found here: 

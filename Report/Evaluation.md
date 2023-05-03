@@ -15,7 +15,6 @@ To understand the feedback provided, below are screenshots of the relevant scene
 <br>
 <p align="center">
   <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/01_Character.png" alt="hci">
-  <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/02_Diffuculty.png" alt="hci">
   <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/03_InGame.png" alt="hci">
 <img width="400" alt="截屏2023-05-01 17 43 01" src="/Diagrams/HCI_Images/04_GameOver.png" alt="hci">
 </p>

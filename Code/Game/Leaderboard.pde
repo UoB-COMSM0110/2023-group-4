@@ -26,12 +26,12 @@ class Leaderboard {
   }
 
   void display(float x, float y) {
-    textSize(20);
+    textSize(12);
     textAlign(LEFT);
 
     for (int i = 0; i < scores.size(); i++) {
       ScoreEntry entry = scores.get(i);
-      text((i + 1) + ". " + entry.name + ": " + entry.score, x, y + i * 25);
+      text((i + 1) + ". " + entry.name + ": " + entry.score, x, y + i * 21);
     }
   }
 

@@ -13,7 +13,7 @@
 The sequence diagram below describes in order how actions in the game are performed.
 
 <p align="center">
-  <img src="/Diagrams/SequenceDiagram/SequenceDiagram.png" alt="sequence diagram">
+  <img src="/2023-group-4/Diagrams/SequenceDiagram/SequenceDiagram.png" alt="sequence diagram">
 </p>
 
 Firstly the user interacts with a series of menus, selecting a character, difficulty level and entering a username. Once the game begins the player jumps over a series of randomly generated obstacles, the generation of each obstacle is one iteration in the Obstacle Loop.

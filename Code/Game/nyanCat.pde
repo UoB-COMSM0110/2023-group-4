@@ -90,14 +90,14 @@ Index of Button
 */ 
 void setup(){
   size(1000,366);
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
 int maxLeaderboardEntries = 10;
 leaderboard = new Leaderboard(maxLeaderboardEntries);
 leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
 
-  sc = loadImage("../design_and_interface/game_BG/score.png");
-  fB = loadImage("../design_and_interface/game_BG/boss.png");
+  sc = loadImage("../design_and_interface/design/score.png");
+  fB = loadImage("../design_and_interface/design/boss.png");
   isMute = false;
   
   //music 
@@ -111,7 +111,7 @@ leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
 
   //initBgMusicFile.play();
   //Leaderboard
-  textfieldFont = createFont("PressStart2P-Regular.ttf", 16); // Change 24 to the desired font size
+  textfieldFont = createFont("data/PressStart2P-Regular.ttf", 16); // Change 24 to the desired font size
   leaderboard = new Leaderboard(10); // Initialize the leaderboard with a maximum of 10 entries
    cp5 = new ControlP5(this);
    cp5.addTextfield("playerName")
@@ -141,13 +141,13 @@ leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
   int newWidth = 100;
   int newHeight = 62;
   
-  player = new Player(false, null, initialX, initialY, newWidth, newHeight, "Images/ratOne/");
+  player = new Player(false, null, initialX, initialY, newWidth, newHeight, "Images/catThree/");
 
   copyCat = new Enemy(fB,width,player.lowEdge);
   copyCat.modeOne();
   PImage[] test = new PImage[4];
   for (int i = 0; i<4; i++){
-    test[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff"); //from png to tiff
+    test[i]=loadImage("Images/catThree/Idle/" + i + ".tiff"); //from png to tiff
     test[i].resize(newWidth, newHeight);
   }
   
@@ -158,14 +158,14 @@ leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
    PImage[] obstacleImages = new PImage[8];
 
   for (int i = 0; i < 8; i++) {
-    obstacleImages[i] = loadImage("../design_and_interface/game_BG/obstacle/obstacle" + str(i + 1) + ".png");
+    obstacleImages[i] = loadImage("../design_and_interface/design/obstacle/obstacle" + str(i + 1) + ".png");
   }
 }
 
   void initClouds() {
-  PImage cloud1Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
-  PImage cloud2Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
-  PImage cloud3Img = loadImage("../design_and_interface/game_BG/cloud/cloud_3.png");
+  PImage cloud1Img = loadImage("../design_and_interface/design/cloud/cloud_3.png");
+  PImage cloud2Img = loadImage("../design_and_interface/design/cloud/cloud_3.png");
+  PImage cloud3Img = loadImage("../design_and_interface/design/cloud/cloud_3.png");
 
  // Resize cloud1 image to half its size
   cloud1Img.resize(cloud1Img.width / 2, cloud1Img.height / 2);
@@ -228,14 +228,14 @@ void buttonInit(){
   int frames = 4;
   PImage[] character = new PImage[4];
   for (int i = 0; i<4; i++){
-    character[i]=loadImage("Images/ratOne/Idle/" + i + ".tiff"); //change from png 
+    character[i]=loadImage("Images/catThree/Idle/" + i + ".tiff"); //change from png 
   }
-  chaOne = new Button(100,height-118,90,62,null,0,200,0,"Images/ratOne/",null,character,0,0,0);
+  chaOne = new Button(100,height-118,90,62,null,0,200,0,"Images/catThree/",null,character,0,0,0);
   buttonArray.add(chaOne);
   for (int i = 0; i<frames; i++){
-    character[i]=loadImage("Images/ratTwo/Idle/" + i + ".tiff");
+    character[i]=loadImage("Images/catfour/Idle/" + i + ".tiff");
   }
-  chaTwo = new Button(0,height-118,90,62,null,0,200,0,"Images/ratTwo/",null,character,0,0,0);
+  chaTwo = new Button(0,height-118,90,62,null,0,200,0,"Images/catfour/",null,character,0,0,0);
   buttonArray.add(chaTwo);
   for (int i = 0; i<frames; i++){
     character[i]=loadImage("Images/catOne/Idle/" + i + ".tiff");
@@ -266,9 +266,9 @@ void buttonInit(){
   beginButton = new Button(width/2-80,height/2+30,180,40,"Let's Go",149,75,12,null,null,null,255,255,255);
   buttonArray.add(beginButton);
   
-  mute = new Button(width - 90, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/game_BG/mute.png"),null,255,255,255);
+  mute = new Button(width - 90, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/design/mute.png"),null,255,255,255);
   buttonArray.add(mute);
-  unmute = new Button(width - 50, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/game_BG/unmute.png"),null,255,255,255);
+  unmute = new Button(width - 50, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/design/unmute.png"),null,255,255,255);
   buttonArray.add(unmute);
   
   leaderBoard = new Button(width/2-130,height/3+100,260,30,"Leaderboard",149,75,12,null,null,null,225,225,225);
@@ -376,8 +376,7 @@ SoundFile getMusicFile() {
 }
 
 void startGame(){
-  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
 
@@ -397,7 +396,7 @@ void startGame(){
 }
 
 void chooseCharacter(){
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   fill(255, 255, 255);
@@ -434,7 +433,7 @@ void chooseCharacter(){
 }
 
 void difficultyChose(){
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   textAlign(CENTER);
@@ -465,7 +464,7 @@ void difficultyChose(){
 }
 
 void showInstruction() {
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   textAlign(CENTER);
@@ -475,15 +474,15 @@ void showInstruction() {
   float totalWidth = 80 + 40 + 36 + 40 + 90; // Width of text "Use", up-arrow, "&", right-arrow, and "to"
   float startX = (width - totalWidth) / 2;
   
-  PImage keyRight = loadImage("../Game/right-arrow.png");
+  PImage keyRight = loadImage("../Game/Images/arrow/right-arrow.png");
   image(keyRight, startX - 85, height / 3 - 43, 40, 40);
   
-  PImage keyLeft = loadImage("../Game/left-arrow.png");
+  PImage keyLeft = loadImage("../Game/Images/arrow/left-arrow.png");
   image(keyLeft, startX - 130, height / 3 - 43, 40, 40);
 
   text("Go backward/forward", width / 2 + 70, height / 3 - 10);
   
-  PImage keyUp = loadImage("../Game/up-arrow.png");
+  PImage keyUp = loadImage("../Game/Images/arrow/up-arrow.png");
   image(keyUp, startX - 110, height / 3 + 17, 40, 40);
 
   text("Jump over obstacles", width / 2 + 40, height / 2 - 10);
@@ -501,7 +500,7 @@ void showInstruction() {
 
 
 void showFakeQuit() {
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   textAlign(CENTER);
@@ -509,7 +508,7 @@ void showFakeQuit() {
   fill(255,255,255);
   text("Be a fighter, not a quitter!",width/2+100,height/2);
   
-  PImage cat = loadImage("../Game/Cat4.png");
+  PImage cat = loadImage("../Game//Images/Cat4.png");
 
   image(cat, width/7-150, height/4-20, 441, 450);
     score = 0;
@@ -534,7 +533,7 @@ void generateObstacles() {
   if (millis() - oldtime > timeGap) {
     oldtime = millis();
     int randomObstacle = int(random(8));
-    PImage obsImage = loadImage("../design_and_interface/game_BG/obstacle/obstacle" + str(randomObstacle + 1) + ".png");
+    PImage obsImage = loadImage("../design_and_interface/design/obstacle/obstacle" + str(randomObstacle + 1) + ".png");
 
     // Resize the obstacle while maintaining its aspect ratio
     float originalWidth = 1890;
@@ -551,7 +550,7 @@ void generateObstacles() {
   }
 }
 void finalBoss() {
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   textAlign(CENTER);
@@ -619,7 +618,7 @@ void finalBoss() {
 
 
 void playGame() {
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
 
@@ -714,7 +713,7 @@ void showBossComingMsg() {
 }
 
 void showLeaderBoard() {
-PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   //Menu BackGround
@@ -777,8 +776,7 @@ void loseGame(){
   }
 }
 void loseGamePage(){
-  //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
-  PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  PImage bg = loadImage("../design_and_interface/design/game_BG/1064_601bg.png");
   background(bg);
   displaySpeaker();
   //Menu BackGround

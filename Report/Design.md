@@ -20,7 +20,8 @@ Once the player has cleared a number of obstacles without any collisions, they b
 
 If the player clears the next set of randomly generated obstacles, they face the boss again in the Boss Iteration loop but now the boss is jumping left to right on the screen. As the Boss Iteration loop increments, the movement of the boss becomes more exaggerated and erratic and harder to defeat, until the player dies.
 
-When the player dies, they can restart the game or quit. If the player decides to quit they are stuck in the “fake quit scenario” loop for three iterations, the game begins again after the first three times they attempt to quit the game.
+When the player dies, they can restart the game or quit. If the player decides to quit they are stuck in the “fake quit scenario” loop for three iterations. Eventually, after the three iterations, when the player selects quit on the game-over menu they return to the start menu.
+
 
 ## System architecture
 

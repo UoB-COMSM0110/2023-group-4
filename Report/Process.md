@@ -20,27 +20,29 @@ Early on in the project there were several merge conflicts we had to manually ov
 
 
 ## The Kanban Board
-The [Kanban board](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Diagrams/KanbanBoard) was the most useful tool we used as a team. 
+The [Kanban board](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Diagrams/KanbanBoard) was the most useful tool we used as a team.
 
-We created a Kanban board on the web application Trello and added all the team members early on in the project. The main uses of the Kanban board became apparent during the implementation stage of the project, when the bulk of the coding was being done. 
+We created a Kanban board on the web application Trello and added all the team members early on in the project. The main uses of the Kanban board became apparent during the implementation stage of the project, when the bulk of the coding was being done.
 
-The majority of tasks were set during meetings, but individuals were also allowed to assign tasks to themselves/others as and when necessary. 
+The majority of tasks were set during meetings, but individuals were also allowed to assign tasks to themselves/others as and when necessary.
 
-On top of being an organisational tool, it was also a good source of motivation for the team, as developers moved their assigned tasks around from “Backlog” all the way through to “Done”. 
+On top of being an organisational tool, it was also a good source of motivation for the team, as developers moved their assigned tasks around from “Backlog” all the way through to “Done”.
 
 <p align="center">
   <img width="400" src="https://user-images.githubusercontent.com/115186584/235485367-b8bf9830-e9aa-4851-abbf-d4ebda14aab4.gif" alt="kanban">
 </p>
 
+
 ## Sprints
-Our sprints were two weeks long. We chose a sprint length of two weeks as we were not working full time on this project due to other work commitments. At the beginning of each sprint we would assign Kanban tasks. 
+Our sprints were two weeks long. We chose a sprint length of two weeks as we were not working full time on this project due to other work commitments. At the beginning of each sprint we would assign Kanban tasks.
 
 We practised the playing poker method to estimate the time and effort each task, based on the collective knowledge of the team. After several weeks we had a rough idea of our team velocity (around 6 tasks per sprint). Having an idea of our team velocity was useful for determining how many of the features of our game we would have time to implement. We considered factors external to the project, knowing our team velocity would decrease during the April exam period and so we made allowances for this when assigning tasks during this period.
 
 At the end of each sprint we tested the new features, each member of the team played the game and would report back any feedback and suggestions. This was a good form of regular testing and highlighted any new bugs. Bug fixing tasks were added to the tasks for the next sprint.
 
+
 ## Team Meetings
-As a team we usually met every week to discuss the development of the game and assign tasks. We adopted several different approaches for team meetings. 
+As a team we usually met every week to discuss the development of the game and assign tasks. We adopted several different approaches for team meetings.
 
 <p align="center">
   <img width="300" src="https://user-images.githubusercontent.com/115186584/234696293-f8709d2f-2938-4d3a-8a08-ee3404cd3bf4.gif" alt="team">
@@ -49,20 +51,9 @@ As a team we usually met every week to discuss the development of the game and a
 
 In the early phases of design we would meet as a whole team so everyone could contribute to the ideation process and ensure that we were all on the same page in terms of the fundamental game concepts.
 As the development of the game was underway we took a more agile approach using the Scrum project management style. We conducted short 10 minute meetings after Software Engineering workshops where the Scrum Master proposed topics for discussion and we updated our Kanban board according to the newly completed/assigned tasks. During  the development phase we also met in sub groups to discuss details relevant to specific tasks and team members, based on the tasks assigned on the Kanban board. The subgroup meetings worked autonomously from the rest of the group, the team trusted the outcomes decided by the relevant team members. [Meeting minutes](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/MeetingMinutes)
+
 On Top of these meetings, on the day we formed our team we created a WhatsApp group as a means of informal communication. We use the group to arrange meetings, share spontaneous ideas, and ask day to day questions.
-
-
-
-<h2 align="center"><b>Some Screenshots of our effective communication:</b></h2>
-
-<p align="center">
-  <img width="300" src="https://user-images.githubusercontent.com/115186584/235327218-c60e4ac7-6ef3-4785-9fee-bc290fd463fe.png" alt="difficulty">
-<img width="300" src="https://user-images.githubusercontent.com/115186584/235327221-89aa0c73-1df4-4e08-aea1-24114cf536db.png" alt="boss">
-<img width="300" src="https://user-images.githubusercontent.com/115186584/235327227-279d7926-6d09-4779-91f2-6c56cc4aeaaf.png" alt="obsticles">
-<img width="300" src="https://user-images.githubusercontent.com/115186584/235327231-6425651e-df51-415f-9516-9c910fc8bb47.png" alt="score1">
-<img width="300" src="https://user-images.githubusercontent.com/115186584/235327232-3c2b7a93-82ed-4bbd-bbdb-354dea280c2b.png" alt="score2">
-</p>
-
+View some of our WhatsApp correspondence [here](/Diagrams/WhatsApp_Correspondence).
 
 
 ## Team Roles

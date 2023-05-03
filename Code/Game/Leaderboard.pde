@@ -31,7 +31,13 @@ class Leaderboard {
 
     for (int i = 0; i < scores.size(); i++) {
       ScoreEntry entry = scores.get(i);
-      text((i + 1) + ". " + entry.name + ": " + entry.score, x, y + i * 21);
+      String name = entry.name;
+      if (name.length() > 10) {
+        // Truncate the name if it's too long
+        name = name.substring(0, 10) + "...";
+      } 
+
+      text((i + 1) + ". " + name + ": " + entry.score, x, y + i * 21);
     }
   }
 

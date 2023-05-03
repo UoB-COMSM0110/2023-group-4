@@ -233,7 +233,7 @@ void buttonInit(){
   chaOne = new Button(100,height-118,90,62,null,0,200,0,"Images/catThree/",null,character,0,0,0);
   buttonArray.add(chaOne);
   for (int i = 0; i<frames; i++){
-    character[i]=loadImage("Images/catfour/Idle/" + i + ".tiff");
+    character[i]=loadImage("Images/catFour/Idle/" + i + ".tiff");
   }
   chaTwo = new Button(0,height-118,90,62,null,0,200,0,"Images/catfour/",null,character,0,0,0);
   buttonArray.add(chaTwo);
@@ -816,7 +816,6 @@ void reset(){
     
     //score = 0;
   obsList = new ArrayList<>();
-  PImage obstacle = loadImage("obstacles.png");
   for(Button button:buttonArray){
     button.Clicked = false;
   }

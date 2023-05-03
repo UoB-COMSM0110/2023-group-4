@@ -93,7 +93,7 @@ The first aspect of this challenge was creating an input text box for entering a
 The second aspect of this challenge was reading and writing to a file so the high score records were persistent and remembered after closing and re-opening the program. We used the Java  NIO import to implement the dataflow between the external text file and the Leaderboard class, manipulating table object methods to store the data.
 
 <p align="center">
-  <img src="/Diagrams/Implementation_Screenshots/Leaderboard.png" alt="record">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/Leaderboard.png" alt="record">
 </p>
 
 

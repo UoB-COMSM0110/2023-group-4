@@ -65,7 +65,9 @@ void setup() {
 
 Our approach involved finding GIFs online that we wanted to use as characters, exporting them to .tiff images frame by frame, and removing the background of each frame. In the code, we simply looped through the image frames to create the appearance of animation. The key was to preserve the transparent background of the images while ensuring that the previously displayed image in Processing was removed before rendering the next animation frame.
 
-<img width="500" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">
+<p align="center">
+<img width="600" alt="截屏2023-04-26 21 15 11" src="https://user-images.githubusercontent.com/115186584/234691968-1c8ca9e4-b2da-4f32-a2e4-ffb8e13ecfe6.png">
+</p>
 
 We continued to find and learn from online resources, such as Possessing games that shared similar concepts to ours, already published on Git. These resources were very useful for understanding how to implement the game mechanics for jumping, detecting obstacle collisions, and introducing the boss character which would move around on the screen.
 
@@ -91,8 +93,49 @@ The first aspect of this challenge was creating an input text box for entering a
 The second aspect of this challenge was reading and writing to a file so the high score records were persistent and remembered after closing and re-opening the program. We used the Java  NIO import to implement the dataflow between the external text file and the Leaderboard class, manipulating table object methods to store the data.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235326236-ea40e3fe-c0f7-48ad-9b86-eaed0a8e64d6.gif" alt="record">
+  <img src="/Diagrams/Implementation_Screenshots/Leaderboard.png" alt="record">
 </p>
+
+
+Below is a snippet of some methods in the Leadboard class:
+
+```java
+Leaderboard(int maxEntries) {
+  this.maxEntries = maxEntries;
+  scores = new ArrayList<ScoreEntry>();
+  loadFromFile(DEFAULT_FILENAME); // Load the entries from the file when initializing the leaderboard
+}
+
+  void loadFromFile(String filename) {
+  String[] lines = loadStrings(filename);
+
+  if (lines != null) {
+    scores.clear();
+
+    for (String line : lines) {
+      String[] parts = line.split(",");
+
+      if (parts.length == 2) {
+        String name = parts[0];
+        int score = Integer.parseInt(parts[1]);
+        addScore(name, score);
+      }
+    }
+  }
+}
+
+  void saveToFile(String filename) {
+  String[] lines = new String[scores.size()];
+
+  for (int i = 0; i < scores.size(); i++) {
+    ScoreEntry entry = scores.get(i);
+    lines[i] = entry.name + "," + entry.score;
+  }
+
+  saveStrings(filename, lines);
+}
+
+```
 
 Within the time constraints, we did not have time to implement a global leaderboard on the web, where all downloaded instances of the game could view the global results, this still remains for future game development. However, for now, we have implemented a leaderboard that is persistent for each download of the game.
 

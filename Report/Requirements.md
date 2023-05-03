@@ -14,9 +14,10 @@
 
 ## Early Stage Design
 
-Initially we had two main game concepts: 
+Initially we had three main game concepts:
 - The [T-Rex](https://trex-runner.com/) jumping style platform game - featured on the Google Chrome browser.
-- [Baba is you](https://hempuli.com/baba/) - a puzzle based top-down game. 
+- [Baba is you](https://hempuli.com/baba/) - a puzzle based top-down game.
+- [Flappy Bird](https://flappybird.io/) - jumping style platform game.
 
 We each voted for our preferred game to develop, results shown below:
 
@@ -24,16 +25,16 @@ We each voted for our preferred game to develop, results shown below:
 
 | Name         |  Game Preference Vote                |
 |--------------|--------------------------------------|
-| Antalya      |  T-Rex Game ft. Nyan Cat/flappy bird | 
+| Antalya      |  T-Rex Game ft. Nyan Cat/flappy bird |
 | Kate Hunter  |  Baba is you                         |
 | Marcin       |  T-Rex Game ft. Nyan Cat             |
-| Mike         |  T-Rex Game ft. Nyan Cat/flappy bird | 
+| Mike         |  T-Rex Game ft. Nyan Cat/flappy bird |
 | Yuchen Zhang |  Baba is you / flappy bird           |
 
 </div>
 
 
-After discussing lots of questions and concepts surrounding both ideas, we unanimously decided on developing a jumping style game for several reasons: 
+After discussing lots of questions and concepts surrounding both ideas, we unanimously decided on developing a jumping style game for several reasons:
 
 - Jumping games are fun, intuitive and easy for everyone to play.
 
@@ -42,7 +43,7 @@ After discussing lots of questions and concepts surrounding both ideas, we unani
 - There were lots of initial thoughts on how to incorporate an interesting narrative for a jumping style game.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/115186584/235324060-93feb3e8-a606-4667-86dd-27eac69f9e85.gif" alt="NyanCat">
+<img width="200" src="https://user-images.githubusercontent.com/115186584/235324060-93feb3e8-a606-4667-86dd-27eac69f9e85.gif" alt="NyanCat">
 </p>
 
 
@@ -65,11 +66,11 @@ At this point we had a game concept with a quirky narrative, a main character an
 
 The paper prototype involved putting our ideas into practice and seeing how the game actually played. This stage was crucial in helping us identify any issues or areas for improvement, which we were then able to address and refine. Some design decisions we made after creating the paper prototype were:
 
-To represent [obstacles](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code/design_and_interface/game_BG/obstacle) as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By [Super Mario](https://mario.nintendo.com/) world.
+- To represent [obstacles](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code/design_and_interface/game_BG/obstacle) as representations of life's obstacles (bills, deadlines, wake up call etc..) and not confuse our game with the aesthetic of By [Super Mario](https://mario.nintendo.com/) world.
 
-If the player successfully defeats the Copy Cat boss, they will be rewarded with celebratory messages. This provides the player with a goal to strive for, besides just aiming to achieve a high score.
+- If the player successfully defeats the Copy Cat boss, they will be rewarded with celebratory messages. This provides the player with a goal to strive for, besides just aiming to achieve a high score.
 
-We could incorporate the [Nyan Cat](https://play.google.com/store/apps/details?id=com.istomgames.engine&hl=en&gl=US&pli=1) theme tune playing on a loop during gameplay, which is a memorable feature associated with the Nyan Cat meme, further enhancing the overall gaming experience.
+- We could incorporate the [Nyan Cat](https://play.google.com/store/apps/details?id=com.istomgames.engine&hl=en&gl=US&pli=1) theme tune playing on a loop during gameplay, which is a memorable feature associated with the Nyan Cat meme, further enhancing the overall gaming experience.
 
 In conclusion, our ideation process was an iterative and collaborative effort that involved a series of discussions and refinements to arrive at our final concept. By considering various factors such as feasibility and player experience, we were able to create a game that we believe will be enjoyable and engaging for players
 
@@ -102,5 +103,3 @@ In conclusion, our ideation process was an iterative and collaborative effort th
 - The system must send the user to the beginning of the game the first three times they attempt to quit.
 - The system must have user feedback when they defeat the boss with animation and sound effects.
 - The system must implement a leaderboard.
-
-

@@ -40,10 +40,11 @@ The online Processing documentation provided us with a solution to our initial c
 
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/115186584/235325864-f6975b98-27c1-41b4-a4c4-0f1ffd1804d8.jpg" alt="84a59261-57db-41b0-82ec-31d110df3e25" width="300">
+  <img src="https://user-images.githubusercontent.com/115186584/235325864-f6975b98-27c1-41b4-a4c4-0f1ffd1804d8.jpg" alt="84a59261-57db-41b0-82ec-31d110df3e25" width="500">
 </p>
 
 ```java
+//code to loop the images
 int numFrames = 6;
 int curFrame = 0;
 PImage[] imgs = new PImage[numFrames];

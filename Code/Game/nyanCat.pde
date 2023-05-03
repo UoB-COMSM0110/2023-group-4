@@ -11,6 +11,7 @@ Button confirmButton;
 Button beginButton;
 Button mute;
 Button unmute;
+Button leaderBoard;
 //music
 import processing.sound.*;
 SoundFile file;
@@ -249,9 +250,9 @@ void buttonInit(){
   
   
   //Restar quit button
-  Button restartButton = new Button(width/2-130,height/3+40,260,30,"Play Again",149,75,12,null,null,null,225,225,225);
+  Button restartButton = new Button(width/2-130,height/3+20,260,30,"Play Again",149,75,12,null,null,null,225,225,225);
   buttonArray.add(restartButton);
-  Button quitButton = new Button(width/2-130,height/3+100,260,30,"Quit",149,75,12,null,null,null,225,225,225);
+  Button quitButton = new Button(width/2-130,height/3+60,260,30,"Quit",149,75,12,null,null,null,225,225,225);
   buttonArray.add(quitButton);
 
   normal = new Button(width/3+35,height/3+40,100,40,"Normal",149,75,12,null,null,null,255,255,255);
@@ -269,6 +270,12 @@ void buttonInit(){
   buttonArray.add(mute);
   unmute = new Button(width - 50, 10,30,30,null,149,75,12,null,loadImage("../design_and_interface/game_BG/unmute.png"),null,255,255,255);
   buttonArray.add(unmute);
+  
+  leaderBoard = new Button(width/2-130,height/3+100,260,30,"Leaderboard",149,75,12,null,null,null,225,225,225);
+  buttonArray.add(leaderBoard);
+  
+  Button goBack = new Button(width/2+205,height/3+135,90,30,"Back",149,75,12,null,null,null,225,225,225);
+  buttonArray.add(goBack);
 }
 void draw(){
   displaySpeaker();
@@ -295,6 +302,8 @@ void draw(){
     showFakeQuit();
   }else if (gameState == "BOSS") {
       finalBoss();
+  } else if (gameState == "LEADERBOARD") {
+      showLeaderBoard();
   }
 }
 
@@ -704,6 +713,32 @@ void showBossComingMsg() {
   }
 }
 
+void showLeaderBoard() {
+PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
+  background(bg);
+  displaySpeaker();
+  //Menu BackGround
+  int menuW = 600;
+  int menuH = 280;
+  int x = (width-menuW)/2;
+  int y = (height-menuH)/2-30;
+  fill(149,75,12);
+  noStroke();
+  rect(x,y,menuW,menuH);
+  fill(255,255,255);
+  textSize(30);
+  textAlign(CENTER);
+  text("LEADERBOARD",width/2+20,height-menuH-20);
+  fill(238,175,54);
+  leaderboard.display(360, 90);
+  buttonArray.get(14).update();
+  buttonArray.get(14).renderButton();
+  if(buttonArray.get(14).isClicked()){
+    gameState = "LOSE";
+    buttonArray.get(14).Clicked = false;  
+  }
+}
+
 void winGame(){}
 void loseGame(){
   //Stop the game
@@ -714,6 +749,9 @@ void loseGame(){
     buttonArray.get(i).update();
     buttonArray.get(i).renderButton();
   }
+  
+  buttonArray.get(13).update();
+  buttonArray.get(13).renderButton();
   //Restart the game
   if(buttonArray.get(5).isClicked()){
     gameState = "PLAY";
@@ -733,15 +771,19 @@ void loseGame(){
     }
     reset();
     buttonArray.get(6).Clicked = false;
+  } else if(buttonArray.get(13).isClicked()){
+    gameState = "LEADERBOARD";
+    buttonArray.get(13).Clicked = false;  
   }
 }
 void loseGamePage(){
   //PImage bg = loadImage("../design_and_interface/game_BG/1064*601bg.png");
   PImage bg = loadImage("../design_and_interface/game_BG/1064_601bg.png");
   background(bg);
+  displaySpeaker();
   //Menu BackGround
   int menuW = 400;
-  int menuH = 130;
+  int menuH = 230;
   String text = "GAME OVER";
   int x = (width-menuW)/2;
   int y = (height-menuH)/2-30;
@@ -752,11 +794,6 @@ void loseGamePage(){
   textAlign(CENTER);
   fill(238,175,54);
   text(text,width/2,y+70);
-   // Display leaderboard on the side
-  fill(255);
-  textSize(17);
-  text("Leaderboard:", 130, 20);
-  leaderboard.display(50, 50);
 }
 
 void helpMenu(){}

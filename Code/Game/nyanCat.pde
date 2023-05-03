@@ -741,7 +741,7 @@ void loseGamePage(){
   background(bg);
   //Menu BackGround
   int menuW = 400;
-  int menuH = 130;
+  int menuH = 230;
   String text = "GAME OVER";
   int x = (width-menuW)/2;
   int y = (height-menuH)/2-30;

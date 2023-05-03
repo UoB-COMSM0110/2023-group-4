@@ -12,7 +12,7 @@
  ## Behavioral Diagram
 The sequence diagram below describes in order how actions in the game are performed.
 
-![SequenceDiagram3](https://user-images.githubusercontent.com/115186584/234691294-15f4200f-aea6-4d1a-a57e-96b55aa8abfc.png)
+![SequenceDiagram3](/Diagrams/SequenceDiagram/SequenceDiagram.png)
 
 Firstly the user interacts with a series of menus, selecting a character, difficulty level and entering a username. Once the game begins the player jumps over a series of randomly generated obstacles, the generation of each obstacle is one iteration in the Obstacle Loop.
 
@@ -31,7 +31,7 @@ The object-oriented design principles followed in this architecture allow for th
 
 
 ## Class diagrams
- 
+
 ![Nyan Cat](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/classDiagram/nyanCat.png)
 
 
@@ -41,26 +41,23 @@ When designing our system architecture, we took the approach that it would be be
 
 [<b>Button Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Button.pde) - The Button class handles the rendering of all selectable buttons in the game. It features functions for updating the button's status, rendering the button with either an image, animation, or text, and detecting if the button has been clicked. Additionally, the class provides methods for accessing the button's width, height, position, and image file path.
 
-[<b>PEObject Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/PEObject.pde) - The player enemy object class is an abstract parent class of the player and enemy classes. It provides functionality for the dynamic, moving objects in the games, and it has a generalisation relationship with the Player and Enemy classes. 
+[<b>PEObject Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/PEObject.pde) - The player enemy object class is an abstract parent class of the player and enemy classes. It provides functionality for the dynamic, moving objects in the games, and it has a generalisation relationship with the Player and Enemy classes.
 
 [<b>Player Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Player.pde) - The Player class is a child class of the PEObject class, which handles the movement of the player character. It includes variables and methods to manage collisions with other objects in the game, as well as animation files and display functions for rendering the player character on screen.
 
 [<b>Enemy Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Enemy.pde) - The Enemy class is responsible for handling the movement and behaviour of the game's enemies. It is a child class of the PEObject class, which provides common functionality for dynamic, moving objects in the game. The Enemy class also includes methods for setting the enemy's velocity and behaviour based on the game's difficulty level.
 
-[<b>Object Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Object.pde) - The object class is an abstract parent class of the static game objects, the obstacles and the cloud objects, which are not interacted with. It has a generalisation relationship with the Obstacle and Cloud classes. 
+[<b>Object Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Object.pde) - The object class is an abstract parent class of the static game objects, the obstacles and the cloud objects, which are not interacted with. It has a generalisation relationship with the Obstacle and Cloud classes.
 
 [<b>Obstacle Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Obstacle.pde) - The Obstacle class is a child class of the Object class that displays and updates the obstacles in the game by changing their positions horizontally. The class is initialised with the obstacle's properties such as its x and y position, width and height, velocityX and its image.
 
 [<b>Cloud Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Cloud.pde) - a child of the Object class that handles rendering the background clouds in the game. It also implements the necessary methods for updating and moving the clouds on the screen.
-  
+
 
 ## Visual Design Resources:
-Sketches outlining the visual layout for the game menus, in game play,  fake quit scenario and leaderboard can be found here: 
+Sketches outlining the visual layout for the game menus, in game play,  fake quit scenario and leaderboard can be found here:
 [Game Visual Sketches](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/classDiagram/ClassDiagram.jpeg)
 
 
 Note the obstacles in these sketches are represented as pipes as at this point but are to be replaced with the following designs:
 [Obstacle Designs](https://github.com/UoB-COMSM0110/2023-group-4/tree/main/Code/design_and_interface/game_BG/obstacle)
-
-
- 

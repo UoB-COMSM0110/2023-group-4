@@ -114,11 +114,11 @@ leaderboard.loadFromFile(Leaderboard.DEFAULT_FILENAME);
   leaderboard = new Leaderboard(10); // Initialize the leaderboard with a maximum of 10 entries
    cp5 = new ControlP5(this);
    cp5.addTextfield("playerName")
-   .setPosition(width/2-45,height/2+20)   //width / 2 + 1, height / 2 + 50
+   .setPosition(width/2+240,height/2+20)   //width / 2 + 1, height / 2 + 50
    .setSize(180, 40) // Set width to 200 and height to 40
    .setColorBackground(color(139, 69, 19)) // Set brown background
-   .setColorForeground(color(255, 255, 255)) // Set white foreground
-   .setColorActive(color(255, 255, 255))
+   .setColorForeground(color(139, 69, 19)) // Set white foreground
+   .setColorActive(color(139, 69, 19))
    .setFont(textfieldFont) // Set the font for the textfield
    .setCaptionLabel(""); // Set the caption label to an empty string
    cp5.get(Textfield.class, "playerName").hide();
@@ -392,8 +392,10 @@ void chooseCharacter(){
   background(bg);
   displaySpeaker();
   fill(255, 255, 255);
+  textSize(37);
+  text("1", width / 6 - 113 ,height/3);
   textSize(18);
-  text("Step 1:\nClick to choose\nyour character", width / 5 ,height/3);
+  text("Click to choose\nyour character", width / 5 + 20 ,height/3);
   textSize(35);
   text("↓", width / 5 ,height/2);
   for(int i = 1; i < 5; i++){
@@ -401,26 +403,24 @@ void chooseCharacter(){
     buttonArray.get(i).renderButton();
   }
   fill(238,175,54);
-  rect(width/2+242,height/2+22, 180,40,4);
-  buttonArray.get(9).update();
-  buttonArray.get(9).renderButton();
+  rect(width/2+242,height/2+22, 180,40);
   player.display();
   buttonListener();
   // Show or hide the playerName text field based on the game state
   fill(255, 255, 153);
+  textSize(37);
+  text("2", width/2+170,height/2+95);
   textSize(18);
-  text("Step 2:\nInput your name\nand press enter", width/2+50 ,height/3);
-  textSize(35);
-  text("↓", width/2+50 ,height/2);
+  text("Input your name\nand press enter", width/2+342,height/2+95);
   if (gameState == "Character") {
     cp5.getController("playerName").setVisible(true);
   } else {
     cp5.getController("playerName").setVisible(false);
   }
-   if (playerNameEntered) {
-    fill(255, 255, 255);
-    textSize(18);
-    text("Hi " + playerName + "!", width / 2 + 50, height / 3 + 140);
+  if (playerNameEntered) {
+    cp5.getController("playerName").setVisible(false);
+    gameState = "Choose";
+    reset();
   }
 }
 
@@ -579,12 +579,7 @@ void finalBoss() {
       copyCat.deadJump();    
       oldtime = millis();
       modeNumber++;
-<<<<<<< HEAD
     }else if(player.collisionSide == "left"||player.collisionSide == "right"||player.collisionSide == "top"){
-=======
-    }else if(player.collisionSide == "left"||player.collisionSide == "right"){
-      leaderboard.addScore(playerName, score);
->>>>>>> b0e6322ba61db1be4fefbd5d87976188de3e3237
       gameState = "LOSE";
     }
   }

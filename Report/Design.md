@@ -32,7 +32,7 @@ The object-oriented design principles followed in this architecture allow for th
 
 ## Class diagrams
  
-![Nyan Cat](2023-group-4/Diagrams/classDiagram/nyanCat.png)
+![Nyan Cat](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Diagrams/classDiagram/nyanCat.png)
 
 
 When designing our system architecture, we took the approach that it would be better to have a higher number of discrete classes, each responsible for doing a specific function well, rather than having a smaller number of classes, each performing for lots of tasks.

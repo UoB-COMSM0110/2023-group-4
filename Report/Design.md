@@ -54,6 +54,8 @@ When designing our system architecture, we took the approach that it would be be
 
 [<b>Cloud Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Cloud.pde) - a child of the Object class that handles rendering the background clouds in the game. It also implements the necessary methods for updating and moving the clouds on the screen.
 
+[<b>Leaderboard Class</b>](https://github.com/UoB-COMSM0110/2023-group-4/blob/main/Code/Game/Leaderboard.pde) - implements the persistent leaderboard, using file read/write Java NIO methods and Array Lists to store the usernames and scores of the top ten high scoring players.
+
 
 ## Visual Design Resources:
 Sketches outlining the visual layout for the game menus, in game play,  fake quit scenario and leaderboard can be found here:

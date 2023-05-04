@@ -68,9 +68,11 @@ View our [requirement document](/Report/Requirements.md) to see our:
 # Design
 
 View our [design document](/Report/Design.md) to see our:
+- Behavioural Diagram
 - System architecture
-- Class diagrams
-- Behavioral Diagram
+- Class diagram
+- Visual Design Resources
+
 
 ---
 
@@ -119,7 +121,7 @@ However, reflecting on the challenges we faced throughout the project, time mana
 
 This experience has helped us appreciate the challenges of working in a team, making decisions and compromises together. Additionally, our capacity to work under pressure has increased, as we pushed ourselves to meet deadlines and deliver a high-quality product.
 
-To produce our game, we made good use of the powerful Git functionality, coding concurrently as a team and ensuring that our work remained synchronised. We appreciated how useful it is to have a detailed log of the project's history and during the development process leant several methods to avoid and overcome merge conflicts.
+To produce our game, we made good use of the powerful Git functions, coding concurrently as a team and ensuring that our work remained synchronised. We appreciated how useful it is to have a detailed log of the project's history and during the development process leant several methods to avoid and overcome merge conflicts.
 
 Our qualitative evaluations of the game gave insightful feedback for making improvements and also highlighted a couple of bugs which were then resolved and further tested, which promoted iterative development of features. The quantitative evaluations provided evidence that there is a significant difference in task load index when the game is played on different difficulty modes, but the usability of the system remains the same. Although we did not implement all of the user stories we had initially planned, the game still functioned well and received positive reception from players.
 

@@ -7,4 +7,9 @@ hi,300
 Antalya,300
 jj,189
 aaa,176
+<<<<<<< HEAD
 Antalya,150
+=======
+kewnlrnewlkrnoieqhriewncqrkqjnbweriukhiwuekrbcekjbrceilkjqbro;ik,114
+Test,103
+>>>>>>> e82cc8c6e6f5e38dae9a0eb1b055fa57874489c6

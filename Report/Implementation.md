@@ -83,10 +83,13 @@ The second challenge we were able to resolve was the challenge of the fake quit 
 
 ## Challenge 3
 The third challenge of implementing the global leaderboard was the largest of the three challenges and the one we tackled last.
-The first aspect of this challenge was creating an input text box for entering a username to be saved alongside each high score. After some research, we decided to use the ControlP5 import to implement the username text field on the character selection menu page. In the interest of the “visibility of system status” heuristic we also redesigned the character selection page to include some instructions on how to enter a username and start the game.
+The first aspect of this challenge was creating an input text box for entering a username to be saved alongside each high score. After some research, we decided to use the ControlP5 import to implement the username text field on the character selection menu page. In the interest of the “visibility of system status” heuristic we also redesigned the character selection menu page to include instructions about how to enter a username and start the game.
+See ordered screenshots of menu re-design below:
 
 <p align="center">
-  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName.png" alt="test">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName1.png" alt="test">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName2.png" alt="test">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName3.png" alt="test">
 </p>
 
 

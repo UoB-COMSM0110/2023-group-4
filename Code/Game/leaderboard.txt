@@ -2,16 +2,9 @@ Antalya,750
 hi,531
 test,450
 ttt,450
+Antalya,450
 hi,300
 Antalya,300
 jj,189
 aaa,176
-kewnlrnewlkrnoieqhriewncqrkqjnbweriukhiwuekrbcekjbrceilkjqbro;ik,114
-Test,103
-Antalya,97
-<<<<<<< HEAD
-=======
-fnewlkfew,87
-er,81
-hi,67
->>>>>>> 31432956803cff25f7292205194f36823579a465
+Antalya,150

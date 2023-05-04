@@ -87,9 +87,9 @@ The first aspect of this challenge was creating an input text box for entering a
 See ordered screenshots of menu re-design below:
 
 <p align="center">
-  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName1.png" alt="test">
-  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName2.png" alt="test">
-  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName3.png" alt="test">
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName1.png" alt="test"><br>
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName2.png" alt="test"><br>
+  <img width="500" src="/Diagrams/Implementation_Screenshots/UserName3.png" alt="test"><br>
 </p>
 
 

@@ -149,10 +149,10 @@ Furniture work tasks for the game could include the implementation of power-ups 
 
 # How To Download and Play Cat Adventure
 
-- Download processing from the following link : [download here](https://processing.org/download)
+- Download processing from the following link : [download here](https://processing.org/download).
       This downloads the graphical library and integrated development environment that the game will run on.
 
-- Download and extract the following ZIP file: [CatAdventure](/DownloadGame/DownloadCatAdventure.zip)
+- Download and extract the following ZIP file: [CatAdventure](/DownloadGame/DownloadCatAdventure.zip).
       This downloads the game program.
 
 - From the extracted files, open the nyanCat.pde file in Processing go to: **Tools -> Manage Tools… -> Libraries**
